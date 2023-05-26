@@ -1,0 +1,53 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Lato:ital,wght@0,400;1,300&display=swap'); */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-weight: 640;
+}
+
+
+
+.clip {
+    border-right: 1px solid black;
+    /* font-weight: 900; */
+    height: 15px;
+    margin: 20px 3px;
+}
+
+.header {
+    display: flex;
+    /* padding: 2px 2px; */
+}
+
+.nav{
+    cursor: pointer;
+}
+
+.nav-link {
+    font-size: 0.8rem;
+}
+
+.main{
+    display: none;
+}
+
+
+
+
+@media (max-width:991px) {
+    .nav-link {
+        display: flex;
+        justify-content: center;
+    }
+
+    .clip {
+        border-right: none;
+        margin: 0 0;
+    }
+}

@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Baloo 2';
+    font-weight: 600;
+}
+/* .clip{
+    border-right: 1px solid black;
+    font-weight: 900;
+    height: 15px;
+    margin: 20px 3px;
+} */
+.header{
+    display: flex;
+    /* padding: 2px 2px; */
+}
+.nav-link{
+    padding-left: 10px;
+}
+
+@media (max-width:700px) {
+    .media{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Lato:ital,wght@0,400;1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+     box-sizing: border-box;
+     
+}
+body{
+    font-weight: 640;
+}
+.nav:hover{
+    color: blue;
+    box-shadow: 3px 3.2px 10.1px 0.3px rgb(163, 241, 241);
+    /* border: 1px solid black; */
+    padding: 13px 20px;
+    color: blue;
+    border-radius: 24px;
+    text-align: center;
+    background: rgb(184, 184, 228);
+}
+.nav-link{
+    font-size: 0.8rem;
+}
+.search-bar {
+    background-image: url(/img/2.png);
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 60px 40px; /* Adjust the width and height of the icon */
+    padding-right: 40px; /* Adjust the padding to make space for the icon */
+  }
+  
+  @media (max-width:991px) {
+    .nav-link{
+        display: flex;
+        justify-content: center;
+    }
+}

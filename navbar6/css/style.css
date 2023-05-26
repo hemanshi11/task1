@@ -1,0 +1,48 @@
+.collapse{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.icon-img{
+    display: none;
+}
+*{
+    margin: 0;
+    padding: 0;
+     box-sizing: border-box;
+     
+}
+body{
+    font-weight: 650;
+}
+.nav:hover{
+    color: blue;
+    box-shadow: 3px 3.2px 10.1px 0.3px rgb(163, 241, 241);
+    /* border: 1px solid black; */
+    padding: 13px 20px 12px 12px;
+    text-align: center;
+    color: blue;
+    border-radius: 24px;
+    text-align: center;
+    background: rgb(184, 184, 228);
+}
+.nav-link{
+    font-size: 0.8rem;
+}
+.nav2{
+    border: 1px solid black;
+    border-radius: 24px;
+}
+@media (max-width:991px) {
+    .nav-link{
+        display: flex;
+        justify-content: center;
+    }
+    .icon{
+        display: none;
+    }
+    .icon-img{
+        display: flex;
+    }
+}
