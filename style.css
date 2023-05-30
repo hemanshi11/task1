@@ -1,0 +1,24 @@
+.heading{
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+}
+.buttons{
+   
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    justify-content: center;
+}
+
+.btn{
+    
+    margin-top: 20px;
+}
+.btn:hover{
+    box-shadow: 7px 7px 7px 4px rgb(150, 136, 136);
+}
+@media (max-width:1045) {
+    .btn{
+        margin-right: 20px;
+    }
+}

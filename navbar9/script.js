@@ -1,7 +1,7 @@
 
 
 $(document).ready(function(){
-    $('.nav1').click(function(){
+    $('.nav2').click(function(){
         $('.main').toggle();
     })
 })
