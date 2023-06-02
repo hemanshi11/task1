@@ -25,7 +25,9 @@ body {
     height: 15px;
     margin: 20px 3px;
 }
-
+.main p{
+    line-height: 44px;
+}
 .header {
     display: flex;
    
