@@ -27,12 +27,7 @@ body {
 }
 
 
-/* @media (max-width:700px) {
-    .media{
-        display: flex;
-        flex-direction: column;
-    }
-} */
+
 .nav{
     font-size: 0.8rem;
     font-family: 'Poppins',sans-serif;
@@ -45,11 +40,7 @@ body {
         display: flex;
         justify-content: center;
         flex-direction: column;
-        /* padding: 2px 2px; */
-        /* justify-content: center; */
-        /* align-items: center;  */
-        /* margin-top: 20px; */
-        /* display: table-caption; */
+       
     }
     .button{
         margin-top: 13px;
