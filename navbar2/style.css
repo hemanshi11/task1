@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Lato:ital,wght@0,400;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Lato:ital,wght@0,400;1,300&family=Poppins:wght@400;500&display=swap');
 
 *{
     margin: 0;
@@ -7,29 +7,31 @@
      
 }
 body{
-    font-weight: 640;
-}
-.nav:hover{
-    color: blue;
-    box-shadow: 3px 3.2px 10.1px 0.3px rgb(163, 241, 241);
-    /* border: 1px solid black; */
-    padding: 13px 20px;
-    color: blue;
-    border-radius: 24px;
-    text-align: center;
-    background: rgb(184, 184, 228);
-}
-.nav-link{
     font-size: 0.8rem;
+    font-family: 'Poppins',sans-serif;
+    font-weight: bold;
+    letter-spacing: 1.3px;
 }
+
+input,
+input::placeholder {
+    /* font: 1.25rem/3 sans-serif; */
+    font-weight: 700;
+    font-size: 12px;
+    
+}
+
 .search-bar {
-    background-image: url(2.png);
+    background-image: url(/img/2.png);
     background-repeat: no-repeat;
     background-position: right 10px center;
     background-size: 60px 40px; /* Adjust the width and height of the icon */
     padding-right: 40px; /* Adjust the padding to make space for the icon */
-  }
-  
+}
+
+.nav-link{
+    font-size: 0.8rem;
+}
   @media (max-width:991px) {
     .nav-link{
         display: flex;
