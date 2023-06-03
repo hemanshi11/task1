@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Lato:ital,wght@0,400;1,300&family=Poppins:wght@400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+     box-sizing: border-box;
+     
+}
+body{
+    font-size: 0.8rem;
+    font-family: 'Poppins',sans-serif;
+    font-weight: bold;
+    letter-spacing: 1.3px;
+}
+
+input,
+input::placeholder {
+    position: relative;
+
+    font-weight: 700;
+    font-size: 12px;
+    
+}
+
+
+.icon{
+    position: absolute;
+    right: 11px;
+    top: 15px;
+    cursor: pointer;
+}
+.nav-link{
+    font-size: 0.8rem;
+}
+  @media (max-width:991px) {
+    .nav-link{
+        display: flex;
+        justify-content: center;
+    }
+}
