@@ -138,7 +138,7 @@ document.write(number1.length + '</br>')
 
 // tostring
 
-document.write('<h1>tostrig</h1>')
+document.write('<h1>to string</h1>')
 
 const number2 = ['option1','option2','option3','option4']
 
