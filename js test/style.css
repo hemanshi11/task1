@@ -79,7 +79,6 @@ button:focus {
     word-break: break-all;
     margin-top: 15px;
 }
-
 .product-name {
     color: blue;
     width: 150px;
@@ -98,4 +97,3 @@ button:focus {
     color: rgb(248, 212, 10);
     
 }
-

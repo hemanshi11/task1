@@ -83,7 +83,7 @@ function render() {
         });
       }
 
-      // Show all products initially
+    
       renderProductCards(result);
     })
     .catch((error) => console.log(error));
