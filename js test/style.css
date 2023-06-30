@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Lato:ital,wght@0,400;1,300&family=Montserrat:wght@400;500&family=Poppins:wght@400;500;600&display=swap');
 
-body{
+body {
     background-color: rgb(223, 223, 223);
     font-family: 'Poppins', sans-serif;
 }
+
 .data-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 50px;
-    margin-left: 45px;
-    
+
     gap: 22px;
 }
 
@@ -19,14 +19,63 @@ body{
     margin-top: 20px;
     align-items: center;
 }
-.fa-regular, .far {
+
+.fa-regular,
+.far {
     font-weight: 400;
     color: rgb(163, 161, 161);
-   
+
 }
-.icon{
+
+.icon {
     font-size: 15px;
 }
+
+.dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #04AA6D;
+    /* background-color: #f1f1f1; */
+    padding: 2px 2px;
+    border-radius: 20px;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+
+    text-decoration: none;
+    display: block;
+}
+
+
+
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
 .product-card {
     width: 300px;
     height: auto;
@@ -36,10 +85,12 @@ body{
     border-top-right-radius: 20px;
 
 }
-.fa-solid{
+
+.fa-solid {
     color: gold;
 }
-.product-price{
+
+.product-price {
     cursor: pointer;
     border: 2px solid green;
     padding: 2px 4px;
@@ -47,18 +98,17 @@ body{
 }
 
 button {
-
     padding: 10px 30px;
     font-size: 15px;
     border: none;
+    background-color: #04AA6D;
     border-radius: 20px;
-    color: black;
+    color: white;
     font-size: 17px;
 }
 
 button:focus {
     background-color: #352b2b;
-
     color: white;
     font-size: 19px;
     transform: 30s ease-in;
@@ -70,6 +120,7 @@ button:focus {
     display: flex;
     width: 300px;
     height: 300px;
+   
 }
 
 .title-css {
@@ -79,21 +130,21 @@ button:focus {
     word-break: break-all;
     margin-top: 15px;
 }
+
 .product-name {
     color: blue;
     width: 150px;
     font-weight: 600;
 }
+
 .rating {
     display: flex;
     justify-content: space-around;
     margin-top: 40px;
-    
     padding-bottom: 26px;
-  
 }
 
 .fa-sharp {
     color: rgb(248, 212, 10);
-    
 }
+

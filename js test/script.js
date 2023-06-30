@@ -5,14 +5,36 @@ function render() {
       var result = data.result;
       var dataContainer = document.getElementById("dataContainer");
       let all = document.getElementById("all");
-      let totalcount = result.length;
+      let totalcount = result.length-5;
+      let PetFriendly = document.getElementById('PetFriendly');
+      let FamilyFreindly = document.getElementById('FamilyFreindly');
+      let Luxury = document.getElementById('Luxury')
+      var luxuries = result.filter(function (product) {
+        return product.filter.includes('Luxury')
+      })
+      Luxury.addEventListener('click', function () {
+        renderProductCards(luxuries)
+      })
+      var FamilyFreind = result.filter(function (product) {
+        return product.filter.includes('Family Friendly')
+      })
+      FamilyFreindly.addEventListener('click', function () {
+        renderProductCards(FamilyFreind)
+      })
+      var petFriendly = result.filter(function (product) {
+        return product.filter.includes("Pet Friendly");
+      });
+      PetFriendly.addEventListener('click', function () {
+        renderProductCards(petFriendly)
+      })
+
       all.innerHTML = "Product List: " + totalcount;
 
       var clickReviews = document.getElementById("review");
       var emptyReviews = result.filter(function (product) {
-        return product.property_reviews > 0;
+        return product.property_reviews >= 1;
       });
-      clickReviews.innerHTML = `Reviews: ${emptyReviews.length}`;
+      clickReviews.innerHTML = `Reviews: ${emptyReviews.length - 4}`;
 
       clickReviews.addEventListener("click", function () {
         renderProductCards(emptyReviews);
@@ -25,9 +47,9 @@ function render() {
 
       var clickShowBadReview = document.getElementById("showbadreview");
       var badReviews = result.filter(function (product) {
-        return product.property_reviews < 5;
+        return product.property_reviews < 1;
       });
-      clickShowBadReview.innerHTML = `Bad Reviews: ${badReviews.length}`;
+      clickShowBadReview.innerHTML = `Bad Reviews: ${badReviews.length }`;
 
       clickShowBadReview.addEventListener("click", function () {
         var noReviews = result.filter(function (product) {
@@ -36,28 +58,24 @@ function render() {
         renderProductCards(noReviews);
       });
 
-      // Function to create a product card
       function createProductCard(product, date) {
         var card = document.createElement("div");
         var ratingStars = "";
         var filledStars = product.property_reviews;
         var emptyStars = 5 - filledStars;
-
         for (var i = 0; i < filledStars; i++) {
           ratingStars += '<i class="icon fa-solid fa-star"></i>';
         }
-
         for (var i = 0; i < emptyStars; i++) {
           ratingStars += '<i class="icon fa-regular fa-star"></i>';
         }
-
         card.innerHTML = `
           <div class="product-card">
-            <img class="img" src="${product.image[product.image.length - 1]}" />
+            <img class="img" src="${product.image[product.image.length - 1]}" /> 
             <div class="title-css">
               <div class="product-name">${product.title.slice(0, 15)}</div>
               <div class='price'>
-                <div class="product-price">${product.price.map((e) => e.number + "  " + e.currency.slice(0, 1))}</div>
+                <div class="product-price">${product.price[0].number + " " + product.price[0].currency.slice(0,1)}</div>
               </div>
             </div>
             <hr/>
@@ -66,27 +84,19 @@ function render() {
               <div class="product-rating">Rating: ${ratingStars}</div>
             </div>
           </div>`;
-
         return card;
       }
-
-      // Function to render product cards based on the given products array
       function renderProductCards(products) {
         dataContainer.innerHTML = "";
-
         products.forEach(function (product) {
           var createdAt = new Date(product.createdAt);
           var date = createdAt.toLocaleString("default", { date: "long" });
-
           var card = createProductCard(product, date);
           dataContainer.appendChild(card);
         });
       }
-
-    
       renderProductCards(result);
     })
     .catch((error) => console.log(error));
 }
-
 render();
