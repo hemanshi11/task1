@@ -19,9 +19,9 @@
     
 
 
-    <div class="container-fluid p-0">
+    <div class="container-fluid p-0" id="home">
         <div class="container-fluid position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4 px-lg-5 py-3 py-lg-0">
+            <nav class="navbar navbar-expand-lg navbar-dark top-fixed fixed-top bg-dark px-4 px-lg-5 py-3 py-lg-0">
                 <a href="" class="navbar-brand ">
                     <h1 class=" m-0"  ><i class="fa fa-utensils me-3"></i>Restoran</h1>
                 </a>
@@ -30,10 +30,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0 pe-4">
-                        <a class="nav-item nav-link active">Home</a>
-                        <a class="nav-item nav-link">About</a>
-                        <a class="nav-item nav-link">Service</a>
-                        <a class="nav-item nav-link">Menu</a>
+                        <a class="nav-item nav-link active" href="#home">Home</a>
+                        <a class="nav-item nav-link" href="#about">About</a>
+                        <a class="nav-item nav-link" href="#services">Service</a>
+                        <a class="nav-item nav-link" href="#menu">Menu</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu m-0">
@@ -42,9 +42,9 @@
                                 <a class="dropdown-item">Testimonial</a>
                             </div>
                         </div>
-                        <a class="nav-item nav-link">Contact</a>
+                        <a class="nav-item nav-link" href="#chefs">Contact</a>
                     </div>
-                    <a href="" class="btn button  py-2 px-4">Book A Table</a>
+                    <a href="#table" class=" button  py-2 px-4">Book A Table</a>
                 </div>
             </nav>
             <div class="container-fluid  py-5 bg-dark hero-header mb-5">
@@ -55,7 +55,7 @@
                             <p class="text-white animated slideInLeft mb-4 pb-2">Tempor erat elitr rebum at clita. Diam
                                 dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed
                                 stet lorem sit clita duo justo magna dolore erat amet</p>
-                            <a href="" class="btn btn-primary py-sm-3 px-sm-5 me-3 animated slideInLeft button">Book A
+                            <a href="" class="btn py-sm-3 px-sm-5 me-3 animated slideInLeft button">Book A
                                 Table</a>
                         </div>
                         <div class="col-lg-6 img-content text-center text-lg-end overflow-hidden">
@@ -66,7 +66,7 @@
             </div>
         </div>
     </div>
-        <div class="main mt-5 container-xxl">
+        <div id="services" class="main mt-5 container-xxl" >
             <div class="conatiner ">
 
                 <div class="row ms-2 me-2">
@@ -138,10 +138,10 @@
             </div>
         </div>
 
-        <div class="section1 mt-5 me-2 container-xxl py-5">
+        <div class="section1 mt-5 me-2 container-xxl py-5" id="about">
             <div class="conatiner">
 
-                <div class="row d-flex justify-content-around">
+                <div class="row d-flex justify-content-center">
                     <div class="col-lg-5 ">
                         <div class="container">
 
@@ -170,7 +170,7 @@
             
 
                     
-                    <div class="col-lg-5 me-2 ms-2">
+                    <div class="col-lg-5 me-2  " >
                         <div class="conatiner content me-5 ms-5">
 
                             <h1 class="about">about us</h1>
@@ -199,11 +199,11 @@
             
 
         </div>
-        <div class="container-xxl py-5">
+        <div class="container-xxl py-5" id="menu">
             <div class="container">
 
     
-        <div class="menu">
+        <div class="menu" >
 
             
             <h1 class="food">Food menu</h1>
@@ -358,13 +358,13 @@
                 </div>
             </div>
         </div>
-        <div class="video ms-5 mb-5 me-4">
-            <div class="container">
+        <div class="video ms-5 mb-5 me-4" id="table">
+            <div class="container-fluid">
 
             
             <div class="row d-flex justify-content-around mt-5 ">
                 <div class="col-lg-6">
-                    <iframe width="100%" height="530" src="https://www.youtube.com/embed/vpAJ0s5S2t0"
+                    <iframe width="100%" height="530" src="https://www.youtube.com/embed/r96L8-C4JjE"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
@@ -417,7 +417,7 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container" id="chefs">
     <div class="members">
 
         <h1 class="memeb">Team members</h1>
@@ -524,33 +524,15 @@
 
 
     </div>
-    <div class="container">
 
-        <div class="about-com text-white bg-dark">
-            <div class="container">
- 
-            <div class="row">
-                <div class="col-md-3">
-                    <h1>compny</h1>
-                </div>
-                <div class="col-md-3">
-                    
-                </div>
-                <div class="col-md-3">
-                    
-                </div>
-                <div class="col-md-3">
-                    
-                </div>
-            </div>
         </div>
                        
-    </div>
-    </div>
-
+ 
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
         crossorigin="anonymous"></script>
 </body>
 
 </html>
+
