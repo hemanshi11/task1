@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Exo:wght@800&family=Fira+Sans&family=Lato:ital,wght@0,400;1,300&family=Montserrat:wght@400;500&family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,800&display=swap');
+
+body{
+    font-family:  Sans Serif fonts, Rounded fonts;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+    background-color: rgb(223, 223, 223);
+}
+.hero-header {
+    background-image: url(headerimg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    /* color: white; */
+    /* height: 800px; */
+    /* opacity: 0.9; */
+    position: relative;
+    /* overflow-x: hidden; */
+  }
+  
+
+.hero-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-position: center;
+   
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.8;
+    overflow-x: hidden;
+}
+
+.button{
+    background-color: orange;
+    border: none;
+    border: none;
+    border-radius: 4px;
+    padding: 3px 21px;
+}
+
+.img-content{
+    
+    color: white;
+    display: flex;
+    flex-direction: column;
+    /* left: 0; */
+    /* right: 0; */
+    /* bottom: 0; */
+    z-index: 1;
+}
+
+/* .para{
+    font-size: 20px;
+} */
+/* .food-name{
+    font-weight: 700;
+} */
+  
+  /* .img-content:target {
+    opacity: 1;
+  } */
+
+
+.img{
+    width: 30rem;
+    height: 500px;
+    margin-top: -70px;
+  
+}
+.content{
+    position: relative;
+}
+.heading{
+    display: flex;
+    flex-direction: column;
+
+}
+.img1{
+    position: absolute;
+    left: 2%;
+    top: 40%;
+    width: 300px;
+
+}
+.number{
+    color: orange;
+    font-weight: 600;
+    border-left: 6px solid orange;
+    padding: 3px 22px;
+}
+.data {
+    font-size: 16px;
+    word-break: break-all;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    font-family: 'Exo', sans-serif;
+}
+.data span {
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.img.img2 {
+    position: absolute;
+    top: 7.5rem;
+    left: 23%;
+    width: 200px;
+}
+.section1{
+    font-family: 'Exo', sans-serif;
+}
+.section1 .img1{
+    width: 300px;
+     position: relative;
+}
+.section1 .img2{
+    width: 200px;
+     margin-left: 10px;
+      height: 100px;
+       position: absolute;
+}
+.orange{
+    color: white;
+    background-color: rgb(248, 170, 25);
+}
+.navbar-brand h1{
+color: orange;
+}
+.orange .fa-quote-left{
+    color: white;
+}
+
+.fa-solid{ 
+    color: orange;
+}
+.about {
+    color: orange;
+    font-family: 'Dancing Script', cursive
+}
+
+.menu .food {
+    color: orange;
+    font-family: 'Dancing Script', cursive
+}
+.menu-item span{
+    font-weight: 700;
+    font-size: 20px;
+}
+.menu-tem p{
+    font-size: 16px;
+}
+.members,
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Exo', sans-serif;
+    margin-top: 20px;
+
+}
+p{
+    font-family: 'Times New Roman', Times, serif;
+}
+.memeb,.test{
+    font-size: 30px;
+    color: orange;
+    font-family: 'Dancing Script', cursive
+    
+
+}
+.price{
+    color: orange;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.bg-dark{
+    padding: 20px 20px;
+    font-family: 'Exo', sans-serif;
+    height: 20%;
+}
+@media (max-width:992px) {
+    .navbar{
+        background-color: rgb(34, 34, 34);
+    }
+    
+    .header{
+      padding-bottom: 20%;
+     /* width: 100%; */
+     height: 1200px;
+    }
+   
+    .img{
+        margin-top: 50px;
+    }
+    .img-content{
+        display: flex;
+        justify-content: center;
+        /* z-index: -1; */
+        text-align: center;
+     }
+     
+     .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+     }
+     .video{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+     .chefs{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+     }
+}
