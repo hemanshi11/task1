@@ -293,13 +293,55 @@ img.text-header {
         width: 20rem;
     }
 }
+
+
+
+
+@media (max-width:344px) {
+
 @media (max-width:375px) {
+
     .text{
         position: absolute;
     left: -1rem;
     right: 0;
     }
 }
+
+
+
+
+    img.mail4 {
+        margin-top: -31rem;
+        margin-left: 15.4rem;
+    }
+}
+
+@media (max-width:425px) {
+    /* text {
+        position: absolute;
+        left: 1rem;
+        font-size: 10px;
+    } */
+    .text2{
+        position: absolute;
+        top: 13rem;
+        left: -4rem;
+    }
+    .man1 {
+        width: 18rem;
+    }
+}
+
+/* @media (max-width:768px) {
+    .text {
+        position: absolute;
+        top: 10%;
+        left: 14%;
+    }
+} */
+
+
 
 
 
