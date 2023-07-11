@@ -129,6 +129,12 @@ img.mail4 {
     margin-top: -13rem;
     margin-left: -3rem;
 }
+.bulb{
+    position: absolute;
+    top: 10rem;
+    left: -5rem;
+
+}
 
 img.mail2 {
     width: 7.5rem;
@@ -191,9 +197,9 @@ img.page {
 
 .text2 {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    
+    bottom: 6rem;
+    left: -12rem;
+
 }
 
 .man2 {
@@ -203,7 +209,7 @@ img.page {
 .text {
     position: absolute;
     top: 5%;
-    left: 0;
+    left: -1rem;
 }
 
 .input::placeholder {
@@ -216,7 +222,97 @@ img.text-header {
     margin-left: -10rem;
     margin-top: -3rem;
 }
+@media (max-width:1075px) {
+    .bulb{
+        position: absolute;
+    top: 10rem;
+    left: -11rem;
 
+    }
+}
+@media (max-width:991px) {
+    .text{
+        position: absolute;
+    left: 14rem;
+    }
+    .text2{
+        position: absolute;
+    left: 6rem;
+    }
+}
+@media (max-width:1075px) {
+    .text{
+        position: absolute;
+    left: -6rem;
+    }
+}
+@media (max-width:992px) {
+    .text{
+        position: absolute;
+    left: 14rem;
+    }
+    .text2{
+        position: absolute;
+    left: 9rem;
+    }
+    .b-1{
+        width: 12rem;
+    position: absolute;
+    top: -4rem;
+    left: 27rem;
+    }
+}
+@media (max-width:355px) {
+    .text{
+        position: absolute;
+    left: -1rem;
+    font-size: 8px;
+    }
+    .text2{
+        position: absolute;
+    font-size: 10px;
+    left: -7rem;
+    }
+}
+@media(max-width:780px) {
+    .text{
+        position: absolute;
+        left: 14rem;
+    }
+    .text2{
+        position: absolute;
+    left: -3rem;
+    }
+}
+@media (max-width:767px) {
+    .text{
+        position: absolute;
+        left: 2rem;
+    }
+    .b-1{
+        position: absolute;
+        top: -4rem;
+        left: 27rem;
+
+    }
+    
+}
+/* @media (max-width:1327px) {
+    .text{
+        position: absolute;
+        left: -1rem;
+    }
+} */
+/* @media (max-width:1188px) {
+    .text{
+        position: absolute;
+    left: -6rem;
+    }
+    .text2{
+        position: absolute;
+    left: -89rem;
+    }
+} */
 
 @media (max-width:992px) {
     .btns {
@@ -225,11 +321,11 @@ img.text-header {
         align-items: center;
     }
 
-    .text {
+    /* .text {
         position: absolute;
         top: 20%;
         left: -21%;
-    }
+    } */
 
     .man1 {
         width: 26rem;
@@ -249,6 +345,17 @@ img.text-header {
 
 }
 
+/* @media (max-width:2670px) {
+    .text {
+        position: absolute;
+        left: 3rem;
+    }
+
+    .text2 {
+        position: absolute;
+        left: -7rem;
+    }
+} */
 
 @media (max-width: 337px) {
     img.mail4 {
@@ -281,7 +388,23 @@ img.text-header {
         align-items: center;
     }
 }
+@media (max-width:344px) {
+    .text{
+        position: absolute;
+    left: 1rem;
 
+    }
+    .text2{
+        position: absolute;
+    left: -4rem;
+    }
+}
+@media (max-width:294px) {
+    .text{
+        position: absolute;
+    left: -2rem;
+    }
+}
 @media (max-width: 322px) {
 
 
@@ -301,13 +424,26 @@ img.text-header {
     }
 }
 
-@media (max-width:768px) {
+@media (max-width:425px) {
+    /* text {
+        position: absolute;
+        left: 1rem;
+        font-size: 10px;
+    } */
+    .text2{
+        position: absolute;
+        top: 13rem;
+        left: -4rem;
+    }
+    .man1 {
+        width: 18rem;
+    }
+}
+
+/* @media (max-width:768px) {
     .text {
         position: absolute;
         top: 10%;
         left: 14%;
     }
-}
-
-
-
+} */
