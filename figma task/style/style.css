@@ -388,6 +388,9 @@ img.text-header {
         align-items: center;
     }
 }
+
+
+
 @media (max-width:344px) {
     .text{
         position: absolute;
@@ -447,3 +450,7 @@ img.text-header {
         left: 14%;
     }
 } */
+
+
+
+
