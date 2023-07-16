@@ -312,10 +312,6 @@ img.text-header {
 
 
 
-
-
-
-
 @media (max-width:820px) {
     .text {
         position: absolute;
@@ -397,5 +393,6 @@ img.text-header {
     bottom: 1rem;
     left: -7rem;
 }
+
 
 
