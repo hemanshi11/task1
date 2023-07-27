@@ -34,9 +34,7 @@ img.man1 {
     font-size: 16px;
 }
 
-.navbar-brand {
-    max-width: 158px
-}
+
 
 .blocks {
     font-family: 'DM Sans', sans-serif;
@@ -130,7 +128,6 @@ img.text-content3 {
     line-height: 28.5px;
 }
 
-
 img.mail3 {
     width: 7.5rem;
     margin-top: -2.06rem;
@@ -147,9 +144,7 @@ img.mail4 {
     top: 8rem;
     left: -1rem;
     right: 1rem;
-
 }
-
 
 img.mail2 {
     width: 7.5rem;
@@ -242,6 +237,9 @@ img.text-header {
     margin-left: -10rem;
     margin-top: -3rem;
 }
+.navbar-brand {
+   width: 380px;
+}
 
 
 @media (max-width:992px) {
@@ -308,7 +306,6 @@ img.text-header {
   
    
 }
-
 
 
 
@@ -395,4 +392,8 @@ img.text-header {
 }
 
 
-
+@media (max-width:320px) {
+    .navbar-brand {
+        max-width: 158px
+    }
+}
