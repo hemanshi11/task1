@@ -19,7 +19,12 @@ body {
     line-height: 30px;
     font-weight: 400;
 }
-
+.nav-item{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28.5px;
+    /* margin-left:20px; */
+}
 
 img.man1 {
     width: 29rem;
@@ -45,11 +50,13 @@ img.man1 {
 
 .header-heading {
     font-size: 70px;
+    font-weight: 850;
 }
 
 .intro {
     font-size: 22px;
 }
+
 
 iframe {
     width: 100%;
@@ -181,6 +188,8 @@ img.page {
 
 .man1 {
     z-index: 1;
+    width: 606px;
+    height: 618.088px;
 
 }
 
@@ -390,10 +399,10 @@ img.text-header {
     bottom: 1rem;
     left: -7rem;
 }
-
-
-@media (max-width:320px) {
+@media (max-width:425px) {
     .navbar-brand {
         max-width: 158px
     }
 }
+
+
