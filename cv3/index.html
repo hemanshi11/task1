@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&family=Kanit:ital,wght@0,300;1,400&family=Lumanosimo&family=Mukta&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,500&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #292929;
+            color: white;
+            background-image: url(images.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .header {
+            display: flex;
+            margin-top: 1rem;
+            padding: 0 4rem;
+            margin-left: 2rem;
+            justify-content: space-around;
+
+        }
+        .header-content{
+            margin-left: 2rem;
+        }
+        .header-content h1 {
+            margin-top: 7rem;
+            margin-left: 1rem;
+            font-size: 5rem;
+            letter-spacing: 5px;
+            flex-wrap: wrap;
+        }
+
+        .header-content h4 {
+            font-size: 2rem;
+            letter-spacing: 0.3rem;
+            color: #E08805;
+        }
+
+        .main {
+            padding: 0 10rem;
+            margin-top: 1rem
+        }
+
+        .experience,
+        .award,
+        .phone,
+        .email {
+            padding: 2rem 10rem;
+        }
+
+        .main h2,
+        .experience h2,
+        .eductaion h2,
+        .award h2,
+        .skill h2 {
+            text-transform: capitalize;
+            color: #E08805;
+        }
+
+        .eductaion {
+            margin-top: 2rem;
+        }
+
+        .phone-email h2 {
+            text-transform: uppercase;
+        }
+
+        .experience h3 {
+            margin-top: 1rem;
+        }
+
+        .main h5 {
+            font-size: 1.1rem;
+            margin-top: 1rem;
+            letter-spacing: 0.1rem;
+
+        }
+
+        .images {
+            width: 20rem;
+            height: 20rem;
+            border-radius: 50%;
+            border: 10px solid white;
+            margin-top: 2rem;
+        }
+
+        .exp-edu {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-right: 8rem;
+
+        }
+
+        .award-skill {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-right: 3rem;
+        }
+
+        .skill {
+            margin-left: 9rem;
+            margin-top: 2rem;
+            padding-right: -9rem;
+
+        }
+
+        .phone-email {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-right: -8rem;
+        }
+
+        .award-skill,
+        .phone-email {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .flex {
+            display: flex;
+            align-items: center;
+
+        }
+
+        p {
+
+            margin-right: 0.3rem;
+            margin-top: 1rem;
+        }
+
+        .flex h4 {
+            margin-left: 1rem;
+        }
+
+        @media (max-width:745px) {
+            .header {
+                margin-top: 0;
+            }
+
+            .header {
+                display: flex;
+                margin-top: 1rem;
+                padding: 0 4rem;
+                margin-left: 0;
+                justify-content: space-around;
+
+            }
+
+            .header-content h1 {
+                margin-top: 7rem;
+                font-size: 3rem;
+                letter-spacing: 5px;
+                flex-wrap: wrap;
+            }
+
+            .header-content h4 {
+                font-size: 1.3rem;
+                letter-spacing: 0.3rem;
+                color: #E08805;
+            }
+
+            .award-skill {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding-right: 7rem;
+            }
+
+            .phone-email {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding-right: -2rem;
+            }
+
+            .images {
+                margin-top: 5rem;
+                width: 15rem;
+                height: 15rem;
+                margin-top: 4rem;
+                border-radius: 50%;
+                border: 10px solid white;
+            }
+
+            .flex {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+
+            .main {
+                padding: 4rem 4rem;
+
+            }
+
+            .experience {
+                padding: 0 4rem;
+            }
+
+            .award {
+                padding: 0 4rem;
+            }
+
+            .phone {
+                padding: 1rem 4rem;
+            }
+
+            .email {
+                margin-left: 2.5rem;
+                padding: 1rem 4rem;
+            }
+
+            .eductaion {
+                margin-top: 0;
+          
+            }
+
+            .skill {
+                margin-top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            
+            <div class="img">
+                <img src="man2.webp" class="images" alt="">
+            </div>
+            <div class="header-content">
+                <h1>purushotam chhuchhiya</h1>
+                <h4>Freelancer, designer</h4>
+            </div>
+        </div>
+        <div class="main">
+            <h2>about</h2>
+            <h5> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, magni! Temporibus, sed
+                necessitatibus obcaecati ex enim officiis alias ea dolores id magnam nihil!</h5>
+        </div>
+        <div class="exp-edu">
+
+            <div class="experience">
+                <h2> experience</h2>
+                <h3>freeenncer, designer</h3> <br>
+                <h3>Art director</h3>
+                <h5>2016 | Borcelle institute</h5>
+
+
+
+            </div>
+            <div class="eductaion">
+                <h2>eductaion</h2> <br>
+                <h5>2016 | Borcelle institute</h5>
+                <h3>Master of thetatre</h3> <br>
+                <h5>2016 | Borcelle institute</h5>
+                <h3>Master of thetatre</h3>
+            </div>
+        </div>
+        <div>
+            <br>
+            <div class="award-skill">
+                <div class="award">
+                    <h2>award</h2> <br>
+                    <h4>2013 | Licireo dwe</h4> <br>
+                    <h3>most outstanding employee of the year</h3>
+                </div>
+                <div class="skill">
+                    <h2>skills</h2>
+                    <div class="flex">
+
+                        <p><i class="fa-sharp fa-solid fa-square"></i></p>
+                        <p><i class="fa-sharp fa-solid fa-square"></i></p>
+
+                        <p><i class="fa-sharp fa-solid fa-square"></i></p>
+                        <p><i class="fa-sharp fa-solid fa-square"></i></p>
+
+                        <p><i class="fa-sharp fa-regular fa-square"></i></p>
+                        <h4 style="margin-top: 2px;">critical thinking</h4>
+
+                    </div>
+                    <div class="flex">
+
+                        <p><i class="fa-sharp fa-solid fa-square"></i></p>
+                        <p><i class="fa-sharp fa-solid fa-square"></i></p>
+
+                        <p><i class="fa-sharp fa-solid fa-square"></i></p>
+                        <p><i class="fa-sharp fa-regular fa-square"></i></p>
+
+                        <p><i class="fa-sharp fa-regular fa-square"></i></p>
+                        <h4>probleam solving</h4>
+
+                    </div>
+                    <div class="flex">
+
+                        <p><i class="fa-sharp fa-solid fa-square"></i></p>
+                        <p><i class="fa-sharp fa-solid fa-square"></i></p>
+
+                        <p><i class="fa-sharp fa-solid fa-square"></i></p>
+                        <p><i class="fa-sharp fa-solid fa-square"></i></p>
+
+                        <p><i class="fa-sharp fa-regular fa-square"></i></p>
+                        <h4> design</h4>
+
+                    </div>
+                </div>
+            </div>
+            <hr style="margin-left: 4rem;margin-right: 4rem;margin-top: 2rem; color: #a6a6a6; height: 1px;">
+            <div class="phone-email">
+                <div class="phone">
+                    <h2>phone</h2>
+                    <h4 style="margin-top: 0.6rem;letter-spacing: 0.1rem;">123-456-7890</h4><br> <br>
+                    <h2>website</h2>
+                    <h4 style="margin-top: 0.2rem;letter-spacing: 0.1rem;">reallygreatsite.com</h4><br>
+
+                </div>
+                <div class="email">
+                    <h2>mail</h2>
+                    <h4 style="margin-top: 0.2rem;letter-spacing: 0.1rem;">hello@reallygreatsite.com</h4><br> <br>
+                    <h2>address</h2>
+                    <h4 style="margin-top: 0.2rem;letter-spacing: 0.1rem;">123 anywhere st.,any city</h4><br>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

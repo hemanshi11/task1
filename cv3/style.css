@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&family=Kanit:ital,wght@0,300;1,400&family=Lumanosimo&family=Mukta&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,500&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #292929;
+    color: white;
+    /* background-image: url(images.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    font-family: 'DM Sans', sans-serif;
+}
+
+.header {
+    display: flex;
+    margin-top: 1rem;
+    padding: 0 4rem;
+    margin-left: -4rem;
+    justify-content: space-around;
+
+}
+
+.header-content h1 {
+    margin-top: 7rem;
+    font-size: 5rem;
+    letter-spacing: 5px;
+    flex-wrap: wrap;
+}
+
+.header-content h4 {
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+    color: #E08805;
+}
+
+.main {
+    padding: 0 10rem;
+    margin-top: 1rem
+}
+
+.experience,
+.award,
+.phone,
+.email {
+    padding: 2rem 10rem;
+}
+
+.main h2,
+.experience h2,
+.eductaion h2,
+.award h2,
+.skill h2 {
+    text-transform: capitalize;
+    color: #E08805;
+}
+.eductaion{
+    margin-top: 2rem;
+}
+.phone-email h2 {
+    text-transform: uppercase;
+}
+
+.experience h3 {
+    margin-top: 1rem;
+}
+
+.main h5 {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    letter-spacing: 0.1rem;
+
+}
+
+.images {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+    border: 10px solid white;
+    margin-top: 2rem;
+}
+
+.exp-edu,
+.award-skill,
+.phone-email {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 8rem;
+
+}
+
+.skill {
+    margin-left:9rem;
+    margin-top: 2rem;
+    padding-right: -9rem;
+
+}
+
+
+.award-skill,
+.phone-email {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+
+}
+
+p {
+   
+    margin-right: 0.3rem;
+    margin-top: 1rem;
+}
+
+.flex h4 {
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+@media (max-width:745px) {
+    .header {
+        margin-top: 0;
+    }
+
+    .header {
+        display: flex;
+        margin-top: 1rem;
+        padding: 0 4rem;
+        margin-left: 0;
+        justify-content: space-around;
+
+    }
+  
+    .header-content h1 {
+        margin-top: 7rem;
+        font-size: 3rem;
+        letter-spacing: 5px;
+        flex-wrap: wrap;
+    }
+
+    .header-content h4 {
+        font-size: 1.3rem;
+        letter-spacing: 0.3rem;
+        color: #E08805;
+    }
+
+    .images {
+        margin-top: 5rem;
+        width: 15rem;
+        height: 15rem;
+        margin-top: 4rem;
+        border-radius: 50%;
+        border: 10px solid white;
+    }
+
+    .flex {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .main {
+        padding: 4rem 4rem;
+
+    }
+
+    .experience {
+        padding: 0 4rem;
+    }
+
+    .award {
+        padding: 0 4rem;
+    }
+
+    .phone {
+        padding: 1rem 4rem;
+    }
+
+    .email {
+        margin-left: 2.5rem;
+        padding: 1rem 4rem;
+    }
+    .eductaion{
+        margin-top: 0;
+        /* margin-left: -14rem; */
+    }
+    .skill{
+        margin-top: 0;
+    }
+}
+
