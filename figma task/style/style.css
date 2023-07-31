@@ -23,7 +23,7 @@ body {
     font-size: 18px;
     font-weight: 700;
     line-height: 28.5px;
-    /* margin-left:20px; */
+    margin-left:1rem;
 }
 
 img.man1 {
@@ -51,10 +51,16 @@ img.man1 {
 .header-heading {
     font-size: 70px;
     font-weight: 850;
+    line-height: 81px;
+   
 }
 
 .intro {
     font-size: 22px;
+    font-weight: 500;
+    line-height: 28.5px;
+    margin-top: 3rem;
+    font-style: normal;
 }
 
 
@@ -169,7 +175,15 @@ img.mail-img1 {
     MARGIN-LEFT: -9rem;
     margin-top: -2.5rem;
 }
-
+.card:focus {
+    border: none !important;
+}
+.card{
+    border-radius: 28px;
+   
+background: #FFF;
+box-shadow: 0px 2.767256498336792px 2.2138051986694336px 0px rgba(0, 0, 0, 0.02), 0px 6.650102138519287px 5.32008171081543px 0px rgba(0, 0, 0, 0.03), 0px 12.521552085876465px 10.017241477966309px 0px rgba(0, 0, 0, 0.04), 0px 22.3363094329834px 17.869047164916992px 0px rgba(0, 0, 0, 0.04), 0px 41.777610778808594px 33.422088623046875px 0px rgba(0, 0, 0, 0.05), 0px 100px 80px 0px rgba(0, 0, 0, 0.07);
+}
 img.mail-img2 {
     width: 9rem;
     margin-right: -9rem;
@@ -190,7 +204,8 @@ img.page {
     z-index: 1;
     width: 606px;
     height: 618.088px;
-
+    /* box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.3); */
+  /* border-radius: 50%; */
 }
 
 .frame {
@@ -225,6 +240,10 @@ img.page {
 
 .man2 {
     position: relative;
+}
+.card1{
+    position: absolute;
+    top: 4rem;
 }
 
 .text {
@@ -374,25 +393,43 @@ img.text-header {
     position: relative;
 }
 .b-1{
-    width: 12rem;
+    /* width: 12rem; */
+
+    /* transform: rotate(-10deg); */
 
 }
 .card1,.card2{
     z-index: -1;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+background: #FFF;
+box-shadow: 0px 2.767256498336792px 2.2138051986694336px 0px rgba(0, 0, 0, 0.02), 0px 6.650102138519287px 5.32008171081543px 0px rgba(0, 0, 0, 0.03), 0px 12.521552085876465px 10.017241477966309px 0px rgba(0, 0, 0, 0.04), 0px 22.3363094329834px 17.869047164916992px 0px rgba(0, 0, 0, 0.04), 0px 41.777610778808594px 33.422088623046875px 0px rgba(0, 0, 0, 0.05), 0px 100px 80px 0px rgba(0, 0, 0, 0.07);
+
+}
+.circle{
+    width: 300px;
+    height: 300px;
+    background-color: #FFF;
+    border: 1px solid black;
+    box-shadow: lightgray -95.896px -87.133px / 136.569% 133.931%;
+   
 }
 .card2{
     font-size: 14px;
+    position: absolute !important;
+    bottom: 6rem;
 }
 .b-1 {
     position: absolute;
-    left: 0rem;
+    left: -4rem;
     z-index: -1;
-    top: 5rem;
+    top: 8rem;
 }
 .card1 {
     position: absolute !important;
-    top: 0.3rem;
-    left: -2rem;
+    top: 1rem;
+    left: -3rem;
 }
 .card2 {
     position: absolute !important;
