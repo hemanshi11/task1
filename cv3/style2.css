@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+.conatainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 2erm;
+}
+.head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 5rem;
+}
+.images{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 12px solid white;
+
+}
+.name-conatent{
+    margin-top: 2rem;
+}
+.name-conatent h2{
+    font-size: 10rem;
+}
+.name-conatent h4{
+    font-size: 3rem;
+}
