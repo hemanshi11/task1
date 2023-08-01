@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+
+}
+
+.left-sider {
+    background-color: white;
+    width: 1000px;
+    height: 100px;
+}
+
+.right-sider {
+    background-color: #423e3e;
+    width: 400px;
+    height: auto;
+    padding: 20px;
+    z-index: -1;
+    color: white;
+    position: relative;
+}
+.portfolio{
+    position: relative;
+    z-index: 1;
+    margin-top: 3rem;
+    width: 125%;
+    display: flex;
+    /* padding-left: 40rem; */
+    padding:2rem 8rem;
+    height: auto;
+    background-color: rgb(3, 155, 155);
+    border-top-right-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+}
+.naming-content h1{
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    font-size: 3rem;
+}
+.naming-content p{
+    color: white;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+.img{
+  position: absolute;
+    width: 11rem;
+    height: 11rem;
+    float: right;
+    top: 4%;
+    right: 2.6%;
+    /* padding: 10px; */
+    border-radius: 50%;
+    border: 6px solid white;
+}
+.port-img{
+    padding: 40px 40px 40px 40px;
+}
+.experience,.experienced , .eduction h1{
+    margin-top: 3rem;
+    padding-left: 3rem;
+    padding-right: 2rem;
+    text-transform: uppercase;
+    color: rgb(3, 155, 155);
+    /* margin-top: 10rem; */
+}
+.profile{
+    margin-top: 15rem;
+    padding: 20px;
+}
+.profile p{
+    font-size: 20px;
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.para{
+    margin-top: 3rem;
+    color: gray;
+    margin-left: 1rem;
+}
+.skills .detaild-skilles, 
+.langueges h1,.contact h1
+{
+    text-transform: uppercase;
+    background-color: rgb(3, 155, 155);
+    width: 300px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+    padding: 5px;
+    margin-left: -1.25rem;
+
+}
+.experiences{
+    /* margin-top: 6rem; */
+    padding-left: 2rem;
+    color: black;
+}
+
+.professiency{
+
+    margin-top: 2rem;
+    padding-left: 1rem;
+}
+.ref{
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 300;
+}
+.refral{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    line-height: 1.4rem;
+    /* float: left; */
+}
+.refral h2{
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+
+}
+.content{
+    display: flex;
+    flex-direction: row;
+}
+.sub{
+    padding-left: 2rem;
+    /* display: flex; */
+}
+.skills h3{
+    text-transform: uppercase;
+    margin-top: 2rem;
+    /* padding-left: 2rem; */
+
+}
+.contact{
+    margin-top: 2rem;
+}
+.experience h1{
+    position: relative;
+}
+/* .experience h1::after{
+    position: absolute;
+    content: "";
+    width: 60%;
+    height: 2px;
+    top: 1rem;
+    margin-left: 1rem;
+   
+    margin-top: 3px;
+    background: rgb(3, 155, 155);
+} */
+.experienced h1{
+    position: relative;
+}
+/* .experienced h1::after{
+    position: absolute;
+    content: "";
+    width: 78%;
+    margin-left: 1rem;
+
+    height: 2px;
+    top: 1rem;
+ 
+    margin-top: 3px;
+    background: rgb(3, 155, 155);
+} */
+
+.icons{
+    display: flex;
+    margin-top: 2rem;
+    padding-left: 2rem;
+}
+.circle{
+    display: inline-block;
+
+}
+.circle p{
+width: 2rem;
+height: 2rem;
+border: 1px solid white;
+border-radius: 50%;
+padding: 9px ;
+}
+
+@media (max-width:745px) {
+    .img{
+        position: absolute;
+    width: 11rem;
+    height: 11rem;
+    float: right;
+    top: 5%;
+    right: 2.6%;
+    /* padding: 10px; */
+    border-radius: 50%;
+    border: 6px solid white;
+    }
+    .naming-content h1{
+        text-transform: uppercase;
+        padding: 1rem 2rem;
+        font-size: 2rem;
+    }
+    .naming-content p{
+        color: white;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    }
+}
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- left-sider -->
+        <div class="left-sider">
+            <div class="portfolio">
+                <div class="naming-content">
+                    <h1>Presilly witting</h1>
+                    <p>Graphic and Web designer</p>
+                </div>
+                <div class="port-img">
+                    <img class="img" src="dp.jpg" alt="">
+                </div>
+            </div>
+            <div class="experience">
+                <h1>Work experience</h1>
+                <div class="experiences">
+
+                    <div class="companyname">
+                        <h3 style="margin-top:20px; color: gray;">Sulok Digital</h3>
+                        <h4 style="margin-top: 12px; color: gray">Devloper</h4>
+                        <h4 style="margin-top: 9px; color: gray">2018-2019</h4>
+                    </div>
+                    <div class="companyname">
+                        <h3 style="margin-top:20px;color: gray">Sulok Digital Pvt. Ltd.</h3>
+                        <h4 style="margin-top: 7px;color: gray">Devloper</h4>
+                        <h4 style="margin-top: 6px;color: gray">2018-2019</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="experience">
+                <h1>About us</h1>
+                <div class="para">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum vel sapiente dolorem libero. Facere eveniet maiores minima aliquid consequatur aliquam animi tenetur voluptatum.
+                </div>
+                </div>
+
+            <div class="experience">
+                <h1>Education</h1>
+                <div class="experiences">
+
+                    <div class="companyname">
+                        <h3 style="margin-top:20px; color: gray;">Sulok Digital</h3>
+                        <h4 style="margin-top: 12px; color: gray">Devloper</h4>
+                        <h4 style="margin-top: 9px; color: gray">2018-2019</h4>
+                    </div>
+                    <div class="companyname">
+                        <h3 style="margin-top:20px;color: gray">Sulok Digital Pvt. Ltd.</h3>
+                        <h4 style="margin-top: 7px;color: gray">Devloper</h4>
+                        <h4 style="margin-top: 6px;color: gray">2018-2019</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="refrence">
+
+                <div class="experienced">
+                    <h1>Refernce</h1>
+                </div>
+                <div class="refral">
+                    <div class="ref">
+                        <h2>xsdxs</h2>
+                        <h4>eduction techer</h4>
+                        <p>email:-swedew</p>
+                        <p>phone:-2351</p>
+
+                    </div>
+                   
+                    <div class="ref">
+                        <h2>xsdxs</h2>
+                        <h4>eduction techer</h4>
+                        <p>email:-swedew</p>
+                        <p>phone:-2351</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- rigt-sider -->
+        <div class="right-sider">
+            <div class="profile">
+                <h1>Profile</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, deserunt. Dolorum voluptates deleniti
+                    harum sunt consectetur cum aspernatur nulla quod. Maxime, ea sunt?</p>
+            </div>
+            <div class="skills ">
+                <h1 class="detaild-skilles">Skills</h1>
+
+                <h2 class="professiency">Professional</h2>
+                <div class="content">
+                    <ul class="sub">
+                        <li>
+                            <h3 style="display: inline-block; margin-right: 10px; ">react</h3>
+                            <p style="display: inline-block;color: rgb(3, 155, 155); padding-left: 2rem;"><i
+                                    class="fa-solid fa-star"></i></p>
+                            <p style="display: inline-block;color: rgb(3, 155, 155); margin: 0.1rem;"><i
+                                    class="fa-solid fa-star"></i></p>
+                            <p style="display: inline-block; margin: 0.1rem;"><i class="fa-solid fa-star"></i></p>
+                            <p style="display: inline-block; margin: 0.1rem;"><i class="fa-solid fa-star"></i></p>
+                            <p style="display: inline-block; margin: 0.1rem;"><i class="fa-solid fa-star"></i></p>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="content" style="margin-top: -1rem;">
+                    <ul class="sub">
+                        <li>
+                            <h3 style="display: inline-block; margin-right: 10px; ">jquary</h3>
+                            <p style="display: inline-block;color: rgb(3, 155, 155); padding-left: 1.3rem;"><i
+                                    class="fa-solid fa-star"></i></p>
+                            <p style="display: inline-block;color: rgb(3, 155, 155); margin: 0.1rem;"><i
+                                    class="fa-solid fa-star"></i></p>
+                            <p style="display: inline-block;color: rgb(3, 155, 155); margin: 0.1rem;"><i
+                                    class="fa-solid fa-star"></i></p>
+                            <p style="display: inline-block;color: rgb(3, 155, 155); margin: 0.1rem;"><i
+                                    class="fa-solid fa-star"></i></p>
+                            <p style="display: inline-block; margin: 0.1rem;"><i class="fa-solid fa-star"></i></p>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="content" style="margin-top: -1rem;">
+                    <ul class="sub">
+                        <li>
+                            <h3 style="display: inline-block; margin-right: 10px; ">css</h3>
+                            <p style="display: inline-block;color: rgb(3, 155, 155); padding-left: 4rem;"><i
+                                    class="fa-solid fa-star"></i></p>
+                            <p style="display: inline-block;color: rgb(3, 155, 155); margin: 0.1rem;"><i
+                                    class="fa-solid fa-star"></i></p>
+                            <p style="display: inline-block;color: rgb(3, 155, 155); margin: 0.1rem;"><i
+                                    class="fa-solid fa-star"></i></p>
+                            <p style="display: inline-block; margin: 0.1rem;"><i class="fa-solid fa-star"></i></p>
+                            <p style="display: inline-block; margin: 0.1rem;"><i class="fa-solid fa-star"></i></p>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="content" style="margin-top: -1rem;">
+                    <ul class="sub">
+                        <li>
+                            <h3 style="display: inline-block; margin-right: 10px; ">html</h3>
+                            <p
+                                style="display: inline-block; color: rgb(3, 155, 155);margin: 0.1rem;padding-left: 2.6rem;">
+                                <i class="fa-solid fa-star"></i>
+                            </p>
+                            <p style="display: inline-block;color: rgb(3, 155, 155); margin: 0.1rem;"><i
+                                    class="fa-solid fa-star"></i></p>
+                            <p style="display: inline-block; margin: 0.1rem;"><i class="fa-solid fa-star"></i></p>
+                            <p style="display: inline-block; margin: 0.1rem;"><i class="fa-solid fa-star"></i></p>
+                            <p style="display: inline-block; margin: 0.1rem;"><i class="fa-solid fa-star"></i></p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content" style="margin-top: -1rem;">
+                    <ul class="sub">
+                        <li>
+                            <h3 style="display: inline-block; margin-right: 10px; ">Javscript</h3>
+                            <p style="display: inline-block; color: rgb(3, 155, 155); margin: 0.1rem;"><i
+                                    class="fa-solid fa-star"></i></p>
+                            <p style="display: inline-block;color: rgb(3, 155, 155); margin: 0.1rem;"><i
+                                    class="fa-solid fa-star"></i></p>
+                            <p style="display: inline-block;color: rgb(3, 155, 155); margin: 0.1rem;"><i
+                                    class="fa-solid fa-star"></i></p>
+                            <p style="display: inline-block;color: rgb(3, 155, 155); margin: 0.1rem;"><i
+                                    class="fa-solid fa-star"></i></p>
+                            <p style="display: inline-block;color: rgb(3, 155, 155); margin: 0.1rem;"><i
+                                    class="fa-solid fa-star"></i></p>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+            <div class="langueges" style="margin-top: 2rem;">
+                <h1>Languages</h1>
+                <ul class="sub" style="margin-top: 2rem;">
+                    <li style="margin-top: 0.1rem;">
+                        <h3>English (Native)</h3>
+                    </li>
+                    <li style="margin-top: 0.4rem;">
+                        <h3>Spanish (intermediate) </h3>
+                    </li>
+                    <li style="margin-top: 0.4rem;">
+                        <h3>French (intermediate) </h3>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="contact-div">
+
+                <div class="contact">
+                    <h1>contact</h1>
+                </div>
+                <div class="icons">
+                    <div class="circle">
+                        <p style="display: inline-block;  margin-left: 2rem;"><i class="fa-regular fa-location-dot"></i></p>
+                        <h3 style="display: inline-block;  margin-left: 2rem;">dw</h>
+                    </div>
+                    
+                </div>
+                <div class="icons">
+                    <div class="circle">
+                        <p style="display: inline-block;  margin-left: 2rem;"><i class="fa-regular fa-location-dot"></i></p>
+                        <h3 style="display: inline-block; margin-left: 2rem;">dw</h3>
+                    </div>
+                    
+                </div>
+                <div class="icons">
+                    <div class="circle">
+                        <p style="display: inline-block;  margin-left: 2rem;"><i class="fa-regular fa-location-dot"></i></p>
+                        <h3 style="display: inline-block; margin-left: 2rem;">dw</h3>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+
