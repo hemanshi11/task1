@@ -30,13 +30,29 @@ body {
     font-weight: 800;
     letter-spacing: 1.3px;
 }
-
+.nav-link{
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.25rem;
+}
 .fa-search {
     position: absolute;
     top: 35px;
     right: 9rem;
 }
-
+.icon{
+    width: 200px;
+    height: 90px;
+    text-align: center;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    border-radius: 20px;
+    /* margin-left: 0.3rem; */
+    background-color: aliceblue;
+}
 .nav-link {
     font-size: 0.8rem;
 }
@@ -64,6 +80,8 @@ body {
 
     .icon-img {
         display: flex;
+       
+
     }
 
     .fa-search {

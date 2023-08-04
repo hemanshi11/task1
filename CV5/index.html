@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400&family=Kanit:ital,wght@0,300;1,400&family=Lumanosimo&family=Mukta&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,500&family=Poppins:wght@300;400;500;600;700&family=REM:wght@500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* body {
+            background-image: url(pngtree-background-elegant-black-with-gold-line-side-4-image_901638.jpg);
+            background-position: center ;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            color: white;
+            font-family: 'REM', sans-serif;
+            background-color: black;
+        } */
+        body {
+    background-image: url(bg8.avif); /* Provide the correct URL to the image */
+    background-position: center; /* Center the background image */
+    background-size: 100% 100%; /* Make the background image cover the entire body */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    width: 100%; /* Set the body width to 100% */
+    color: white; /* Text color for the body */
+    font-family: 'REM', sans-serif; /* Font family for the body text */
+    background-color: black; /* Fallback background color in case the image is unavailable */
+}
+@media print {
+  body {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            padding: 4rem;
+            /* justify-content: space-around; */
+            /* flex-direction: r; */
+            /* justify-content: center; */
+            /* align-items: center; */
+        }
+
+        .header {
+            display: flex;
+            flex-direction: row;
+
+            justify-content: space-around;
+
+            padding: 2rem 1rem;
+        }
+
+        .images {
+
+            padding-right: 5rem;
+            padding-left: 4rem;
+        }
+
+        .img {
+            width: 290px;
+            height: 290px;
+            border: 12px solid #c7ce1c;
+            border-radius: 50%;
+            float: left;
+        }
+
+        .name-content {
+            padding: 2rem;
+            padding-left: 2rem;
+        }
+
+        .name-content h1 {
+            color: #c7ce1c;
+            font-size: 4rem;
+            text-transform: uppercase;
+        }
+
+        .name-content h4 {
+            font-size: 1.5rem;
+            color: rgb(156, 153, 153);
+            text-transform: uppercase;
+            letter-spacing: 0.5rem;
+        }
+
+        .main-profile {
+            display: flex;
+            flex-direction: row;
+            padding: 2rem 2rem;
+            /* justify-content: initial; */
+            /* padding-left: 5rem; */
+
+        }
+
+        .left-sider {
+            max-width: 80%;
+            padding-right: 2rem;
+        }
+
+        .profile,
+        .contact,
+        .experience,
+        .eduaction {
+            padding-left: 5rem;
+            margin-top: 2rem;
+        }
+
+        .experience h1 {
+
+            color: #c7ce1c;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+            /* margin-bottom: 2rem; */
+            padding-bottom: 1rem;
+            font-size: 1.4rem;
+
+        }
+
+        .profile h1,
+        .contact h1,
+        .eduaction h1 {
+            color: #c7ce1c;
+
+            font-size: 1.4rem;
+            padding-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+        }
+        .profile1{
+            margin-left: 2rem;
+        }
+.heading{
+    color: #c7ce1c;
+
+            font-size: 1rem;
+            padding-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2rem;
+}
+        .right-sider {
+            max-width: 50%;
+            /* margin-top: 2rem; */
+            padding-left: 2rem;
+
+        }
+        img.first-job-title {
+    width: 200px;
+    height: 173px;
+    border-radius: 20px;
+    margin-left: 0.2rem;
+    margin-top: 0.3rem;
+}
+.institute{
+    margin-left: 2rem;
+}
+.contact h3{
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+    text-transform: uppercase;
+}
+.title{
+    margin-top: 2rem;
+}
+/* .first-job-title{
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+} */
+        @media (max-width:745px) {
+
+            .profile,
+            .contact,
+            .experience,
+            .eduaction {
+                padding-left: 0;
+                margin-top: 1rem;
+            }
+
+            .name-content h1 {
+                font-size: 2.5rem;
+
+                padding-top: 0.5rem;
+            }
+
+            .name-content h4 {
+                font-size: 1rem;
+            }
+
+            .name-content {
+                padding-left: 0;
+                padding-right: 5rem;
+                /* padding: 0; */
+            }
+
+            .institution     {
+                padding-left: 1rem;
+            }
+
+            .images {
+
+                padding-right: 2rem;
+                padding-left: 2rem;
+            }
+            .img{
+                width: 200px;
+            height: 200px;
+            border: 12px solid #c7ce1c;
+            border-radius: 50%;
+            float: left;
+            }
+            img.first-job-title {
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+    margin-left: 0.2rem;
+    margin-top: 0.3rem;
+}
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <div class="images">
+                <img src="man.jpg" alt="" class="img">
+            </div>
+            <div class="name-content">
+                <h1>Alexander aronowitz</h1>
+                <h4>freenancer, designer</h4>
+            </div>
+        </div>
+        <div class="profile1">
+
+            <div class="profile">
+                <h1>profile</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis asperiores illo ratione nulla
+                    blanditiis possimus quas cupiditate laborum quibusdam quod voluptas similique, rem quae
+                </p>
+            </div>
+        </div>
+        <div class="main-profile">
+
+            <div class="left-sider">
+                <div class="experience">
+                    <h1>experience</h1>
+
+                    <div class="" style="display: flex;">
+                        <div class="month">
+                            <h5 >2022-2023 </h3>
+                        </div>
+                        <div class="institute">
+
+                            <h3>Lorem ipsum dolor sit amet </h3>
+                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed,
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="eduaction">
+                    <h1>eduaction</h1>
+                    <div class="education-content" style="display: flex;">
+                        <div class="month">
+                            <h5>2022-2023 </h5>
+                        </div>
+                        <div class="institute" >
+
+                            <h3>Lorem ipsum dolor sit amet </h3>
+                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed,
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="education-content" style="display: flex;margin-top: 2rem;">
+                        <div class="month">
+                            <h5>2022-2023</h5>
+                        </div>
+                        <div class="institute">
+
+                            <h3>Lorem ipsum dolor </h3>
+                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed,
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact" >
+                    <h1>work</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam temporibus quia quidem architecto aut
+                        eos blanditiis veritatis. Quasi optio dolor saepe dolorem earum, iure cum adipisci eum ut tenetur
+                        voluptate nemo sequi magni. Quae.</p>
+                      
+                    <h2 class="heading title">title : </h2>
+                    <img src="man.jpg" class="first-job-title">
+                    <h2 class="heading title">title : </h2>
+                    <img src="man2.webp" class="first-job-title">
+                    <img src="man2.webp" class="first-job-title">
+        
+                    <img src="man2.webp" class="first-job-title">
+                    <img src="man2.webp" class="first-job-title">
+                    <img src="man2.webp" class="first-job-title">
+                    <img src="man2.webp" class="first-job-title">
+                    <img src="man2.webp" class="first-job-title">
+                    <div class="title-job">
+        
+                        <!-- <h2 class="heading">title :</h2> -->
+                        <h2 class="text-content heading title   ">Lorem ipsum dolor sit amet.</h2>
+                    </div>
+                    <div class="title-job1">
+        
+                        <!-- <h2 class="heading">category :</h2> -->
+                        <p class="text-content " style="font-size: 1rem; ">Lorem ipsum dolor sit amet.</p>
+        
+                    </div>
+                    <div class="title-job1">
+        
+                        <!-- <h2 class="heading">descreption:</h2> -->
+                        <p class="text-content " style="margin-top: 1rem;margin-bottom: 1rem;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, velit placeat!
+                            Ratione rem excepturi, consectetur saepe veritatis odit consequatur?.</p>
+                    </div>
+        
+                    <img src="man2.webp" class="first-job-title">
+                </div>
+            </div>
+            <div class="right-sider">
+                <div class="contact">
+                    
+                    <h1>personal details</h1>
+                    <h3>contact</h3>
+                    <p>+123 456 789</p>
+                    <h3>mail</h3>
+                    <p>info@gmail.com</p>
+                    <h3>date of birth</h3>
+
+                    <p>3 aug 1997</p>
+                    <h3>address</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam at excepturi porro ea quaerat
+                        eaque facilis unde. Ab.</p>
+                </div>
+                <div class="contact">
+                </div>
+               
+               
+               
+                <div class="contact">
+                    <h1>residency</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ab expedita itaque veritatis,
+                        consequuntur modi ipsum porro ut.</p>
+                </div>
+           
+
+    </div>
+    </div>
+    
+    </div>
+</body>
+
+</html>
+
+
+
