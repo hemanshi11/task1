@@ -13,10 +13,16 @@ body {
 .header {
     background-image: url(Background\ Image.png);
     background-position: center;
+    /* background-color: blue; */
     background-size: cover;
     padding-bottom: 1rem;
+    width: 100%;
+    /* max-width: 1500px; */
     padding-top: 1rem;
 
+}
+.carousel{
+    display: flex;
 }
 
 .info {
@@ -24,11 +30,8 @@ body {
     font-weight: 400;
     line-height: 1rem;
 }
-/* .bg-light.z-1.mt-5.p-2 {
-    position: absolute;
-    top: 0;
-    left: -3rem;
-} */
+
+
 .navigation {
     font-size: 1.3rem;
     text-transform: uppercase;
@@ -37,23 +40,66 @@ body {
     justify-content: center;
     margin-top: 1.3rem;
 }
-
+.carousel {
+    display: flex;
+    overflow: hidden; /* Add this line to hide overflow */
+    position: relative; /* Add this line for absolute positioning of images */
+  }
+  
+  .carousel-item {
+    flex: 0 0 100%; /* Add this line to make images take full width */
+    opacity: 0; /* Add this line to hide all images initially */
+    transition: opacity 0.3s ease-in-out; /* Add this line for smooth fading */
+    position: absolute; /* Add this line for absolute positioning */
+    top: 0; /* Add this line */
+    left: 0; /* Add this line */
+  }
+  
+  /* Show only the selected image */
+  .carousel-item.active {
+    opacity: 1; /* Add this line to make the selected image visible */
+  }
+  
+  /* Style the carousel controls */
+  .carousel-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .control-button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+  }
 .navigation1 {
 
 
 
     width: 12rem;
     height: 6rem;
-
+    /* border-radius: 2rem; */
+    border-radius: 5px;
     background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.10);
 
 }
-.second-nav{
+
+.second-nav {
     height: 4rem;
+}
+
+.fetures{
+position: relative;
+}
+.app{
+    position: absolute;
+    
 }
 
 .logo {
@@ -71,20 +117,66 @@ body {
 
 
 }
+.img
+
 .responsive-nav {
-    display: flex; flex-direction: row; justify-content: space-evenly;width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
 }
+
 #btn {
     margin-top: -2rem;
 }
+/* Add this CSS for the relative and absolute positioning */
+.header-content {
+    position: relative;
+  }
+  
+  .box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px; 
+    height: 80px;
+   
+    /* z-index: 1;  */
+  }
+  
+  
+  @media (max-width: 767px) {
+    .header-content {
+      position: static; 
+    }
+    
+    .box {
+      position: relative; /* Remove absolute positioning on small screens */
+      width: 100%; /* Make the box take the full width on small screens */
+      height: auto; /* Reset height to automatic for responsive behavior */
+    }
+  }
+  
+
+.header-contemt {
+    position: relative;
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .box {
-    position: relative;
-    width: 570px;
-    height: 535px;
     border: 18px solid #7572FF;
+    position: absolute;
+    width: 29rem;
+    height: 29rem;
+    /* border: 18px solid #7572FF; */
 }
-#button{
+
+#button {
     display: none;
 }
 
@@ -92,18 +184,26 @@ body {
 
     .navigation2 {
 
+        /* border-radius: 12px; */
         width: 12rem;
         height: 6rem;
+        border-radius: 5px;
 
         background-color: white;
         display: flex;
         justify-content: center;
         align-items: center;
-    
+        box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.10);
+
 
 
     }
-    .responsive-nav{
+
+    #btn {
+        margin-top: -2rem !important;
+    }
+
+    .responsive-nav {
         display: flex;
         flex-direction: column;
 
@@ -114,29 +214,35 @@ body {
         display: none;
     }
 
-    
 
-    #button{
+
+    #button {
         display: flex;
+        margin-top: -1rem !important;
     }
 
 }
+
 @media (max-width:786px) {
 
-.button2{
-    display: none   ;
-}
-    .second-nav{
+    .button2 {
+        display: none;
+    }
+
+    .second-nav {
         margin-top: 2rem;
     }
-    .nav1{
+
+    .nav1 {
         background-color: white;
     }
+
     .button {
         display: flex;
     }
 
 }
+
 @media (max-width:425px) {
     .navigation2 {
 
@@ -147,15 +253,17 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        
+
 
 
     }
-    .img{
-        width: 4rem!important;
+
+    .img {
+        width: 4rem !important;
     }
-   
+
 }
+
 @media (max-width:400px) {
     .navigation2 {
 
@@ -166,24 +274,32 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-       
+
         position: absolute;
         top: -3rem;
         left: 3rem;
-/* display: none; */
+        /* display{
+            : none; */
 
     }
-    
-    
-    
+
+
+
 }
+
 @media (max-width:325px) {
-  
-   .second-nav{
-    height: 5rem;
-}
+
+    .second-nav {
+        height: 5rem;
+    }
 
 
 }
+.bg-white{
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.10);
+    border-radius: 10px;
+}
+
+
 
 
