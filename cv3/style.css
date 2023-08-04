@@ -10,10 +10,10 @@
 body {
     background-color: #292929;
     color: white;
-    /* background-image: url(images.jpeg);
+    background-image: url(images.jpeg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover; */
+    background-size: cover;
     font-family: 'DM Sans', sans-serif;
 }
 

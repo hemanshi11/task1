@@ -9,6 +9,14 @@
 body {
     font-family: 'Josefin Sans', sans-serif;
 }
+.box{
+    border: 15px solid #7572FF;
+}
+.card{
+    position: relative;
+    right: 4rem;
+    bottom: 1.5rem;
+}
 
 .header {
     background-image: url(Background\ Image.png);
@@ -135,11 +143,11 @@ position: relative;
   }
   
   .box {
-    position: absolute;
+    /* position: absolute;
     top: 0;
     right: 0;
-    width: 200px; 
-    height: 80px;
+    width: 35.625rem;
+    height: 33.4375rem; */
    
     /* z-index: 1;  */
   }
@@ -150,11 +158,7 @@ position: relative;
       position: static; 
     }
     
-    .box {
-      position: relative; /* Remove absolute positioning on small screens */
-      width: 100%; /* Make the box take the full width on small screens */
-      height: auto; /* Reset height to automatic for responsive behavior */
-    }
+   
   }
   
 
@@ -168,13 +172,7 @@ position: relative;
     margin-right: auto;
 }
 
-.box {
-    border: 18px solid #7572FF;
-    position: absolute;
-    width: 29rem;
-    height: 29rem;
-    /* border: 18px solid #7572FF; */
-}
+
 
 #button {
     display: none;
@@ -265,7 +263,7 @@ position: relative;
 }
 
 @media (max-width:400px) {
-    .navigation2 {
+    /* .navigation2 {
 
         width: 9rem;
         height: 5rem;
@@ -278,10 +276,9 @@ position: relative;
         position: absolute;
         top: -3rem;
         left: 3rem;
-        /* display{
-            : none; */
+       
 
-    }
+    } */
 
 
 
@@ -303,3 +300,86 @@ position: relative;
 
 
 
+.sticky-box {
+    position: absolute;
+    top: 43%;
+    left: 15%;
+    /* z-index: -1; */
+}
+
+@media (max-width: 767px) {
+    .sticky-box {
+        position: static;
+    }
+}
+
+
+
+.navigation3{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100; /* Ensure the logo is above other elements */
+    width: 12rem;
+    height: 6rem;
+    /* border-radius: 2rem; */
+    border-radius: 5px;
+    background-color: white;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.10);
+}
+
+.navigation3 {
+}
+
+@media (min-width: 400px) {
+    .navigation3 {
+        display: block;
+        width: 12rem;
+        height: 6rem;
+        /* border-radius: 2rem; */
+        border-radius: 5px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.10);
+    }
+    .main-logo{
+
+
+        display: flex;
+    }
+}
+.main-logo{
+
+
+    display: none;
+}
+
+/* .hi-slide{
+    position: relative;
+    width: 754px;
+    height: 292px;
+    margin: 115px auto 0;
+}
+.hi-slide .hi-prev,
+.hi-slide .hi-next{
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    margin-top: -20px;
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    transition: all 0.7s;
+    font-size: 20px;
+    font-weight: bold;
+} */
