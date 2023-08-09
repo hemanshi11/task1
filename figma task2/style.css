@@ -402,32 +402,7 @@ body {
     display: none;
 }
 
-/* .hi-slide{
-    position: relative;
-    width: 754px;
-    height: 292px;
-    margin: 115px auto 0;
-}
-.hi-slide .hi-prev,
-.hi-slide .hi-next{
-    position: absolute;
-    top: 50%;
-    width: 40px;
-    margin-top: -20px;
-    border-radius: 50px;
-    line-height: 40px;
-    text-align: center;
-    cursor: pointer;
-    background-color: black;
-    color: white;
-    transition: all 0.7s;
-    font-size: 20px;
-    font-weight: bold;
-} */
 
-/* Define the z-index for elements with class 'card' inside class 'box' */
-/* Initial styles for box and card */
-/* Initial styles for box and card */
 .box .card {
     z-index: 1;
 }
