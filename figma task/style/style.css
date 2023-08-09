@@ -392,12 +392,7 @@ img.text-header {
 .man{
     position: relative;
 }
-.b-1{
-    /* width: 12rem; */
 
-    /* transform: rotate(-10deg); */
-
-}
 .card1,.card2{
     z-index: -1;
     border-radius: 12px;
