@@ -376,8 +376,6 @@ body {
     box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.10);
 }
 
-.navigation3 {}
-
 @media (min-width: 400px) {
     .navigation3 {
         display: block;
