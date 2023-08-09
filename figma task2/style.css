@@ -428,29 +428,37 @@ body {
     }
 }
 
-
 .card-carousel {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 100%; /* Set maximum width */
-    overflow: hidden; /* Hide overflow if necessary */
-    height: 100vh; /* Set container height */
-  }
+    max-width: 100%;
+    /* Set maximum width */
+    overflow: hidden;
+    /* Hide overflow if necessary */
+    height: 100vh;
+    /* Set container height */
+}
 
-  .cards-container {
+.cards-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap; /* Allow wrapping if necessary */
-    width: 100%; /* Adjust width as needed */
-  }
+    flex-wrap: wrap;
+    /* Allow wrapping if necessary */
+    width: 100%;
+    /* Adjust width as needed */
+}
 
-  .card {
-    width: 250px; /* Set your fixed width */
-    height: 350px; /* Set your fixed height */
-    margin: 5px; /* Adjust margin as needed */
-    padding: 10px; /* Adjust padding as needed */
+.card {
+    width: 250px;
+    /* Set your fixed width */
+    height: 350px;
+    /* Set your fixed height */
+    margin: 5px;
+    /* Adjust margin as needed */
+    padding: 10px;
+    /* Adjust padding as needed */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -459,29 +467,30 @@ body {
     border-radius: 1em;
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
     transform-style: preserve-3d;
-  }
+}
 
-  /* Add 3D card colors */
-  .card.card-1 {
+/* Add 3D card colors */
+.card.card-1 {
     background-color: #FF5733;
-  }
+}
 
-  .card.card-2 {
+.card.card-2 {
     background-color: #C70039;
-  }
+}
 
-  .card.card-3 {
+.card.card-3 {
     background-color: #900C3F;
-  }
+}
 
-  .card.card-4 {
+.card.card-4 {
     background-color: #581845;
-  }
+}
 
-  .card.card-5 {
+.card.card-5 {
     background-color: #3D9970;
-  }
-  #slider {
+}
+
+#slider {
     position: relative;
     width: 50%;
     height: 32vw;
@@ -489,11 +498,12 @@ body {
     perspective: 1400px;
     transform-style: preserve-3d;
     display: flex;
-    gap: 20px; /* Adjust the gap value as needed */
-  }
-  
-  
-  input[type=radio] {
+    gap: 20px;
+    /* Adjust the gap value as needed */
+}
+
+
+input[type=radio] {
     position: relative;
     top: 108%;
     left: 50%;
@@ -503,12 +513,15 @@ body {
     opacity: 0.4;
     transform: translateX(-83px);
     cursor: pointer;
-  }
-  #slider label,
-#slider label img {
-  /* ... other properties ... */
-  height: 100%; /* Set the height to 100% */
 }
+
+#slider label,
+#slider label img {
+    /* ... other properties ... */
+    height: 100%;
+    /* Set the height to 100% */
+}
+
 #slider label {
     position: absolute;
     width: 100%;
@@ -518,23 +531,21 @@ body {
     margin: 2rem;
     cursor: pointer;
     transition: transform 400ms ease;
-    padding: 24rem; /* Add padding between images */
-  }
-  
-  
-  input[type=radio]:nth-child(5) {
+    padding: 24rem;
+    /* Add padding between images */
+}
+
+
+input[type=radio]:nth-child(5) {
     margin-right: 0px;
-  }
-  
-  input[type=radio]:checked {
+}
+
+input[type=radio]:checked {
     opacity: 1;
-  }
-  
-  
-  
-  
-  #slider label,
-  #slider label img {
+}
+
+#slider label,
+#slider label img {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -549,61 +560,57 @@ body {
     align-items: center;
     justify-content: center;
     transition: transform 400ms ease;
-  }
-  
-  
-  
-  /* Slider Functionality */
-  
-  /* Active Slide */
-  #s1:checked ~ #slide1,
-   #s2:checked ~ #slide2,
-    #s3:checked ~ #slide3,
-     #s4:checked ~ #slide4,
-      #s5:checked ~ #slide5 {
+}
+
+/* Slider Functionality */
+
+/* Active Slide */
+#s1:checked~#slide1,
+#s2:checked~#slide2,
+#s3:checked~#slide3,
+#s4:checked~#slide4,
+#s5:checked~#slide5 {
     /* box-shadow: 0 13px 26px rgba(0,0,0, 0.3), 0 12px 6px rgba(0,0,0, 0.2); */
     transform: translate3d(0%, 0, 0px);
-  }
-  
-  /* Next Slide */
-  #s1:checked ~ #slide2,
-   #s2:checked ~ #slide3,
-    #s3:checked ~ #slide4,
-     #s4:checked ~ #slide5,
-      #s5:checked ~ #slide1 {
+}
+
+/* Next Slide */
+#s1:checked~#slide2,
+#s2:checked~#slide3,
+#s3:checked~#slide4,
+#s4:checked~#slide5,
+#s5:checked~#slide1 {
     /* box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2); */
     transform: translate3d(20%, 0, -100px);
-  }
-  
-  
-  /* Next to Next Slide */
-  #s1:checked ~ #slide3,
-   #s2:checked ~ #slide4,
-    #s3:checked ~ #slide5,
-     #s4:checked ~ #slide1,
-      #s5:checked ~ #slide2 {
+}
+
+
+/* Next to Next Slide */
+#s1:checked~#slide3,
+#s2:checked~#slide4,
+#s3:checked~#slide5,
+#s4:checked~#slide1,
+#s5:checked~#slide2 {
     /* box-shadow: 0 1px 4px rgba(0,0,0, 0.4); */
     transform: translate3d(40%, 0, -250px);
-  }
-  
-  /* Previous to Previous Slide */
-  #s1:checked ~ #slide4,
-   #s2:checked ~ #slide5,
-    #s3:checked ~ #slide1,
-     #s4:checked ~ #slide2,
-      #s5:checked ~ #slide3 {
+}
+
+/* Previous to Previous Slide */
+#s1:checked~#slide4,
+#s2:checked~#slide5,
+#s3:checked~#slide1,
+#s4:checked~#slide2,
+#s5:checked~#slide3 {
     /* box-shadow: 0 1px 4px rgba(0,0,0, 0.4); */
     transform: translate3d(-40%, 0, -250px);
-  }
-  
-  /* Previous Slide */
-  #s1:checked ~ #slide5,
-   #s2:checked ~ #slide1,
-    #s3:checked ~ #slide2,
-     #s4:checked ~ #slide3,
-      #s5:checked ~ #slide4 {
+}
+
+/* Previous Slide */
+#s1:checked~#slide5,
+#s2:checked~#slide1,
+#s3:checked~#slide2,
+#s4:checked~#slide3,
+#s5:checked~#slide4 {
     /* box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2); */
     transform: translate3d(-20%, 0, -100px);
-  }
-
-  
+}
