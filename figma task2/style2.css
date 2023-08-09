@@ -280,6 +280,17 @@ body {
     }
 
 }
+.hide-logo {
+    width: 12rem;
+    height: 5rem;
+    background-color: white;
+    border-radius: 10px;
+    justify-content: center;
+    padding: 24px 20px;
+    padding-right: 40px;
+
+    display: none;
+}
 
 @media (max-width:405px) {
     .navigation2 {
@@ -538,23 +549,8 @@ input[type=radio]:checked {
 }
 
 
-@media (min-width: 405px) {
-    .hide-logo {
-        display: block;
-    }
-}
 
-.hide-logo {
-    width: 12rem;
-    height: 5rem;
-    background-color: white;
-    border-radius: 10px;
-    justify-content: center;
-    padding: 24px 20px;
-    padding-right: 40px;
 
-    display: none;
-}
 
 .main-img {
     position: relative;
