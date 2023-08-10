@@ -43,6 +43,7 @@ body {
 .border-right {
     border-right: 1px solid rgb(167, 165, 165);
     /* padding-left:rem; */
+    border-right: 1px solid black;
 }
 
 .header {
@@ -81,6 +82,9 @@ body {
     display: flex;
     overflow: hidden;
     position: relative;
+    /* Add this line to hide overflow */
+    position: relative;
+    /* Add this line for absolute positioning of images */
 }
 
 .carousel-item {
@@ -95,8 +99,28 @@ body {
 
 .carousel-item.active {
     opacity: 1;
+    
+    /* Add this line to make images take full width */
+    opacity: 0;
+    /* Add this line to hide all images initially */
+    transition: opacity 0.3s ease-in-out;
+    /* Add this line for smooth fading */
+    position: absolute;
+    /* Add this line for absolute positioning */
+    top: 0;
+    /* Add this line */
+    left: 0;
+    /* Add this line */
+}
+/* } */
+
+/* Show only the selected image */
+.carousel-item.active {
+    opacity: 1;
+    /* Add this line to make the selected image visible */
 }
 
+/* Style the carousel controls */
 .carousel-controls {
     display: flex;
     justify-content: center;
@@ -205,6 +229,7 @@ body {
     .navigation2 {
 
 
+        /* border-radius: 12px; */
         width: 12rem;
         height: 6rem;
         border-radius: 5px;
@@ -278,6 +303,7 @@ body {
         justify-content: center;
         align-items: center;
     }
+
 
 }
 
@@ -556,6 +582,40 @@ input[type=radio]:checked {
     display: none;
 }
 
+    .img {
+        width: 4rem !important;
+    }
+
+/* } */
+
+@media (max-width:400px) {
+    /* .navigation2 {
+
+        width: 9rem;
+        height: 5rem;
+
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        top: -3rem;
+        left: 3rem;
+       
+
+    } */
+
+
+
+}
+
+@media (max-width:325px) {
+
+    .second-nav {
+        height: 5rem;
+    }
+
 .main-img {
     position: relative;
 }
@@ -577,4 +637,243 @@ input[type=radio]:checked {
 }
 
 
+.bg-white {
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.10);
+    border-radius: 10px;
+}
 
+
+
+
+.sticky-box {
+    position: absolute;
+    top: 43%;
+    left: 15%;
+    /* z-index: -1; */
+}
+
+@media (max-width: 767px) {
+    .sticky-box {
+        position: static;
+    }
+
+    .sec-nav {
+        position: relative;
+    }
+
+    ul.navbar-nav.d-flex.flex-fill.justify-content-between.align-items-center {
+        background: white;
+        z-index: 1;
+    }
+
+}
+
+
+
+.navigation3 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    /* Ensure the logo is above other elements */
+    width: 12rem;
+    height: 6rem;
+    /* border-radius: 2rem; */
+    border-radius: 5px;
+    background-color: white;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.10);
+}
+
+
+@media (min-width: 400px) {
+    .navigation3 {
+        display: block;
+        width: 12rem;
+        height: 6rem;
+       
+        border-radius: 5px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.10);
+    }
+
+    .main-logo {
+
+
+        display: flex;
+    }
+}
+
+.main-logo {
+    display: none;
+}
+
+
+.box .card {
+    z-index: 1;
+}
+
+.my-custom-container {
+    position: relative;
+}
+
+/* Media query for screens with a minimum width of 768px */
+@media (min-width: 768px) {
+
+    /* Set z-index to 1 for ul.navbar-nav */
+    ul.navbar-nav {
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Set z-index to 0 for .card-content after 768px */
+    .card-content {
+        position: relative;
+        z-index: 0;
+    }
+}
+
+#slider {
+    position: relative;
+    width: 50%;
+    height: 32vw;
+    margin: 150px auto;
+    perspective: 1400px;
+    transform-style: preserve-3d;
+    display: flex;
+    gap: 20px;
+    /* Adjust the gap value as needed */
+}
+
+
+input[type=radio] {
+    position: relative;
+    top: 108%;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    margin: 0 15px 0 0;
+    opacity: 0.4;
+    transform: translateX(-83px);
+    cursor: pointer;
+}
+
+#slider label,
+#slider label img {
+    /* ... other properties ... */
+    height: 100%;
+    /* Set the height to 100% */
+}
+
+#slider label {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    margin: 2rem;
+    cursor: pointer;
+    transition: transform 400ms ease;
+    padding: 24rem;
+    /* Add padding between images */
+}
+
+
+input[type=radio]:nth-child(5) {
+    margin-right: 0px;
+}
+
+input[type=radio]:checked {
+    opacity: 1;
+}
+
+
+
+
+#slider label,
+#slider label img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    color: white;
+    font-size: 70px;
+    font-weight: bold;
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 400ms ease;
+}
+
+
+
+/* Slider Functionality */
+
+/* Active Slide */
+#s1:checked~#slide1,
+#s2:checked~#slide2,
+#s3:checked~#slide3,
+#s4:checked~#slide4,
+#s5:checked~#slide5 {
+    /* box-shadow: 0 13px 26px rgba(0,0,0, 0.3), 0 12px 6px rgba(0,0,0, 0.2); */
+    transform: translate3d(0%, 0, 0px);
+}
+
+/* Next Slide */
+#s1:checked~#slide2,
+#s2:checked~#slide3,
+#s3:checked~#slide4,
+#s4:checked~#slide5,
+#s5:checked~#slide1 {
+    /* box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2); */
+    transform: translate3d(20%, 0, -100px);
+}
+
+
+/* Next to Next Slide */
+#s1:checked~#slide3,
+#s2:checked~#slide4,
+#s3:checked~#slide5,
+#s4:checked~#slide1,
+#s5:checked~#slide2 {
+    /* box-shadow: 0 1px 4px rgba(0,0,0, 0.4); */
+    transform: translate3d(40%, 0, -250px);
+}
+
+/* Previous to Previous Slide */
+#s1:checked~#slide4,
+#s2:checked~#slide5,
+#s3:checked~#slide1,
+#s4:checked~#slide2,
+#s5:checked~#slide3 {
+    /* box-shadow: 0 1px 4px rgba(0,0,0, 0.4); */
+    transform: translate3d(-40%, 0, -250px);
+}
+
+/* Previous Slide */
+#s1:checked~#slide5,
+#s2:checked~#slide1,
+#s3:checked~#slide2,
+#s4:checked~#slide3,
+#s5:checked~#slide4 {
+    /* box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2); */
+    transform: translate3d(-20%, 0, -100px);
+
+}
+
+
+
+
+
+
+}
