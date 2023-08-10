@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&family=Inter:wght@300;400;500;600;700;800&family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400&family=Kanit:ital,wght@0,300;1,400&family=Lumanosimo&family=Mukta&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,500&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;1,600&family=REM:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* font-family: 'Baloo 2'; */
+    font-family: Lato;
+    font-weight: 600;
+}
+
+.nav1 {
+    /* border-bottom: 1px solid orange; */
+    color: orange;
+    padding-bottom: 0;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.nav-link {
+    padding-left: 10px;
+    cursor: pointer;
+}
+.heading h2{
+    color: #F54C1E;
+    font-family: Poppins;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 1.25rem */
+    letter-spacing: 0.2625rem;
+}
+.img {
+    background: linear-gradient(to top, #FD5C30 0%, rgba(0, 0, 0, 0.00) 100%);
+    display: inline-block; /* Ensure the gradient is applied to the entire image */
+}
+.img-container {
+    position: relative; /* Set the container to a relative position */
+    display: inline-block;
+}
+
+.img {
+    /* width: 100%; */
+    height: auto;
+}
+
+.img-content {
+    position: absolute; /* Position the content absolutely within the container */
+    bottom: 0; /* Position the content at the bottom */
+    left: 0; /* Align the content to the left */
+    right: 0; /* Align the content to the right */
+    padding: 10px; /* Add some padding for better readability */
+    background-color:transparent; 
+    color: white; /* Set the text color */
+}
+
+.project{
+    color: #031333;
+font-family: Poppins;
+font-size: 2.5rem;
+font-style: normal;
+font-weight: 600;
+line-height: 140%; 
+}
+/* Set the size of the image */
+.img img {
+    width: 100%;
+    height: auto;
+}
+
+.heading h1{
+    font-size: 2.375rem;
+font-style: normal;
+font-weight: 600;
+}
+.about h4 , .header h4{
+    color: #F54C1E;
+font-family: Poppins;
+font-size: 1.25rem;
+font-style: normal;
+font-weight: 500;
+line-height: 100%; /* 1.25rem */
+letter-spacing: 0.2625rem;
+}
+/* .about{
+    margin-left: 2rem;
+} */
+.about h3{
+    color: #031333;
+font-family: Poppins;
+font-size: 3.1rem;
+font-style: normal;
+font-weight: 600;
+line-height: 140%; 
+}
+.text-muted{
+    color: #818181;
+font-family: Poppins;
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: 160%;
+}
+.btn {
+    /* margin: auto; */
+    /* border-radius: 25px; */
+    /* padding: 2px 35px; */
+    margin-right: 3rem;
+    cursor: pointer;
+    color: white;
+    justify-content: center;
+align-items: center;
+gap: 0.625rem;
+    background-color: orangered;
+    /* border: none; */
+    /* background-color: rgb(186 174 237 / 43%); */
+    /* color: black; */
+
+}
+
+
+
+.nav {
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1.3px;
+    color: black;
+}
+
+.header {
+    background-color: #031333;
+    max-width: 100%;
+    max-height: auto;
+    color: white;
+}
+
+.navbar-brand {
+    margin-left: 10rem;
+}
+
+.main-heading p {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 12rem;
+    font-style: normal;
+    word-wrap: wrap;
+    font-weight: 700;
+    line-height: 3.5rem;
+    max-width: 400px;
+}
+
+.content {
+    font-family: Inter;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    max-width: 350px;
+}
+
+.main-heading span {
+    color: orangered;
+}
+
+@media (max-width:991px) {
+    .btns {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+
+    .btn {
+        /* margin: auto; */
+        /* border-radius: 25px; */
+        padding: 2px 30px;
+        margin-right: 3rem;
+        margin-top: 3rem;
+        cursor: pointer;
+        text-align: center;
+        /* border: none; */
+        /* background-color: rgb(186 174 237 / 43%); */
+        /* color: black; */
+    }
+
+    .button {
+        margin-top: 3rem;
+        padding: 2px 2px;
+    }
+}
