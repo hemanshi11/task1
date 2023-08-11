@@ -9,6 +9,9 @@
 body {
     font-family: 'Josefin Sans', sans-serif;
 }
+.hidden {
+    display: none;
+}
 
 .box {
     border: 15px solid #7572FF;
@@ -17,7 +20,9 @@ body {
 .blogs {
     box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.10);
 }
-
+.cross{
+    display: none;
+}
 /* Custom CSS to style the input group with button inside */
 .input-group {
     position: relative;
@@ -246,7 +251,13 @@ body {
         display: flex;
         margin-top: -1rem !important;
     }
-
+    .cross{
+        display: flex;
+        margin-left: 30rem;
+    }
+}
+.hidden {
+    display: none;
 }
 
 
