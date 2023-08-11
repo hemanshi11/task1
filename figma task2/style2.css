@@ -57,13 +57,16 @@ body {
     padding-top: 1rem;
 
 }
+.cross{
+    display: none;
+}
 
 .carousel {
     display: flex;
 }
 
 .info {
-    font-size: 1rem;
+    font-size: 1rem !important;
     font-weight: 400;
     line-height: 1rem;
 }
@@ -242,7 +245,12 @@ body {
 
     #button {
         display: flex;
-        margin-top: -1rem !important;
+        margin-top: -2rem !important;
+    }
+    .cross{
+        display: flex;
+        margin-left: auto;
+        margin-right: 1rem;
     }
 
 }
@@ -306,7 +314,9 @@ body {
     .container-fluid.sec-nav {
         margin-top: 1rem;
     }
-
+    .task{
+        margin-top: -6rem !important;
+    }
 }
 
 @media (max-width:325px) {
@@ -545,6 +555,9 @@ input[type=radio]:checked {
         width: 10rem;
         margin-left: 4.5rem !important;
         margin-bottom: 3rem;
+    }
+    .task{
+        display: none;
     }
 
 }
