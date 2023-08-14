@@ -60,7 +60,15 @@ body {
 .cross{
     display: none;
 }
-
+.link{
+    font-family: Josefin Sans;
+font-size: 1.25rem;
+font-style: normal;
+font-weight: 600;
+line-height: 130%; /* 1.625rem */
+text-decoration-line: underline;
+text-transform: uppercase;
+}
 .carousel {
     display: flex;
 }
@@ -73,12 +81,12 @@ body {
 
 
 .navigation {
-    font-size: 1.3rem;
+    font-size: 1.3rem !important;
     text-transform: uppercase;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 1.3rem;
+    margin-top: 1.3rem !important;
 }
 
 .carousel {
