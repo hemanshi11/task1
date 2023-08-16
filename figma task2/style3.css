@@ -250,6 +250,7 @@ line-height: 130%; /* 1.625rem */
         padding-left: 2rem !important;
     }
     
+<<<<<<< HEAD
 } */
 
 @media (max-width: 768px) {
@@ -259,3 +260,7 @@ line-height: 130%; /* 1.625rem */
     }
   }
   
+=======
+}
+
+>>>>>>> 7e59c7a5d90c571efbe74f1a50b7659597612c4a
