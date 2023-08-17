@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="style4.css" />
+  </head>
+
+  <body>
+    <div class="header pb-5">
+      <div class="container">
+        <nav class="navbar ps-2 d-md-flex d-none navbar-expand-lg navbar-light ">
+          <ul class="navbar-nav d-flex flex-row gap-3">
+            <li class="nav-item">
+              <a class="nav-link info active d-flex gap-3 text-light"
+                ><i class="fa-sharp mt-1 fs-5 fa-solid fa-envelope"></i><span
+                  >info@your email.com
+                </span></a
+              >
+            </li>
+            <li class="nav-item gap-2">
+              <a class="nav-link d-flex gap-3 active info text-light"
+                ><i class="fa-solid mt-1 fa-phone"></i>
+                <span>(480) 555-0103 </span></a
+              >
+            </li>
+          </ul>
+          <ul
+            class="navbar-nav gap-2 me-2 ms-auto d-flex flex-row"
+          >
+            <li class="nav-item">
+              <a class="nav-link active text-light">
+                <i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <!-- <a class="nav-link  active text-light">
+                <img src="facbook.png" class="w-25 pe-0" alt=""></a> -->
+               
+            </li>
+            <li class="nav-item">
+              <!-- <a class="nav-link active text-light">
+                <i class="fa-brands fa-instagram"></i
+              >
+            </a> -->
+
+              <a class="nav-link  active text-light">
+              <img src="insta.png" class="w-25 mb-1 pe-0" alt=""></a>
+             
+            </li>
+            <li class="nav-item" style="margin-left: -3rem;" >
+              <a class="nav-link active text-light"
+                ><i class="fa-brands fa-twitter"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-light">
+                <i class="fa-brands fa-youtube"></i
+              ></a>
+            </li>
+          </ul>
+        </nav>
+      <!-- </div> -->
+
+      <!--             
+        <div class="container">
+          <nav class="navbar  navbar-expand-lg navbar-light d-sm-flex d-none">
+              <div class="container first-nav" >
+
+
+                  <ul class="navbar-nav d-flex">
+                      <li class="nav-item">
+                          <a class="nav-link info active d-flex gap-3 text-light "><img src="Group.png"
+                                  alt=""><span>info@your email.com </span></a>
+                      </li>
+                      <li class="nav-item gap-2">
+                          <a class="nav-link d-flex gap-3 active info text-light"><i class="fa-solid fa-phone"></i>
+                              <span>(480) 555-0103 </span></a>
+                      </li>
+
+
+                  </ul>
+                  <ul class="navbar-nav gap-2 " style="display: flex;flex-direction: row;">
+                      <li class="nav-item">
+                          <a class="nav-link active text-light"> <i class="fa-brands fa-facebook-f"></i></a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link active text-light"> <i class="fa-brands fa-instagram"></i></a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link active text-light"><i class="fa-brands fa-twitter"></i></a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link active text-light"> <i class="fa-brands fa-youtube"></i></a>
+                      </li>
+
+                  </ul>
+
+              </div>
+          </nav> -->
+
+      <div class="container">
+        <nav class="navbar navbar-expand-lg  rounded bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand position-absolute" href="#"> </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <button class="btn bg-primary text-light text-uppercase left">
+              download
+            </button>
+
+            <div
+              class="collapse navbar-collapse position-relative"
+              id="navbarSupportedContent"
+            >
+              <ul
+                class="navbar-nav gap-5  me-auto gap-xl-4   gap-lg-3  ms-lg-0 mb-2 mb-lg-0"
+                style="margin-left: -1.1rem !important"
+              >
+                <li class="nav-item cross">
+                  <a
+                    class="nav-link mb-2"
+                    href="#"
+                    style="color: #5956e9; margin-top: 1rem !important"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    id="btn"
+                    aria-label="Toggle "
+                  >
+                    <i class="fas fa-times-circle" id="closeIcon"></i>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link active text-uppercase text-primary link"
+                    aria-current="page"
+                    href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link text-uppercase active text-decoration-none" href="#"
+                    >about</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-uppercase active link text-decoration-none" href="#"
+                    >features</a
+                  >
+                </li>
+              </ul>
+              <div class="d-flex">
+                <ul
+                  class="navbar-nav gap-5 me-auto gap-xl-4  gap-lg-2  align-items-lg-center  ms-lg-0 mb-2 mb-lg-0 "
+                >
+                  <li class="nav-item">
+                    <a
+                      class="nav-link screen  ps-2 text-uppercase active  text-decoration-none link"
+                      aria-current="page"
+                      href="#"
+                      >screenshot</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link text-uppercase  ps-2 active link text-decoration-none"
+                      href="#"
+                      >blog</a
+                    >
+                  </li>
+
+                  <li>
+                    <button
+                      class="btn text-light text-uppercase bg-primary right"
+                    >
+                      download
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="navigation">
+          <img src="Logo.png" alt="" class="icon" />
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
+
+
+
+
