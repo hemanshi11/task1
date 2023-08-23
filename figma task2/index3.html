@@ -12,6 +12,8 @@
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
   <link rel="stylesheet" href="style3.css" />
 </head>
 
@@ -145,7 +147,7 @@
 
             <div class="col-md-5 mx-auto mt-5 col-sm-12 d-flex align-items-center justify-content-center text-center">
               <div class="d-flex align-items-end justify-content-end" style="height: 100%;">
-                <img src="Free Ui View Mobile App Mockup 1.png" class="img-fluid" alt="">
+                <img src="Free Ui View Mobile App Mockup 1.png" class="img-fluid w-100 h-100" alt="" style="margin-left: 5rem !important;">
               </div>
             </div>
 
@@ -312,6 +314,52 @@
   </div>
 </div> -->
 
+<div class="slider-container mb-5" style="height: 100vh;">
+  <span class="arrow-left">
+    <i class="fa-solid fa-angle-right  text-light "></i>
+
+  </span>
+  <span class="arrow-right">
+    <i class="fa-solid fa-angle-right  text-light"></i>
+  </span>
+  <div class="slider" id="slider">
+    <div class="slide prev-2">
+      <img src="000.png" alt="" >
+    </div>
+    <div class="slide prev-1">
+      <img src="001.png" alt="">
+    </div>
+    <div class="slide active">
+      <img src="001.png" alt="" >
+    </div>
+    <div class="slide next-1">
+      <img src="001.png" alt="">
+    </div>
+    <div class="slide next-2">
+      <img src="001.png" alt="">
+    </div>
+    <!-- <div class="slide">
+      6
+    </div>
+    <div class="slide">
+      7
+    </div>
+    <div class="slide">
+      8
+    </div> -->
+  </div>
+  <div class="dots">
+    <span></span>
+    <span></span>
+    <span class="active"></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+</div>
   <div class="container mt-5">
     <div class="row p-2">
       <div class="col-md-6">
@@ -784,6 +832,53 @@
     </div>
   </div>
 
+  
+  <div class="carousel-container">   
+    <div class="carousel-main" id="carousel">
+      <div class="carousel-feature bg-1">
+        <a href="#"><img class="carousel-image" alt="featureCarousel-1" width="320" height="200" src=""></a>
+      </div>
+  
+      <div class="carousel-feature bg-2">
+        <a href="#"><img class="carousel-image" alt="featureCarousel-2" width="320" height="200" src=""></a>
+      </div>
+  
+      <div class="carousel-feature bg-3">
+        <a href="#"><img class="carousel-image" alt="featureCarousel-3" width="320" height="200" src=""></a>
+      </div>
+    </div>
+    <p>
+      <a href="#" id="carousel-left"><i class="fa fa-chevron-left" aria-hidden="true"></i>
+  </a>
+      <a href="#" id="carousel-right"><i class="fa fa-chevron-right" aria-hidden="true"></i>
+  </a>
+    </p>
+  </div>
+
+
+  <section id="slider">
+    <input type="radio" name="slider" id="s1" checked>
+    <input type="radio" name="slider" id="s2">
+    <input type="radio" name="slider" id="s3">
+    <input type="radio" name="slider" id="s4">
+    <input type="radio" name="slider" id="s5">
+  
+    <label for="s1" id="slide1"><img src="Free Ui View Mobile App Mockup 1.png" alt="" class="h-75 w-75"></label>
+    <label for="s2" id="slide2"><img src="App.png" alt=""   class="h-75 w-75"></label>
+    <label for="s3" id="slide3"><img src="Gravity-Scene-iPhone-12-Moc.png" alt=""   class="h-75 w-75"></label>
+    <label for="s4" id="slide4"><img src="Free Ui View Mobile App Mockup 1.png" alt=""  class="h-75 w-75"></label>
+    <label for="s5" id="slide5"><img src="Free Ui View Mobile App Mockup 1.png" alt=""  class="h-75 w-75"></label>
+  </section>
+
+  
+  
+
+
+
+  
+  <script>
+    
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>

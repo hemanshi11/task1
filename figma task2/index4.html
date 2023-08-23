@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="style4.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  
+<div class="profile">
+  <div class="carousel">
+    <a class="carousel-item" href="#">
+      <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    </a>
+    <a class="carousel-item" href="#two!"><div class="card" style="width: 18rem;">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div></a>
+    <a class="carousel-item" >
+      <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </a>
+    <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/250/250/nature/4"></a>
+    <a class="carousel-item" href="#five!"><img src="https://lorempixel.com/250/250/nature/5"></a>
+  </div>
+</div>
+
+ 
+<div class="container-fluid" style="background-color: blue;  color: white;" >
+
+<div class="container" >
+<div class="row d-flex justify-content-center">
+  <div class="col-md-4">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, earum? Perspiciatis saepe assumenda, harum, incidunt dicta explicabo quaerat, ipsa eius praesentium adipisci modi!
+    <!-- <img src="App.png"  alt=""> -->
+    
+  </div>
+  <div class="col-md-3">
+    <img src="App.png"    alt="">
+  </div>
+  <div class="col">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, earum? Perspiciatis saepe assumenda, harum, incidunt dicta explicabo quaerat, ipsa eius praesentium adipisci modi!
+    <!-- <img src="App.png"  alt=""> -->
+  </div>
+</div>
+<div class="col">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nihil officiis eaque!
+</div>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+
+<div class="slider-container">
+  <span class="arrow-left">
+    <i class="fa-solid fa-angle-right left text-light"></i>
+
+  </span>
+  <span class="arrow-right">
+    <i class="fa-solid fa-angle-right  text-light"></i>
+  </span>
+  <div class="slider" id="slider">
+    <div class="slide prev-2">
+      <img src="000.png" alt="" >
+    </div>
+    <div class="slide prev-1">
+      <img src="001.png" alt="">
+    </div>
+    <div class="slide active">
+      <img src="001.png" alt="" >
+    </div>
+    <div class="slide next-1">
+      <img src="001.png" alt="">
+    </div>
+    <div class="slide next-2">
+      <img src="001.png" alt="">
+    </div>
+    <!-- <div class="slide">
+      6
+    </div>
+    <div class="slide">
+      7
+    </div>
+    <div class="slide">
+      8
+    </div> -->
+  </div>
+  <div class="dots">
+    <span></span>
+    <span></span>
+    <span class="active"></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+</div>
+
+<script>
+  var Slider = (function() {
+    var initSlider = function() {
+        var dir = $("html").attr("dir");
+        var swipeHandler = new Hammer(document.getElementById("slider"));
+        swipeHandler.on('swipeleft', function(e) {
+            if (dir == "rtl")
+                $(".arrow-left").trigger("click");
+            else
+                $(".arrow-right").trigger("click");
+        });
+
+        swipeHandler.on('swiperight', function(e) {
+            if (dir == "rtl")
+                $(".arrow-right").trigger("click");
+            else
+                $(".arrow-left").trigger("click");
+        });
+
+        $(".arrow-right , .arrow-left").click(function(event) {
+            var nextActiveSlide = $(".slide.active").next();
+
+            if ($(this).hasClass("arrow-left"))
+                nextActiveSlide = $(".slide.active").prev();
+
+            if (nextActiveSlide.length > 0) {
+                var nextActiveIndex = nextActiveSlide.index();
+                $(".dots span").removeClass("active");
+                $($(".dots").children()[nextActiveIndex]).addClass("active");
+
+                updateSlides(nextActiveSlide);
+            }
+        });
+
+        $(".dots span").click(function(event) {
+            var slideIndex = $(this).index();
+            var nextActiveSlide = $($(".slider").children()[slideIndex]);
+            $(".dots span").removeClass("active");
+            $(this).addClass("active");
+
+            updateSlides(nextActiveSlide);
+        });
+
+        var updateSlides = function(nextActiveSlide) {
+            var nextActiveSlideIndex = $(nextActiveSlide).index();
+
+            $(".slide").removeClass("prev-1");
+            $(".slide").removeClass("next-1");
+            $(".slide").removeClass("active");
+            $(".slide").removeClass("prev-2");
+            $(".slide").removeClass("next-2");
+
+            nextActiveSlide.addClass("active");
+
+            nextActiveSlide.prev().addClass("prev-1");
+            nextActiveSlide.prev().prev().addClass("prev-2");
+            nextActiveSlide.addClass("active");
+            nextActiveSlide.next().addClass("next-1");
+            nextActiveSlide.next().next().addClass("next-2");
+        }
+
+        var updateToNextSlide = function(nextActiveSlide)
+        {
+            
+        }
+    }
+    return {
+        init: function() {
+            initSlider();
+        }
+    }
+})();
+
+$(function() {
+    Slider.init();
+});
+      
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
