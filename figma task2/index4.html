@@ -1,322 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- <link rel="stylesheet" href="style4.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
-  <link rel="stylesheet" href="style4.css" />
+  <style>
+      
+     * {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 20px;
+  background: #eee;
+  user-select: none;
+}
+
+[type=radio] {
+  display: none;
+}
+
+#slider {
+  height: 65vw;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+#slider label {
+  margin: auto;
+  border-radius: 4px;
+  position: absolute;
+  left: 0; right: 0;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+#s1:checked ~ #slide4, #s2:checked ~ #slide5,
+#s3:checked ~ #slide1, #s4:checked ~ #slide2,
+#s5:checked ~ #slide3 {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+  transform: translate3d(-30%,0,-200px);
+}
+
+#s1:checked ~ #slide5, #s2:checked ~ #slide1,
+#s3:checked ~ #slide2, #s4:checked ~ #slide3,
+#s5:checked ~ #slide4 {
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2);
+  transform: translate3d(-15%,0,-100px);
+}
+
+#s1:checked ~ #slide1, #s2:checked ~ #slide2,
+#s3:checked ~ #slide3, #s4:checked ~ #slide4,
+#s5:checked ~ #slide5 {
+  box-shadow: 0 13px 25px 0 rgba(0,0,0,.3), 0 11px 7px 0 rgba(0,0,0,.19);
+  transform: translate3d(0,0,0);
+}
+
+#s1:checked ~ #slide2, #s2:checked ~ #slide3,
+#s3:checked ~ #slide4, #s4:checked ~ #slide5,
+#s5:checked ~ #slide1 {
+  box-shadow: 0 6px 10px 0 rgba(0,0,0,.3), 0 2px 2px 0 rgba(0,0,0,.2);
+  transform: translate3d(15%,0,-100px);
+}
+
+#s1:checked ~ #slide3, #s2:checked ~ #slide4,
+#s3:checked ~ #slide5, #s4:checked ~ #slide1,
+#s5:checked ~ #slide2 {
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,.37);
+  transform: translate3d(30%,0,-200px);
+}
+
+.mkt-3dSlider { background: #333e48; padding: 72px 0 }
+
+.mkt-3dSlider-title {
+  color: #fff;
+  margin: 0 auto;
+  text-align: center;
+    margin-bottom: 24px;
+}
+
+.mkt-3dSlider-description {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 48px
+}
+
+.card-slider {
+  background: #fff;
+ height : 378px;
+  width: 520px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+ 
+
+
+    /* .slider-container {
+  display: block;
+  height: 270px;
+  width: auto;
+  margin: 0 auto;
+  position: relative;
+  max-width: 1300px;
+  margin-top:20px;
+  .arrow-left {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 9;
+    border-top: 15px solid transparent;
+    border-right: 30px solid #C85054;
+    border-bottom: 15px solid transparent;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  .arrow-right {
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 9;
+    border-top: 15px solid transparent;
+    border-left: 30px solid #C85054;
+    border-bottom: 15px solid transparent;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  .dots {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin: 30px 0;
+    user-select: none;
+    span {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 2px;
+      cursor: pointer;
+      user-select: none;
+      padding: 10px 0;
+      position: relative;
+      &:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background-color: #ccc;
+        opacity: 0.6;
+      }
+      @media (max-width: 768px) {
+        width: 23px;
+        margin-bottom: 15px;
+      }
+      &.active {
+        &:before {
+          background-color: #C85054;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .slider {
+    display: block;
+    width:650px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    line-height: 270px;
+    color: white;
+    @media (max-width: 768px) {
+      height: 450px;
+    }
+    .slide {
+      display: inline-block;
+      width: 80%;
+      height: 270px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate3d(-50%, -50%, 0) scale3d(.4, .4, 1);
+      transition: transform 0.3s ease-in-out 0s, z-index .2s ease-in-out .1s;
+      background-color:#2C2A40;
+      &:nth-child(odd)
+      {
+         background-color:gray;
+      }
+      @media (max-width: 768px) {
+        width: 100%;
+        height: 450px;
+      }
+      &:nth-child(1) {
+        background-color: #505E63;
+      }
+      &:nth-child(2) {
+        background-color: #62698C;
+      }
+      &:nth-child(3) {
+        background-color: #2C2A40;
+      }
+      &:nth-child(4) {
+        background-color: #C85054;
+      }
+      &:nth-child(5) {
+        background-color: #F1BB70;
+      }
+      &.prev-2 {
+        transform: translate3d(-105%, -50%, 0) scale3d(.4, .4, 1);
+        z-index: 1;
+        opacity: 0.5;
+      }
+      &.prev-1 {
+        transform: translate3d(-85%, -50%, 0) scale3d(.6, .6, 1);
+        z-index: 2;
+      }
+      &.next-1 {
+        z-index: 2;
+        transform: translate3d(-15%, -50%, 0) scale3d(.6, .6, 1);
+      }
+      &.next-2 {
+        z-index: 1;
+        transform: translate3d(5%, -50%, 0) scale3d(.4, .4, 1);
+        opacity: 0.5;
+      }
+      &.active {
+        z-index: 3;
+        transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+        box-shadow: 0px 5px 15px 3px rgba(0, 0, 0, 0.3);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+    }
+  }
+} */
+  </style>
+
 </head>
-
 <body>
-  <div class="header pb-5">
-    <div class="container">
-      <nav class="navbar d-md-flex d-none navbar-expand-lg navbar-light ">
-        <ul class="navbar-nav d-flex flex-row gap-3">
-          <li class="nav-item">
-            <a class="nav-link info active d-flex gap-3 text-light"><img src="Group3.png" alt="" /><span>info@your
-                email.com
-              </span></a>
-          </li>
-          <li class="nav-item gap-2">
-            <a class="nav-link d-flex gap-3 active info text-light"><i class="fa-solid fa-phone"></i>
-              <span>(480) 555-0103 </span></a>
-          </li>
-        </ul>
-        <ul class="navbar-nav gap-2 me-2 ms-auto d-flex flex-row">
-          <li class="nav-item">
-            <a class="nav-link active text-light">
-              <i class="fa-brands fa-facebook-f"></i></a>
-            <!-- <a class="nav-link  active text-light">
-                <img src="facbook.png" class="w-25 pe-0" alt=""></a> -->
-
-          </li>
-          <li class="nav-item">
-           
-            <a class="nav-link  active text-light">
-              <img src="insta3.png" class="w-25 pe-0" alt=""></a>
-
-          </li>
-          <li class="nav-item" style="margin-left: -3rem;">
-            <a class="nav-link active text-light"><i class="fa-brands fa-twitter"></i></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active text-light">
-              <i class="fa-brands fa-youtube"></i></a>
-          </li>
-        </ul>
-      </nav>
-      <!-- </div> -->
-
-      <div class="container">
-        <nav class="navbar navbar-expand-lg  rounded bg-body-tertiary">
-          <div class="container-fluid">
-            <a class="navbar-brand position-absolute" href="#"> </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-              aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <button class="btn bg-primary text-light text-uppercase left">
-              download
-            </button>
-
-            <div class="collapse navbar-collapse position-relative" id="navbarSupportedContent">
-              <ul class="navbar-nav gap-5  me-auto gap-xl-4   gap-lg-3  ms-lg-0 mb-2 mb-lg-0"
-                style="margin-left: -1.1rem !important">
-                <li class="nav-item cross">
-                  <a class="nav-link mb-2" href="#" style="color: #5956e9; margin-top: 1rem !important"
-                    data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" id="btn" aria-label="Toggle ">
-                    <i class="fas fa-times-circle" id="closeIcon"></i>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active text-uppercase text-primary link" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link link text-uppercase active text-decoration-none" href="#">about</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-uppercase active link text-decoration-none" href="#">features</a>
-                </li>
-              </ul>
-              <div class="d-flex">
-                <ul class="navbar-nav gap-5 me-auto gap-xl-4  gap-lg-2  align-items-lg-center  ms-lg-0 mb-2 mb-lg-0 ">
-                  <li class="nav-item">
-                    <a class="nav-link screen  ps-2 text-uppercase active  text-decoration-none link"
-                      aria-current="page" href="#">screenshot</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link text-uppercase  ps-2 active link text-decoration-none" href="#">blog</a>
-                  </li>
-
-                  <li>
-                    <button class="btn text-light text-uppercase bg-primary right">
-                      download
-                    </button>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </nav>
-        <div class="navigation">
-          <img src="Logo.png" alt="" class="icon" />
+  
+<!-- <div class="profile">
+  <div class="carousel">
+    <a class="carousel-item" href="#">
+      <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
-
-
-
-      <div class="container  mt-5">
-        <div class="container  mt-5">
-          <div class="row d-flex justify-content-center align-items-center">
-            <div class="col-md-6 ms-0  col-sm-12">
-              <div class="box  ">
-                <div class="card card-content mt-5 ">
-                  <div class="card-body">
-                    <h5 class="card-title fw-bold fw-3 fs-1 text-uppercase text-primary d-flex flex-wrap">
-                      a
-                      great app makes life better</h5>
-                    <p class="card-text lh-base">Lorem ipsum dolor sit amet consectetur adipisicing
-                      elit.
-                      Repellendus rem eum asperiores aperiam, officiis quaerat iste soluta odit
-                      mollitia
-                      enim expedita earum neque?</p>
-                    <h2 class="text-uppercase mt-5">download app now</h2>
-                    <div class="pb-2">
-                      <span><img src="toppng 1.png" alt=""></span>
-                      <span class="ms-2"><img src="toppng 1.png" alt=""></span>
-
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-            <!-- </div> -->
-
-            <div class="col-md-5 mx-auto mt-5 col-sm-12 d-flex align-items-center justify-content-center text-center">
-              <div class="d-flex align-items-end justify-content-end" style="height: 100%;">
-                <img src="Free Ui View Mobile App Mockup 1.png" class="img-fluid w-100 h-100" alt="" style="margin-left: 5rem !important;">
-              </div>
-            </div>
-
-
-
-          </div>
+    </a>
+    <a class="carousel-item" href="#two!"><div class="card" style="width: 18rem;">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div></a>
+    <a class="carousel-item" >
+      <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
-
-      </div>
-    </div>
-
-  </div>
-  </div>
-
-  </div>
-  </div>
-  </div>
-  <div class="container mt-5 p-5  pb-5 mb-5">
-    <div class="about p-5  d-flex flex-column justify-content-center align-items-center">
-      <h1 class="text-uppercase text-center pb-4 fw-bolder">about our app</h1>
-      <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim voluptate atque, rerum
-        amet adipisci esse alias. Reiciendis sunt, alias molestias enim voluptates quidem sit, cumque
-        blanditiis ipsam nisi accusantium magnam fugit, quod voluptatibus delectus dignissimos quas
-        quae mollitia laudantium natus earum culpa atque eum. Laborum.
-      </p>
-    </div>
-    <div class="row mt-5">
-      <div class="col-lg-6 ">
-        <img src="android-smartphone-free-mockup 1.png" class="w-75" alt="">
-        <!-- <img src="android-smartphone-free-mockup 1.png" alt=""> -->
-      </div>
-      <div class="col-lg-6 mt-3">
-        <div class="bg-white">
-          <div class="title d-flex flex-row">
-            <span class="mt-2 ms-3"> <img src="Group1.png" alt=""> </span>
-            <span class=" fw-bolder text-uppercase text-center p-3 pb-0 ">
-              <h6>creative design </h6>
-            </span>
-          </div>
-          <p class="p-4 ms-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam delectus sed
-            officia vero, modi dolor voluptates odit autem neque ex aut, </p>
-        </div>
-        <div class="bg-white mt-4">
-          <div class="title d-flex flex-row">
-            <span class="mt-2  ms-3"> <img src="Group1.png" alt=""> </span>
-            <span class=" fw-bolder text-uppercase text-center p-3 pb-0 ">
-              <h6>easy to use </h6>
-            </span>
-          </div>
-          <p class="p-4 ms-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam delectus sed
-            officia vero, modi dolor voluptates odit autem neque ex aut, </p>
-        </div>
-        <div class="bg-white mt-4">
-          <div class="title d-flex flex-row">
-            <span class="mt-2  ms-3"> <img src="Group1.png" alt=""> </span>
-            <span class=" fw-bolder text-uppercase text-center p-3 pb-0 ">
-              <h6> best user expperience </h6>
-            </span>
-          </div>
-          <p class="p-4 ms-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam delectus sed
-            officia vero, modi dolor voluptates odit autem neque ex aut, </p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-  <div class="header pb-5">
-    <div class="container text-light ">
-      <div class="feture pt-5 mt-5 d-flex flex-column  text-center">
-        <h1 class="text-uppercase "> app features</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Nostrum qui, laboriosam magnam
-          veritatis maxime nemo <br> fugit distinctio sit? Blanditiis tempore accusantium nihil illum!</p>
-        <div class="fs-1 mt-5"> <i class="fa-solid fa-message"></i></div>
-        <h2 class="text-uppercase mt-3">full free chat</h2>
-        <p class="mt-4">Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. At impedit quaerat
-          consequatur?</p>
-        <div>
-          <div class="row d-flex justify-content-center">
-            <div class="col mt-5 pt-5">
-
-            </div>
-            <div class="col-5">
-              <div class="img1">
-                <img src="App.png" class="h-100 w-100" alt="">
-              </div>
-            </div>
-            <div class="col  mt-5">
-
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- <div>
-                <div class="text">
-
-
-                   <img src="surface1.png" class="mb-5 surface " alt=""> 
-                </div>
-                <img src="App.png" class="w-50hmm ">
-            </div> -->
-  </div>
-  </div>
-  </div>
-  <div class="container mt-5 pt-5 p-3 text-center">
-    <h3 class="text-uppercase p-3">checkout our app interface look</h3>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br> Tempora earum eos aperiam voluptates voluptate.
-      <br> Saepe minima neque vero odit doloribusnemo facilis blanditiis?
-      <!-- <section id="slider">
-      <br> Saepe minima neque vero odit doloribusnemo facilis blanditiis?
-<section id="slider">
-      <input type="radio" name="slider" id="s1" checked>
-      <input type="radio" name="slider" id="s2">
-      <input type="radio" name="slider" id="s3">
-      <input type="radio" name="slider" id="s4">
-      <input type="radio" name="slider" id="s5">
-
-      <label for="s1" id="slide1"><img src="App.png" class="h-50" alt=""></label>
-      <label for="s2" id="slide2"><img src="Free Ui View Mobile App Mockup 1.png" class="h-50" alt=""></label>
-      <label for="s3" id="slide3"><img src="Free Ui View Mobile App Mockup 1.png" class="h-50" alt=""></label>
-      <label for="s4" id="slide4"><img src="App.png" class="h-50" alt=""></label>
-      <label for="s5" id="slide5"><img src="Free Ui View Mobile App Mockup 1.png" class="h-50" alt=""></label>
-  </section>  -->
-
-    </p>
-    </p>
-
-
-
-
-  </div>
-  <!-- <div class="container mt-5">
-</div>
-<div class="container mt-5">
-  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-          <div class="carousel-item active">
-              <img src="Image (10).png" class="d-block w-100" alt="Image 1">
-          </div>
-          <div class="carousel-item">
-              <img src="Image (11).png" class="d-block w-100" alt="Image 2">
-          </div>
-          <div class="carousel-item">
-              <img src="Image (12).png" class="d-block w-100" alt="Image 3">
-          </div>
-          <div class="carousel-item">
-              <img src="Image (16).png" class="d-block w-100" alt="Image 4">
-          </div>
-          <div class="carousel-item">
-              <img src="Image (17).png" class="d-block w-100" alt="Image 5">
-          </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-      </button>
-  </div> 
-      </div>
+    </a>
+    <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/250/250/nature/4"></a>
+    <a class="carousel-item" href="#five!"><img src="https://lorempixel.com/250/250/nature/5"></a>
   </div>
 </div> -->
 
-<div class="slider-container mb-5" style="height: 100vh;">
+ 
+<!-- <div class="container-fluid" style="background-color: blue;  color: white;" >
+
+<div class="container" >
+<div class="row d-flex justify-content-center">
+  <div class="col-md-4">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, earum? Perspiciatis saepe assumenda, harum, incidunt dicta explicabo quaerat, ipsa eius praesentium adipisci modi!
+   
+    
+  </div>
+  <div class="col-md-3">
+    <img src="App.png"    alt="">
+  </div>
+  <div class="col">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, earum? Perspiciatis saepe assumenda, harum, incidunt dicta explicabo quaerat, ipsa eius praesentium adipisci modi!
+     <img src="App.png"  alt="">
+  </div>
+</div>
+<div class="col">
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nihil officiis eaque!
+</div>
+</div>
+</div> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+
+<!-- <div class="slider-container">
   <span class="arrow-left">
-    <i class="fa-solid fa-angle-right  text-light "></i>
+    <i class="fa-solid fa-angle-right left text-light"></i>
 
   </span>
   <span class="arrow-right">
@@ -347,6 +354,57 @@
     <div class="slide">
       8
     </div> -->
+  <!-- </div>
+  <div class="dots">
+    <span></span>
+    <span></span>
+    <span class="active"></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+</div>  -->
+
+<!-- <div class="slider-container">
+  <span class="arrow-left"></span>
+  <span class="arrow-right"></span>
+  <div class="slider" id="slider">
+    <div class="slide prev-2">
+      <div class="card">
+        Lorem, ipsum dolor.4
+      </div>
+    </div>
+    <div class="slide prev-1">
+      <div class="card">
+        Lorem, ipsum dolor.4
+
+      </div>
+    </div>
+    <div class="slide active">
+      <div class="card d-flex justify-content-center align-items-center">
+        <img src="Profile Image (2).png" class="w-25 h-25" alt="">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias beatae ipsum amet perferendis temporibus pariatur quos, magni, aperiam assumenda architecto eveniet qui minus.
+
+      </div>
+    </div>
+    <div class="slide next-1">
+      4
+    </div>
+    <div class="slide next-2">
+      5
+    </div>
+    <div class="slide">
+      6
+    </div>
+    <div class="slide">
+      7
+    </div>
+    <div class="slide">
+      8
+    </div>
   </div>
   <div class="dots">
     <span></span>
@@ -359,532 +417,132 @@
     <span></span>
   </div>
 </div>
-</div>
-  <div class="container mt-5">
-    <div class="row p-2">
-      <div class="col-md-6">
-        <h2 class="text-uppercase fw-bolder">download app now</h2>
-        <p class="lh-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis corporis,
-          reiciendis, cupiditate esse eveniet, architecto officia dicta tempore quia eaque rerum voluptatum
-          mollitia.</p>
-        <div class="d-flex mt-5">
-          <img src="toppng 1.png" alt="">
-          <img src="appstore.png" class="ms-4" alt="">
-
-        </div>
-        <div class="container">
-
-          <div class="row mt-5 ms-5 d-flex ">
-            <div class="col-sm-3 ">
-              <!-- <div class="card  text-center mt-2 bg-primary text-white text-center"> -->
-              <!-- <h4 class="mt-2"><i class="fa-solid fa-download"></i></h4> -->
-              <!-- <div class="card  text-center bg-primary text-white text-center">
-                          <img src="download-2-fill.png" class="w-25 mt-3 ms-4 mb-2" alt="">
-
-                          <p class="me-2">6543</p>
-                          <p class="me-2">6543</p>
-
-
-
-                      </div> -->
-            </div>
-            <!-- <div class="col-sm-3 ">
-                      <div class="card  text-center bg-primary mt-2 text-white text-center">
-                      <div class="card  text-center bg-primary text-white text-center">
-                          <h4 class="mt-2"><i class="fa-solid fa-thumbs-up"></i></h4>
-                          <p class="me-2">6543</p>
-                          <p class="me-2">6543</p>
-
-                      </div>
-                  </div> -->
-            <!-- <div class="col-sm-3 ">
-                      <div class="card  text-center mt-2 bg-primary text-white text-center">
-                      <div class="card  text-center bg-primary text-white text-center">
-                          <h4 class="mt-2"> <i class="fa-solid fa-star"></i></h4>
-
-                          <p class="me-2">6543</p>
-                          <p class="me-2">6543</p>
-
-                      </div>
-                  </div> -->
-          </div>
-        </div>
-      </div>
-      <!-- <div class="col-md-6">
-          <img src="Gravity-Scene-iPhone-12-Mockup 1.png" class="w-75" alt="">
-          <img src="Gravity-Scene-iPhone-12-Mockup 1.png" class="w-100" alt="">
-      </div> -->
-    </div>
-    <!-- </div> -->
-  </div>
-  </div>
-  </div>
-  </div>
-  <div class="container-fluid pb-5 position-relative">
-
-    <div class="header text-center   text-light w-100">
-
-      <div class="p-5" style="position: relative;">
-        <div class="container">
-
-          <h3 class="text-uppercase p-2">how to use the app perfectly</h3>
-          <p class="p-3 ps-5 mb-5 pe-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda cumque
-            ex eligendi soluta quis adipisci, animi, libero dolore quo delectus beatae eius vitae.</p>
-
-          <div class="p-5 position-relative">
-            <img src="Image (2).png" class="w-50 bottom-0 position-absolute top-100 mt-5 start-50 translate-middle"
-              alt=""
-              style="left: 50%; width: 50%; height: 19.9375rem; transform: translate(-50%, -50%);box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.24);">
-            <div class="play-btn p-2 bg-light text-center  position-absolute  rounded-circle p-2"
-              style="width: 30px; left: 50%;top: 109%; transform: translateX(-50%);">
-              <img src="Group.png" class="me-4  w-100" alt="">
-            </div>
-          </div>
-
-        </div>
-
-        <div>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-  <div class="container text-center p-5">
-
-    <div class="team mt-5 mb-5  pt-5">
-      <h2 class="text-uppercase pb-3">our reative team</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste minus quam repellendus, ipsum itaque
-        cupiditate. Est quos minus harum alias illum reprehenderit facilis.</p>
-
-    </div>
-    <div class="row d-flex mt-5 justify-content-center">
-      <div class="col">
-        <div class="bg-light ps-4 mt-3 pe-4 rounded p-4" style="box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.10);">
-
-          <div class="img-section" style="position: relative; display: inline-block;">
-            <img src="Group 1513.png" class="w-75" alt="">
-            <img src="Profile.png" class=" position-absolute top-50 start-50 translate-middle" alt=""
-              style="width: 9rem; left: 50%; top: 50%; transform: translate(-50%, -50%);">
-          </div>
-          <h4 class="mt-5  text-uppercase">carla press</h4>
-          <h6 class="text-muted mt-1 text-uppercase">app devlopers</h6>
-          <p class="mt-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis illum eos
-            <!-- <h6 class="text-muted text-uppercase">app devlopers</h6>
-              <p class="mt-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis illum eos
-                  nobis!</p> -->
-          <div class="row">
-            <div class="col p-2">
-
-              <h3 class="border-right pe-2"><i class="fa-brands fs-5 fa-facebook-f"></i></h3>
-            </div>
-            <div class="col p-2">
-
-              <h3 class="border-right pe-2"><i class="fa-brands fs-5  fa-square-instagram"></i></h3>
-            </div>
-            <div class="col p-2">
-
-              <h3 class="border-right pe-2"><i class="fa-brands fs-5 fa-twitter"></i></h3>
-              <!-- <h3 class="border-right"><i class="fa-brands fs-5 fa-facebook-f"></i></h3> -->
-            </div>
-
-            <div class="col p-2">
-
-              <h3><i class="fa-brands fs-5 fa-youtube"></i></h3>
-            </div>
-
-
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="bg-light mt-3 ps-4 pe-4 rounded p-4" style="box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.10);">
-
-          <div class="img-section" style="position: relative; display: inline-block;">
-            <img src="Group 1513.png" class="w-75" alt="">
-            <img src="Profile Image.png" class=" position-absolute top-50 start-50 translate-middle" alt=""
-              style="width: 9rem; left: 50%; top: 50%; transform: translate(-50%, -50%);">
-          </div>
-          <h4 class="mt-5  text-uppercase">Craig Gouse</h4>
-          <h6 class="text-muted text-uppercase">ui/ux devloper</h6>
-
-          <p class="mt-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis illum eos
-            <!-- <h4 class="mt-5  text-uppercase">carla press</h4>
-              <h6 class="text-muted text-uppercase">ui/ux devloper</h6>
-
-              <p class="mt-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis illum eos
-                  nobis!</p> -->
-          <div class="row">
-            <div class="col p-2">
-
-              <h3 class="border-right pe-2"><i class="fa-brands fs-5 fa-facebook-f"></i></h3>
-            </div>
-            <div class="col p-2">
-
-              <h3 class="border-right pe-2"><i class="fa-brands fs-5 fa-square-instagram"></i></h3>
-            </div>
-            <div class="col p-2">
-
-              <h3 class="border-right pe-2"><i class="fa-brands fs-5 fa-twitter"></i></h3>
-              <!-- <h3 class="border-right"><i class="fa-brands fs-5 fa-facebook-f"></i></h3> -->
-            </div>
-            <div class="col p-2">
-
-              <h3><i class="fa-brands fs-5 fa-youtube"></i></h3>
-            </div>
-            <!-- <div class="col p-2">
-
-                      <h3 class="border-right"><i class="fa-brands fs-5 fa-square-instagram"></i></h3>
-                  </div>
-                  <div class="col p-2">
-
-                      <h3 class="border-right"><i class="fa-brands fs-5 fa-twitter"></i></h3>
-                    </div>
-                    <div class="col p-2">
+</div> -->
+   <div class="mkt-3dSlider py-6">
+  <h1 class="mkt-3dSlider-title">Section Title</h1>
+   <p class="mkt-3dSlider-description">a description can be here</p>
+<section id="slider">
   
-                        <h3><i class="fa-brands fs-5 fa-youtube"></i></h3>
-                    </div> -->
+ 
+  <input class="card-slider" type="radio" name="slider" id="s1">
+  <input class="card-slider" type="radio" name="slider" id="s2">
+  <input class="card-slider" type="radio" name="slider" id="s3" checked>
+  <input class="card-slider" type="radio" name="slider" id="s4">
+   <input class="card-slider"type="radio" name="slider" id="s5"> 
+  <label for="s1" id="slide1" class="card-slider p-3 text-center d-flex flex-column justify-content-center ">
+    <img src="Profile Image (2).png" class="w-25 h-25 p-2"     alt="">
+     Lorem, ipsum dolor sit amet conseccltetur adipisicing elit. Enim eligendi suscipit ratione fugit dolores vero aspernatur, voluptas velit veniam nihil. Itaque, hic pariatur!
+  </label>
+  <label for="s2" id="slide2" class="card-slider p-3 text-center d-flex flex-column justify-content-center">
+    <img src="Profile Image (2).png" class="w-25 h-25 p-2"     alt="">
+    Lorem, ipsum dolor sit amet conseccltetur adipisicing elit. Enim eligendi suscipit ratione fugit dolores vero aspernatur, voluptas velit veniam nihil. Itaque, hic pariatur!
+  </label>
+  <label for="s3" id="slide3" class="card-slider p-3 text-center d-flex flex-column justify-content-center">
+    <img src="Profile Image (2).png" class="w-25 h-25 p-2"     alt="">
+    Lorem, ipsum dolor sit amet conseccltetur adipisicing elit. Enim eligendi suscipit ratione fugit dolores vero aspernatur, voluptas velit veniam nihil. Itaque, hic pariatur!
+  </label>
+  <label for="s4" id="slide4" class="card-slider p-3 text-center d-flex flex-column justify-content-center" >
+    <img src="Profile Image (2).png" class="w-25 h-25 p-2"     alt="">
+    Lorem, ipsum dolor sit amet conseccltetur adipisicing elit. Enim eligendi suscipit ratione fugit dolores vero aspernatur, voluptas velit veniam nihil. Itaque, hic pariatur!
+  </label>
+  <!-- <label for="s5" id="slide5" class="card-slider"></label> -->
+</section>
+</div> 
 
 
-          </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="bg-light mt-3 ps-4 pe-4 rounded p-4" style="box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.10);">
+<!-- <section id="slider">
+  <input type="radio" name="slider" id="s1" checked>
+  <input type="radio" name="slider" id="s2">
+  <input type="radio" name="slider" id="s3">
+  <input type="radio" name="slider" id="s4">
+  <input type="radio" name="slider" id="s5">
 
-          <div class="img-section" style="position: relative; display: inline-block;">
-            <img src="Group 1513.png" class="w-75" alt="">
-            <img src="Profile Image (1).png" class=" position-absolute top-50 start-50 translate-middle" alt=""
-              style="width: 9rem; left: 50%; top: 50%; transform: translate(-50%, -50%);">
-          </div>
-          <h4 class="mt-5  text-uppercase">Jocelyn Septimus</h4>
-          <h6 class="text-muted mt-1 text-uppercase">website devloper</h6>
-          <p class="mt-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis illum eos
-            <!-- <h4 class="mt-5  text-uppercase">carla press</h4>
-              <h6 class="text-muted text-uppercase">website devloper</h6>
-              <p class="mt-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis illum eos
-                  nobis!</p> -->
-          <div class="row">
-            <div class="col p-2">
+  <label for="s1" id="slide1"><img src="https://i.pinimg.com/originals/2b/de/de/2bdede0647e3cdf75b44ea33723201d9.jpg" alt=""></label>
+  <label for="s2" id="slide2"><img src="https://images6.alphacoders.com/462/thumb-1920-462371.jpg" alt=""></label>
+  <label for="s3" id="slide3"><img src="https://wallpaperaccess.com/full/1154341.jpg" alt=""></label>
+  <label for="s4" id="slide4"><img src="https://wallpapercave.com/wp/wp2634222.jpg" alt=""></label>
+  <label for="s5" id="slide5"><img src="https://images5.alphacoders.com/343/thumb-1920-343645.jpg" alt=""></label>
+</section> -->
+<script>
+  var Slider = (function() {
+    var initSlider = function() {
+        var dir = $("html").attr("dir");
+        var swipeHandler = new Hammer(document.getElementById("slider"));
+        swipeHandler.on('swipeleft', function(e) {
+            if (dir == "rtl")
+                $(".arrow-left").trigger("click");
+            else
+                $(".arrow-right").trigger("click");
+        });
 
-              <h3 class="border-right pe-2"><i class="fa-brands fs-5 fa-facebook-f"></i></h3>
-            </div>
-            <div class="col p-2">
+        swipeHandler.on('swiperight', function(e) {
+            if (dir == "rtl")
+                $(".arrow-right").trigger("click");
+            else
+                $(".arrow-left").trigger("click");
+        });
 
-              <h3 class="border-right pe-2"><i class="fa-brands fs-5 fa-square-instagram"></i></h3>
-            </div>
-            <div class="col p-2">
+        $(".arrow-right , .arrow-left").click(function(event) {
+            var nextActiveSlide = $(".slide.active").next();
 
-              <h3 class="border-right pe-2"><i class="fa-brands fs-5 fa-twitter"></i></h3>
-              <!-- <h3 class="border-right"><i class="fa-brands fs-5 fa-facebook-f"></i></h3> -->
-            </div>
-            <div class="col p-2">
+            if ($(this).hasClass("arrow-left"))
+                nextActiveSlide = $(".slide.active").prev();
 
-              <h3><i class="fa-brands fs-5 fa-youtube"></i></h3>
-            </div>
-            <!-- 
-                      <h3 class="border-right"><i class="fa-brands fs-5 fa-square-instagram"></i></h3>
-                  </div>
-                  <div class="col p-2">
+            if (nextActiveSlide.length > 0) {
+                var nextActiveIndex = nextActiveSlide.index();
+                $(".dots span").removeClass("active");
+                $($(".dots").children()[nextActiveIndex]).addClass("active");
 
-                      <h3 class="border-right"><i class="fa-brands fs-5 fa-twitter"></i></h3>
-                  </div>
-                  <div class="col p-2">
+                updateSlides(nextActiveSlide);
+            }
+        });
 
-                      <h3><i class="fa-brands fs-5 fa-youtube"></i></h3>
-                  </div> -->
+        $(".dots span").click(function(event) {
+            var slideIndex = $(this).index();
+            var nextActiveSlide = $($(".slider").children()[slideIndex]);
+            $(".dots span").removeClass("active");
+            $(this).addClass("active");
 
+            updateSlides(nextActiveSlide);
+        });
 
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
+        var updateSlides = function(nextActiveSlide) {
+            var nextActiveSlideIndex = $(nextActiveSlide).index();
 
-  <div class="container-fluid mt-5 text-light text-center">
-    <div class="header w-100">
-      <div class="container">
+            $(".slide").removeClass("prev-1");
+            $(".slide").removeClass("next-1");
+            $(".slide").removeClass("active");
+            $(".slide").removeClass("prev-2");
+            $(".slide").removeClass("next-2");
 
+            nextActiveSlide.addClass("active");
 
-        <h1 class="text-uppercase mt-5 pt-5">our happy customer</h1>
-        <p class="ps-4 ms-5 mt-1 pe-5 me-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur assumenda
-          delectus ut, commodi sequi magnam enim temporibus, molestiae repellendus officiis modi saepe illo ea
-          accusamus labore ipsum sit debitis consectetur dolor adipisci consequatur fugit!</p>
-        <div>
-          <section id="slider">
-            <!-- <h1 class="text-uppercase mt-5 pt-5">our happy customer</h1>
-      <p class="ps-4 ms-5 pe-5 me-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur assumenda
-          delectus ut, commodi sequi magnam enim temporibus, molestiae repellendus officiis modi saepe illo ea
-          accusamus labore ipsum sit debitis consectetur dolor adipisci consequatur fugit!</p> -->
-            <div>
-              <!-- <section id="slider">
-              <input type="radio" name="slider" id="s1" checked>
-              <input type="radio" name="slider" id="s2">
-              <input type="radio" name="slider" id="s3">
-              <input type="radio" name="slider" id="s4">
-              <input type="radio" name="slider" id="s5"> 
+            nextActiveSlide.prev().addClass("prev-1");
+            nextActiveSlide.prev().prev().addClass("prev-2");
+            nextActiveSlide.addClass("active");
+            nextActiveSlide.next().addClass("next-1");
+            nextActiveSlide.next().next().addClass("next-2");
+        }
 
-
-       <label for="s1" id="slide1">
-              <label for="s1" id="slide1">
-                  <div class="card" style="width: 18rem;">
-                      <img src="..." class="card-img-top" alt="...">
-                      <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the
-                              bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
-                      </div>
-                  </div>
-              </label> 
-       <label for="s2" id="slide2">
-               <label for="s2" id="slide2">
-                  <div class="card" style="width: 18rem;">
-                      <img src="..." class="card-img-top" alt="...">
-                      <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the
-                              bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
-                      </div>
-                  </div>
-              </label> 
-       <label for="s3" id="slide3">
-               <label for="s3" id="slide3">
-                  <div class="card" style="width: 18rem;">
-                      <img src="..." class="card-img-top" alt="...">
-                      <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the
-                              bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
-                      </div>
-                  </div>
-              </label> 
-      <label for="s4" id="slide4">
-
-              </label>
-      <label for="s5" id="slide5">
-              <label for="s4" id="slide4">
-
-              </label> 
-             <label for="s5" id="slide5">
-                  <div class="card" style="width: 18rem;">
-                      <img src="..." class="card-img-top" alt="...">
-                      <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the
-                              bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
-                      </div>
-                  </div>>
-              </label> 
-
-      </section> -->
-
-            </div>
-        </div>
-      </div>
-
-      <!-- </section> -->
-
-    </div>
-  </div>
-  <div class="container text-center mt-5 p-3">
-    <div class="blog">
-      <h3 class="text-uppercase p-3">our resent blog</h3>
-      <p class="ps-5 pe-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe quidem culpa, amet
-        cupiditate, aperiam perspiciatis ullam sapiente, assumenda asperiores tempore temporibus quibusdam ad.
-      </p>
-    </div>
-    <div class="row d-flex mt-5">
-      <div class="col-md-4">
-        <div class="col">
-          <div class="bg-light blogs">
-            <img src="Image (3).png" class="card-img-top img-fluid" alt="...">
-            <div class="card-body text-start p-2">
-              <h5 class="card-title  mt-2 p-3 ">The Snap Pixel: How It Works and How to Install</h5>
-              <p class="card-text ps-3 pe-3">Some quick example text to build on the card title and make up
-                the bulk of the card's content.</p>
-              <a href="index2.html" class=" btn  text-primary fs-5  ms-3 mt-5">Read more</a>
-
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-
-
-        <div class="col">
-          <div class="bg-light blogs">
-            <img src="Image (4).png" class="card-img-top img-fluid" alt="...">
-            <div class="card-body text-start p-2">
-              <h5 class="card-title  mt-2 p-3 ">Global Partner Solutions: A Partnership of Innovation</h5>
-              <p class="card-text ps-3 pe-3">Some quick example text to build on the card title and make up
-                the bulk of the card's content.</p>
-              <a href="index2.html" class="btn text-primary fs-5 mt-5 ms-3">Read more</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-
-        <div class="col">
-          <div class="bg-light blogs">
-            <img src="Image (5).png" class="card-img-top img-fluid" alt="...">
-            <div class="card-body text-start p-2">
-              <h5 class="card-title mt-2 p-3">2021: An opportunity for Snapchatters to start fresh</h5>
-              <p class="card-text ps-3 pe-3">Some quick example text to build on the card title and make up
-                the bulk of the card's content.</p>
-              <a href="index2.html" class="btn mt-5  text-primary fs-5   ms-3">Read more</a>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-  <div class="container position-relative">
-    <div class="bg-light rounded p-5">
-      <div class="row d-flex justify-content-between">
-        <div class="col border-right border-dark h-50 d-flex align-items-center">
-          <div class="bg-primary p-3 rounded-circle text-light">
-            <img src="Group3.png" class="w-150 " alt="" />
+        var updateToNextSlide = function(nextActiveSlide)
+        {
             
-          </div>
-         <div class=" fs-5 ms-4  pe-4">
-          info@youremail.com
-          </div>
-        </div>
-        <div class="col  h-50 d-flex align-items-center">
-          <div class="bg-primary p-3 rounded-circle text-light">
-            <!-- <img src="Group3.png" alt="" /> -->
-            <i class="fa-solid fs-5 fa-phone"></i>
-            
-          </div>
-         <div class=" fs-5 ms-4  pe-4">
-          +880 321 655 9985
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container-fluid footer p-5 pb-2 mt-5  bg-dark">
-    <div class="container pt-5 text-light">
-      <div class="row d-flex justify-content-between align-items-center">
-        <div class="col-md-3">
-          <h4 class="text-uppercase">LOGO</h4>
-          <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae, nullam lobortis enim.</p>
-          <div class="row text-center">
-            <div class="col border-right border-white align-items-center p-2">
-              <i class="fa-brands text-primary fa-facebook-f"></i>
-            </div>
-            <div class="col border-right border-white align-items-center p-2">
-              <img src="insta3.png" class="w-25 pe-0" alt="">
-              
-            </div>
-            <div class="col border-right border-white  align-items-center p-2">
-              <i class="fa-brands fa-twitter"></i>
-              
-            </div>
-            <div class="col  align-items-center p-2">
-              <i class="fa-brands fa-youtube"></i>  
-              
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <!-- <h1>quick link</h1> -->
-          <h4 class="text-uppercase">quick link</h4>
-          <div class="row d-flex flex-column lh-base">
-            <div class="col text-capitalize mt-2">
-              about
-            </div>
-            <div class="col text-capitalize mt-2">
-              features
-            </div>
-            <div class="col text-capitalize mt-2 ">
-              screenshot
-            </div>
-            <div class="col text-capitalize mt-2">
-              blog
-            </div>
-          </div>
+        }
+    }
+    return {
+        init: function() {
+            initSlider();
+        }
+    }
+})();
 
-        </div>
-        <div class="col-md-3">
-          <!-- <h1>news letter</h1> -->
-          <h4 class="text-uppercase">news letter</h4>
-<p>Subscribe our newsletter to get our latest
-  update & news</p>
-<form action="">
-  <input type="text" class="w-100 p-2" placeholder="your email address">
-</form>
-        </div>
-      </div>
-    </div>
-    <hr class="text-light mt-5 pt-4">
-    <div class="text-center text-light">
-<p>Copyright 2021 .Ojjomedia. All Right Reserved.</p>
-    </div>
-  </div>
-
-  
-  <div class="carousel-container">   
-    <div class="carousel-main" id="carousel">
-      <div class="carousel-feature bg-1">
-        <a href="#"><img class="carousel-image" alt="featureCarousel-1" width="320" height="200" src=""></a>
-      </div>
-  
-      <div class="carousel-feature bg-2">
-        <a href="#"><img class="carousel-image" alt="featureCarousel-2" width="320" height="200" src=""></a>
-      </div>
-  
-      <div class="carousel-feature bg-3">
-        <a href="#"><img class="carousel-image" alt="featureCarousel-3" width="320" height="200" src=""></a>
-      </div>
-    </div>
-    <p>
-      <a href="#" id="carousel-left"><i class="fa fa-chevron-left" aria-hidden="true"></i>
-  </a>
-      <a href="#" id="carousel-right"><i class="fa fa-chevron-right" aria-hidden="true"></i>
-  </a>
-    </p>
-  </div>
-
-
-  <section id="slider">
-    <input type="radio" name="slider" id="s1" checked>
-    <input type="radio" name="slider" id="s2">
-    <input type="radio" name="slider" id="s3">
-    <input type="radio" name="slider" id="s4">
-    <input type="radio" name="slider" id="s5">
-  
-    <label for="s1" id="slide1"><img src="Free Ui View Mobile App Mockup 1.png" alt="" class="h-75 w-75"></label>
-    <label for="s2" id="slide2"><img src="App.png" alt=""   class="h-75 w-75"></label>
-    <label for="s3" id="slide3"><img src="Gravity-Scene-iPhone-12-Moc.png" alt=""   class="h-75 w-75"></label>
-    <label for="s4" id="slide4"><img src="Free Ui View Mobile App Mockup 1.png" alt=""  class="h-75 w-75"></label>
-    <label for="s5" id="slide5"><img src="Free Ui View Mobile App Mockup 1.png" alt=""  class="h-75 w-75"></label>
-  </section>
-
-  
-  
-
-
-
-  
-  <script>
-    
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-    crossorigin="anonymous"></script>
+$(function() {
+    Slider.init();
+});
+      
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
-
 </html>
-
-
-
