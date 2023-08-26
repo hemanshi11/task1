@@ -2,1100 +2,365 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="style2.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <link rel="stylesheet" href="style3.css" />
 </head>
 
 <body>
-    <div class="header pb-5">
-
-        <div class="container ">
-            <ul class="navbar-nav ">
-                <li class="nav-item   hide-logo">
-                    <a class="nav-brand mb-2 " href="#" style="border-radius: 5px;">
-                        <img src="Logo.png" alt="">
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-
+    <div class="header pb-5 mb-5">
         <div class="container">
-            <nav class="navbar  navbar-expand-lg navbar-light d-sm-flex d-none">
-                <div class="container first-nav" style=" padding-right: 0;padding-left: 0;">
+            <nav class="navbar d-md-flex d-none navbar-expand-lg navbar-light ">
+                <ul class="navbar-nav d-flex flex-row gap-3">
+                    <li class="nav-item">
+                        <a class="nav-link info active d-flex gap-3 text-light"><img src="Group3.png"
+                                alt="" /><span>info@your
+                                email.com
+                            </span></a>
+                    </li>
+                    <li class="nav-item gap-2">
+                        <a class="nav-link d-flex gap-3 active info text-light"><i class="fa-solid fa-phone"></i>
+                            <span>(480) 555-0103 </span></a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav gap-2 me-2 ms-auto d-flex flex-row">
+                    <li class="nav-item">
+                        <a class="nav-link active text-light">
+                            <i class="fa-brands fa-facebook-f"></i></a>
+                        <!-- <a class="nav-link  active text-light">
+                <img src="facbook.png" class="w-25 pe-0" alt=""></a> -->
 
+                    </li>
+                    <li class="nav-item">
 
-                    <ul class="navbar-nav d-flex  gap-4">
-                        <li class="nav-item">
-                            <a class="nav-link info active d-flex gap-3 text-light "><img src="Group.png"
-                                    alt=""><span>info@your email.com </span></a>
-                        </li>
-                        <li class="nav-item gap-2">
-                            <a class="nav-link d-flex gap-3 active info text-light"><i class="fa-solid fa-phone"></i>
-                                <span>(480) 555-0103 </span></a>
-                        </li>
+                        <a class="nav-link  active text-light">
+                            <img src="insta3.png" class="w-25 pe-0" alt=""></a>
 
-
-                    </ul>
-                    <ul class="navbar-nav gap-2 " style="display: flex;flex-direction: row;">
-                        <li class="nav-item">
-                            <a class="nav-link active text-light"> <i class="fa-brands fa-facebook-f"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active text-light"> <i class="fa-brands fa-instagram"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active text-light"><i class="fa-brands fa-twitter"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active text-light"> <i class="fa-brands fa-youtube"></i></a>
-                        </li>
-
-                    </ul>
-
-                </div>
+                    </li>
+                    <li class="nav-item" style="margin-left: -3rem;">
+                        <a class="nav-link active text-light"><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active text-light">
+                            <i class="fa-brands fa-youtube"></i></a>
+                    </li>
+                </ul>
             </nav>
-            <div class=" pb-3">
+            <!-- </div> -->
 
-                <nav class="navbar rounded  second-nav mb-5 navbar-expand-lg bg-body-tertiary">
-                    <div class="container  sec-nav">
-
-                        <button class="navbar-toggler mb-3  mt-0" type="button" data-bs-toggle="collapse"
+            <div class="container">
+                <nav class="navbar navbar-expand-lg  rounded bg-body-tertiary">
+                    <div class="container-fluid">
+                        <a class="navbar-brand position-absolute" href="#"> </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" id="btn" aria-label="Toggle navigation">
+                            aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <div class="">
+                        <button class="btn bg-primary text-light text-uppercase left">
+                            download
+                        </button>
 
-                            <a class="nav-brand mb-3   logo  navigation2" href="#"><img src="Logo.png" class="img"
-                                    alt=""></a>
-                        </div>
-                        <a class="nav-link " href="#"><button class="btn btn-lg    btn-primary " id="button">
-                                Download</button></a>
-                        <div class="collapse navbar-collapse " id="navbarSupportedContent">
-
-
-
-                            <ul id="navbar"
-                                class="navbar-nav content d-flex flex-fill justify-content-between align-items-center">
+                        <div class="collapse navbar-collapse position-relative" id="navbarSupportedContent">
+                            <ul class="navbar-nav gap-5  me-auto gap-xl-4   gap-lg-3  ms-lg-0 mb-2 mb-lg-0"
+                                style="margin-left: -1.1rem !important">
                                 <li class="nav-item cross">
-                                    <a class="nav-link mb-2 navigation" href="#" style="    color: #5956E9;
-                                    margin-top: 1rem !important;"
-                                        data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                                        aria-controls="navbarSupportedContent" aria-expanded="false" id="btn"
-                                        aria-label="Toggle navigation">
-                                        <i class="fas   fa-times-circle" id="closeIcon"></i>
-                                    </a>
-                                </li>
-                                <li class="nav-item link">
-                                    <a class="nav-link text-primary border-bottom-primary fs-5 " href="#" >Home</a>
-                                </li> 
-                                <li class="nav-item">
-                                    <a class="nav-link  fs-5   navigation" href="about">About</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link fs-5  navigation" href="#">Features</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-brand  navigation1" href="#" style="border-radius: 5px;">
-                                        <img src="Logo.png" alt="">
+                                    <a class="nav-link mb-2" href="#"
+                                        style="color: #5956e9; margin-top: 1rem !important" data-bs-toggle="collapse"
+                                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                        aria-expanded="false" id="btn" aria-label="Toggle ">
+                                        <i class="fas fa-times-circle" id="closeIcon"></i>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link fs-5  navigation" href="#">Screenshot</a>
+                                    <a class="nav-link active text-uppercase text-primary link" aria-current="page"
+                                        href="#">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link fs-5  navigation" href="#">Blog</a>
+                                    <a class="nav-link link text-uppercase active text-decoration-none"
+                                        href="#">about</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link  button2" href="#">
-                                        <button class="btn task btn-lg btn-primary">Download</button>
-                                    </a>
+                                    <a class="nav-link text-uppercase active link text-decoration-none"
+                                        href="#">features</a>
                                 </li>
                             </ul>
-
-
-
-                        </div>
-                    </div>
-            </div>
-            </nav>
-            <!-- <div class="container-fluid ">
-
-                <div class=" container navbar p-1 bg-light nav  rounded  d-flex flex-row gap-3">
-                   
-                    <ul
-                        class="navbar-nav content ps-4 d-flex flex-row  justify-content-between align-items-center gap-5">
-                        <li class="nav-item">
-                            <a class="nav-link link mb-2 text-primary " href="#">
-                                home
-
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link link mb-2 text-decoration-none " href="#">
-                                about
-
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link link mb-2 text-decoration-none " href="#">
-                                features
-
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link link mb-2 text-decoration-none " href="#">
-                                screenshot
-
-                            </a>
-                        </li>
-
-
-                        <div class="container-fluid">
-                            <div class="container p-2 bg-light rounded d-flex flex-row gap-3">
+                            <div class="d-flex">
                                 <ul
-                                    class="navbar-nav content d-flex flex-row justify-content-between align-items-center gap-5 ms-auto">
+                                    class="navbar-nav gap-5 me-auto gap-xl-4  gap-lg-2  align-items-lg-center  ms-lg-0 mb-2 mb-lg-0 ">
                                     <li class="nav-item">
-                                        <a class="nav-link link mb-2 text-decoration-none" href="#">
-                                            Blog
-                                        </a>
+                                        <a class="nav-link screen  ps-2 text-uppercase active  text-decoration-none link"
+                                            aria-current="page" href="#">screenshot</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link link mb-2 text-decoration-none" href="#">
-                                            Blog
-                                        </a>
+                                        <a class="nav-link text-uppercase  ps-2 active link text-decoration-none"
+                                            href="#">blog</a>
                                     </li>
 
-
+                                    <li>
+                                        <button class="btn text-light text-uppercase bg-primary right">
+                                            download
+                                        </button>
+                                    </li>
                                 </ul>
-
                             </div>
                         </div>
-                    </ul>
-
-                </div>
-                <div>
-
-                </div>
-                <div class="bg-light p-4  logo" style="width: 12.5rem;
-                height: 5.625rem;
-                border-radius: 0.3125rem;
-background-color: aliceblue;
-box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.10);
-">
-                    <img src="Logo.png" alt="">
-                </div>
-
-            </div> -->
-
-
-
-            <!-- <div class="container  mt-5">
-                <div class="row d-flex justify-content-between align-items-center">
-                    <div class="col-md-5 ms-0 mt-5 col-sm-12">
-                        <div class="box  mt-3">
-                            <div class="card card-content mt-5 " style="width: 100%;">
-                                <div class="card-body">
-                                    <h5
-                                        class="card-title fw-bold fw-3 fs-1 text-uppercase text-primary d-flex flex-wrap">
-                                        a
-                                        great app makes life better</h5>
-                                    <p class="card-text lh-base">Lorem ipsum dolor sit amet consectetur adipisicing
-                                        elit.
-                                        Repellendus rem eum asperiores aperiam, officiis quaerat iste soluta odit
-                                        mollitia
-                                        enim expedita earum neque?</p>
-                                    <h2 class="text-uppercase mt-5">download app now</h2>
-                                    <div class="pb-2">
-                                        <span><img src="toppng 1.png" alt=""></span>
-                                        <span class="ms-2"><img src="toppng 1.png" alt=""></span>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
                     </div>
-
-                    <div class="col-md-6 mt-5 text-center col-sm-12 d-flex align-items-center justify-content-center">
-                        <div class="d-flex align-items-center justify-content-center" style="height: 100%;">
-                            <img src="Free Ui View Mobile App Mockup 1.png" class="img-fluid" alt="">
-                        </div>
-                    </div>
-
-
-
+                </nav>
+                <div class="navigation">
+                    <img src="Logo.png" alt="" class="icon" />
                 </div>
             </div>
-
+        </div>
+        <div class="d-flex mt-5  pt-4 justify-content-center align-items-center text-center text-light">
+            <div>
+                <h1 class="text-uppercase">blog</h1>
+                <div class="d-flex mt-2">
+                    <i class="fa-sharp fa-solid fa-house-chimney"></i> <span class="ms-3 text-capitalize ">
+                        home/blog</span>
+                </div>
+            </div>
         </div>
     </div>
-
-    </div>
-    </div>
-
-    </div>
-    </div>
-
-    <div class="container mt-5 p-5  pb-5 mb-5">
-        <div class="about p-5  d-flex flex-column justify-content-center align-items-center">
-            <h1 class="text-uppercase text-center pb-4 fw-bolder">about our app</h1>
-            <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim voluptate atque, rerum
-                amet adipisci esse alias. Reiciendis sunt, alias molestias enim voluptates quidem sit, cumque
-                blanditiis ipsam nisi accusantium magnam fugit, quod voluptatibus delectus dignissimos quas
-                quae mollitia laudantium natus earum culpa atque eum. Laborum.
-            </p>
-        </div>
-        <div class="row mt-5">
-            <div class="col-lg-6 ">
-                <img src="android-smartphone-free-mockup 1.png" class="w-75" alt="">
-            </div>
-            <div class="col-lg-6 mt-3">
-                <div class="bg-white">
-                    <div class="title d-flex flex-row">
-                        <span class="mt-2 ms-3"> <img src="Group1.png" alt=""> </span>
-                        <span class=" fw-bolder text-uppercase text-center p-3 pb-0 ">
-                            <h6>creative design </h6>
-                        </span>
-                    </div>
-                    <p class="p-4 ms-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam delectus sed
-                        officia vero, modi dolor voluptates odit autem neque ex aut, </p>
-                </div>
-                <div class="bg-white mt-4">
-                    <div class="title d-flex flex-row">
-                        <span class="mt-2  ms-3"> <img src="Group1.png" alt=""> </span>
-                        <span class=" fw-bolder text-uppercase text-center p-3 pb-0 ">
-                            <h6>easy to use </h6>
-                        </span>
-                    </div>
-                    <p class="p-4 ms-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam delectus sed
-                        officia vero, modi dolor voluptates odit autem neque ex aut, </p>
-                </div>
-                <div class="bg-white mt-4">
-                    <div class="title d-flex flex-row">
-                        <span class="mt-2  ms-3"> <img src="Group1.png" alt=""> </span>
-                        <span class=" fw-bolder text-uppercase text-center p-3 pb-0 ">
-                            <h6> best user expperience </h6>
-                        </span>
-                    </div>
-                    <p class="p-4 ms-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam delectus sed
-                        officia vero, modi dolor voluptates odit autem neque ex aut, </p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div class="header pb-5">
-        <div class="container text-light ">
-            <div class="feture pt-5 mt-5 d-flex flex-column  text-center">
-                <h1 class="text-uppercase "> app features</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Nostrum qui, laboriosam magnam
-                    veritatis maxime nemo <br> fugit distinctio sit? Blanditiis tempore accusantium nihil illum!</p>
-                <div class="fs-1 mt-5"> <i class="fa-solid fa-message"></i></div>
-                <h2 class="text-uppercase mt-3">full free chat</h2>
-                <p class="mt-4">Lorem ipsum dolor sit amet consectetur <br> adipisicing elit. At impedit quaerat
-                    consequatur?</p>
-                    <div>
-                        <div class="row d-flex justify-content-center">
-                            <div class="col mt-5 pt-5">
-                               
-                            </div>
-                            <div class="col-5">
-                                <div class="img1">
-                                    <img src="App.png" class="h-100 w-100" alt="">
-                                </div>
-                            </div>
-                            <div class="col  mt-5">
-                               
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </div>
-                </div>
-    </div>
-
-
-    <div class="container mt-5 pt-5 p-3 text-center">
-        <h3 class="text-uppercase p-3">checkout our app interface look</h3>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br> Tempora earum eos aperiam voluptates voluptate.
-            <br> Saepe minima neque vero odit doloribusnemo facilis blanditiis? -->
-            <!-- <section id="slider">
-            <input type="radio" name="slider" id="s1" checked>
-            <input type="radio" name="slider" id="s2">
-            <input type="radio" name="slider" id="s3">
-            <input type="radio" name="slider" id="s4">
-            <input type="radio" name="slider" id="s5">
-
-            <label for="s1" id="slide1"><img src="App.png" class="h-50" alt=""></label>
-            <label for="s2" id="slide2"><img src="Free Ui View Mobile App Mockup 1.png" class="h-50" alt=""></label>
-            <label for="s3" id="slide3"><img src="Free Ui View Mobile App Mockup 1.png" class="h-50" alt=""></label>
-            <label for="s4" id="slide4"><img src="App.png" class="h-50" alt=""></label>
-            <label for="s5" id="slide5"><img src="Free Ui View Mobile App Mockup 1.png" class="h-50" alt=""></label>
-        </section> -->
-
-            <!-- </p>
-
-
-
-
-    </div> -->
-            <!-- <div class="container mt-5">
-        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="Image (10).png" class="d-block w-100" alt="Image 1">
-                </div>
-                <div class="carousel-item">
-                    <img src="Image (11).png" class="d-block w-100" alt="Image 2">
-                </div>
-                <div class="carousel-item">
-                    <img src="Image (12).png" class="d-block w-100" alt="Image 3">
-                </div>
-                <div class="carousel-item">
-                    <img src="Image (16).png" class="d-block w-100" alt="Image 4">
-                </div>
-                <div class="carousel-item">
-                    <img src="Image (17).png" class="d-block w-100" alt="Image 5">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div> -->
-            <!-- </div>
 
     <div class="container mt-5">
-        <div class="row p-2">
-            <div class="col-md-6">
-                <h2 class="text-uppercase fw-bolder">download app now</h2>
-                <p class="lh-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis corporis,
-                    reiciendis, cupiditate esse eveniet, architecto officia dicta tempore quia eaque rerum voluptatum
-                    mollitia.</p>
-                <div class="d-flex mt-5">
-                    <img src="toppng 1.png" alt="">
-                    <img src="appstore.png" class="ms-4" alt="">
+        <div class="row">
 
+            <div class="col-md-8">
+                <div class="text">
+                    <img src="Image (6).png" alt="" class="w-100">
+                    <h1>The Snap Pixel: How It Works and How to Install </h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie blandit nibh risus nisl,
+                        scelerisque. Fusce cursus massa ut egestas. Massa lorem turpis lectus viverra. Nulla volutpat
+                        urna
+                        eget velit vel at gravida fermentum, sem.Ut ullamcorper scelerisque interdum bibendum non
+                        tristique
+                        nullam. Netus nisl, leo nunc eu tincidunt vivamus nisi suspendisse. Non morbi eleifend sit ac.
+                    </p>
+
+                    <a href="" class="mt-5 text-uppercase">read more</a>
                 </div>
-                <div class="container">
+                <div class="text mt-5">
+                    <img src="Image (8).png" alt="" class="w-100">
+                    <h1>The Snap Pixel: How It Works and How to Install </h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie blandit nibh risus nisl,
+                        scelerisque. Fusce cursus massa ut egestas. Massa lorem turpis lectus viverra. Nulla volutpat
+                        urna
+                        eget velit vel at gravida fermentum, sem.Ut ullamcorper scelerisque interdum bibendum non
+                        tristique
+                        nullam. Netus nisl, leo nunc eu tincidunt vivamus nisi suspendisse. Non morbi eleifend sit ac.
+                    </p>
 
-                    <div class="row mt-5 ms-5 d-flex ">
-                        <div class="col-sm-3 ">
-                            <div class="card  text-center mt-2 bg-primary text-white text-center">
-                               <h4 class="mt-2"><i class="fa-solid fa-download"></i></h4>
-
-                                <p class="me-2">6543</p>
-                                <p class="me-2">6543</p>
-
-
-
-                            </div>
-                        </div>
-                        <div class="col-sm-3 ">
-                            <div class="card  text-center bg-primary mt-2 text-white text-center">
-                                <h4 class="mt-2"><i class="fa-solid fa-thumbs-up"></i></h4>
-                                <p class="me-2">6543</p>
-                                <p class="me-2">6543</p>
-
-                            </div>
-                        </div>
-                        <div class="col-sm-3 ">
-                            <div class="card  text-center mt-2 bg-primary text-white text-center">
-                                <h4 class="mt-2"> <i class="fa-solid fa-star"></i></h4>
-
-                                <p class="me-2">6543</p>
-                                <p class="me-2">6543</p>
-
-                            </div>
-                        </div>
-                    </div>
+                    <a href="" class="mt-5 text-uppercase">read more</a>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <img src="Gravity-Scene-iPhone-12-Mockup 1.png" class="w-75" alt="">
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid pb-5 position-relative">
+                <div class="text mt-5">
+                    <img src="Image (4).png" alt="" class="w-100">
+                    <h1>The Snap Pixel: How It Works and How to Install </h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie blandit nibh risus nisl,
+                        scelerisque. Fusce cursus massa ut egestas. Massa lorem turpis lectus viverra. Nulla volutpat
+                        urna
+                        eget velit vel at gravida fermentum, sem.Ut ullamcorper scelerisque interdum bibendum non
+                        tristique
+                        nullam. Netus nisl, leo nunc eu tincidunt vivamus nisi suspendisse. Non morbi eleifend sit ac.
+                    </p>
 
-        <div class="header text-center   text-light w-100">
-
-            <div class="p-5" style="position: relative;">
-                <div class="container">
-          
-                <h3 class="text-uppercase p-2">how to use the app perfectly</h3>
-                <p class="p-3 ps-5 mb-5 pe-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda cumque
-                    ex eligendi soluta quis adipisci, animi, libero dolore quo delectus beatae eius vitae.</p>
-
-                <div class="p-5 position-relative">
-                    <img src="Image (2).png"
-                        class="w-50 bottom-0 position-absolute top-100 mt-5 start-50 translate-middle" alt=""
-                        style="left: 50%; width: 50%; height: 19.9375rem; transform: translate(-50%, -50%);box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.24);">
-                    <div class="play-btn p-2 bg-light text-center  position-absolute  rounded-circle p-2"
-                        style="width: 30px; left: 50%;top: 109%; transform: translateX(-50%);">
-                        <img src="Group2.png" class="me-4  w-100" alt="">
-                    </div>
+                    <a href="" class="mt-5 text-uppercase">read more</a>
                 </div>
+                <div class="text mt-5">
+                    <img src="Image (11).png" alt="" class="w-100">
+                    <h1>The Snap Pixel: How It Works and How to Install </h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie blandit nibh risus nisl,
+                        scelerisque. Fusce cursus massa ut egestas. Massa lorem turpis lectus viverra. Nulla volutpat
+                        urna
+                        eget velit vel at gravida fermentum, sem.Ut ullamcorper scelerisque interdum bibendum non
+                        tristique
+                        nullam. Netus nisl, leo nunc eu tincidunt vivamus nisi suspendisse. Non morbi eleifend sit ac.
+                    </p>
 
-            </div>
-
-            <div>
-            </div>
-        </div>
-                  
-    </div>
-
-    </div>
-    <div class="container text-center p-5">
-
-        <div class="team mt-5 mb-5  pt-5">
-            <h2 class="text-uppercase pb-3">our reative team</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste minus quam repellendus, ipsum itaque
-                cupiditate. Est quos minus harum alias illum reprehenderit facilis.</p>
-
-        </div>
-        <div class="row d-flex mt-5 justify-content-center">
-            <div class="col">
-                <div class="bg-light ps-4 mt-3 pe-4 rounded p-4"
-                    style="box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.10);">
-
-                    <div class="img-section" style="position: relative; display: inline-block;">
-                        <img src="Group 1513.png" class="w-75" alt="">
-                        <img src="Profile.png" class=" position-absolute top-50 start-50 translate-middle" alt=""
-                            style="width: 9rem; left: 50%; top: 50%; transform: translate(-50%, -50%);">
-                    </div>
-                    <h4 class="mt-5  text-uppercase">carla press</h4>
-                    <h6 class="text-muted mt-1 text-uppercase">app devlopers</h6>
-                    <p class="mt-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis illum eos
-                        nobis!</p>
-                    <div class="row">
-                        <div class="col p-2">
-
-                            <h3 class="border-right pe-2"><i class="fa-brands fs-5 fa-facebook-f"></i></h3>
-                        </div>
-                        <div class="col p-2">
-
-                            <h3 class="border-right pe-2"><i class="fa-brands fs-5  fa-square-instagram"></i></h3>
-                        </div>
-                        <div class="col p-2">
-
-                            <h3 class="border-right pe-2"><i class="fa-brands fs-5 fa-twitter"></i></h3>
-                        </div>
-                        <div class="col p-2">
-
-                            <h3><i class="fa-brands fs-5 fa-youtube"></i></h3>
-                        </div>
-
-
-                    </div>
+                    <a href="" class="mt-5 text-uppercase">read more</a>
                 </div>
-            </div>
+                <div class="text mt-5">
+                    <img src="Image (12).png" alt="" class="w-100">
+                    <h1>The Snap Pixel: How It Works and How to Install </h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie blandit nibh risus nisl,
+                        scelerisque. Fusce cursus massa ut egestas. Massa lorem turpis lectus viverra. Nulla volutpat
+                        urna
+                        eget velit vel at gravida fermentum, sem.Ut ullamcorper scelerisque interdum bibendum non
+                        tristique
+                        nullam. Netus nisl, leo nunc eu tincidunt vivamus nisi suspendisse. Non morbi eleifend sit ac.
+                    </p>
 
-            <div class="col">
-                <div class="bg-light mt-3 ps-4 pe-4 rounded p-4"
-                    style="box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.10);">
-
-                    <div class="img-section" style="position: relative; display: inline-block;">
-                        <img src="Group 1513.png" class="w-75" alt="">
-                        <img src="Profile Image.png" class=" position-absolute top-50 start-50 translate-middle" alt=""
-                            style="width: 9rem; left: 50%; top: 50%; transform: translate(-50%, -50%);">
-                    </div>
-                    <h4 class="mt-5  text-uppercase">Craig Gouse</h4>
-                    <h6 class="text-muted text-uppercase">ui/ux devloper</h6>
-
-                    <p class="mt-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis illum eos
-                        nobis!</p>
-                    <div class="row">
-                        <div class="col p-2">
-
-                            <h3 class="border-right pe-2"><i class="fa-brands fs-5 fa-facebook-f"></i></h3>
-                        </div>
-                        <div class="col p-2">
-
-                            <h3 class="border-right pe-2"><i class="fa-brands fs-5 fa-square-instagram"></i></h3>
-                        </div>
-                        <div class="col p-2">
-
-                            <h3 class="border-right pe-2"><i class="fa-brands fs-5 fa-twitter"></i></h3>
-                        </div>
-                        <div class="col p-2">
-
-                            <h3><i class="fa-brands fs-5 fa-youtube"></i></h3>
-                        </div>
-
-
-                    </div>
+                    <a href="" class="mt-5 text-uppercase">read more</a>
                 </div>
+               
             </div>
-            <div class="col">
-                <div class="bg-light mt-3 ps-4 pe-4 rounded p-4"
-                    style="box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.10);">
-
-                    <div class="img-section" style="position: relative; display: inline-block;">
-                        <img src="Group 1513.png" class="w-75" alt="">
-                        <img src="Profile Image (1).png" class=" position-absolute top-50 start-50 translate-middle"
-                            alt="" style="width: 9rem; left: 50%; top: 50%; transform: translate(-50%, -50%);">
-                    </div>
-                    <h4 class="mt-5  text-uppercase">Jocelyn Septimus</h4>
-                    <h6 class="text-muted mt-1 text-uppercase">website devloper</h6>
-                    <p class="mt-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis illum eos
-                        nobis!</p>
-                    <div class="row">
-                        <div class="col p-2">
-
-                            <h3 class="border-right pe-2"><i class="fa-brands fs-5 fa-facebook-f"></i></h3>
-                        </div>
-                        <div class="col p-2">
-
-                            <h3 class="border-right pe-2"><i class="fa-brands fs-5 fa-square-instagram"></i></h3>
-                        </div>
-                        <div class="col p-2">
-
-                            <h3 class="border-right pe-2"><i class="fa-brands fs-5 fa-twitter"></i></h3>
-                        </div>
-                        <div class="col p-2">
-
-                            <h3><i class="fa-brands fs-5 fa-youtube"></i></h3>
-                        </div>
-
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    <div class="container-fluid mt-5 text-light text-center">
-        <div class="header w-100">
-            <div class="container">
-
-           
-            <h1 class="text-uppercase mt-5 pt-5">our happy customer</h1>
-            <p class="ps-4 ms-5 mt-1 pe-5 me-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur assumenda
-                delectus ut, commodi sequi magnam enim temporibus, molestiae repellendus officiis modi saepe illo ea
-                accusamus labore ipsum sit debitis consectetur dolor adipisci consequatur fugit!</p>
-            <div> -->
-            <!-- <section id="slider">
-                    <input type="radio" name="slider" id="s1" checked>
-                    <input type="radio" name="slider" id="s2">
-                    <input type="radio" name="slider" id="s3">
-                    <input type="radio" name="slider" id="s4">
-                    <input type="radio" name="slider" id="s5"> -->
-
-
-            <!-- <label for="s1" id="slide1">
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </label> -->
-            <!-- <label for="s2" id="slide2">
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </label> -->
-            <!-- <label for="s3" id="slide3">
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </label> -->
-            <!-- <label for="s4" id="slide4">
-
-                    </label> -->
-            <!-- <label for="s5" id="slide5">
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>>
-                    </label> -->
-
-            <!-- </section>
-
-            </div>
-        </div>
-    </div>
-
-    </div>
-    <div class="container text-center mt-5 p-3">
-        <div class="blog">
-            <h3 class="text-uppercase p-3">our resent blog</h3>
-            <p class="ps-5 pe-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe quidem culpa, amet
-                cupiditate, aperiam perspiciatis ullam sapiente, assumenda asperiores tempore temporibus quibusdam ad.
-            </p>
-        </div>
-        <div class="row mt-5">
-            <div class="col-md-4">
-                <div class="bg-light blogs">
-                    <img src="Image (3).png" class="card-img-top img-fluid" alt="...">
-                    <div class="card-body text-start p-2">
-                        <h5 class="card-title  mt-2 p-3 ">The Snap Pixel: How It Works and How to Install</h5>
-                        <p class="card-text ps-3 pe-3">Some quick example text to build on the card title and make up
-                            the bulk of the card's content.</p>
-                        <a href="index2.html" class=" btn ms-3 mt-5">Read more</a>
-
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="bg-light blogs">
-                    <img src="Image (4).png" class="card-img-top img-fluid" alt="...">
-                    <div class="card-body text-start p-2">
-                        <h5 class="card-title  mt-2 p-3 ">Global Partner Solutions: A Partnership of Innovation</h5>
-                        <p class="card-text ps-3 pe-3">Some quick example text to build on the card title and make up
-                            the bulk of the card's content.</p>
-                        <a href="index2.html" class="btn mt-5 ms-3">Read more</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="bg-light blogs">
-                    <img src="Image (5).png" class="card-img-top img-fluid" alt="...">
-                    <div class="card-body text-start p-2">
-                        <h5 class="card-title mt-2 p-3">2021: An opportunity for Snapchatters to start fresh</h5>
-                        <p class="card-text ps-3 pe-3">Some quick example text to build on the card title and make up
-                            the bulk of the card's content.</p>
-                        <a href="index2.html" class="btn mt-5  ms-3">Read more</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-    <div class=" container-fluid  pt-5 mt-5 bg-dark text-white">
-        <div class="content mt-5 pt-5">
-            <div class="container">
-
-
-                <div class="row">
-                    <div class="col-md-4">
-                        <h3 class="text-uppercase" style="margin-left: 3rem;">logo</h3>
-                        <p class="ps-4 ms-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eius
-                            maxime dicta. Nostrum dolorum asperiores illum omnis ea! Quidem odio maxime voluptate
-                            commodi.</p>
-                        <div class="row mb-5 ms-5 mt-4">
-                            <div class="col">
-
-                                <h3 class=""><i class="fa-brands fs-6 fa-facebook-f"></i></h3>
-                            </div>
-                            <div class="col ">
-
-                                <h3 class=" "><i class="fa-brands fs-6 fa-square-instagram"></i></h3>
-                            </div>
-                            <div class="col ">
-
-                                <h3 class=""><i class="fa-brands fs-6 fa-twitter"></i></h3>
-                            </div>
-                            <div class="col ">
-
-                                <h3><i class="fa-brands fs-6 fa-youtube"></i></h3>
-                            </div>
-
-
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <h3 class="text-uppercase" style="margin-left: 5rem;">Quick Link</h3>
-                        <nav class="float-start ms-5 ps-3">
-                            <ul class="nav flex-column">
-                                <li class="nav-item "><a class="nav-link" href="#about">About</a></li>
-                                <li class="nav-item "><a class="nav-link" href="#features">Features</a></li>
-                                <li class="nav-item "><a class="nav-link" href="#screenshot">Screenshot</a></li>
-                                <li class="nav-item "><a class="nav-link" href="#blog">Blog</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-
-                    <div class="col-md-4 ">
-                        <h3 class="text-uppercase" style="margin-left: 5rem;">Newsletter</h3>
-                        <p class="ms-5 ps-4 ">Subscribe to our newsletter to get our latest updates & news</p>
-                        <div class="input-group">
-                            <input type="text" class="form-control " placeholder="Your email address">
-                            <button class="btn btn-primary " type="button"><i
-                                    class="fa-sharp fa-solid fa-play"></i></button>
-                        </div>
-                    </div>
-
+            <div class="col-md-4 mt-3">
+                <div>
+                    <form action="" class="mb-5">
+                        <input type="text" class="w-100 p-2">
+                    </form>
                     <hr>
-                    <div class="text-center">
-                        <p>Copyright 2021 .Ojjomedia. All Right Reserved.</p>
-                    </div>
                 </div>
-            </div>
-        </div>
+                <div class="mt-4">
+                    <h2 class="text-uppercase">Recent Post </h2>
+                    <img src="Image (7).png" alt="">
+                    <p  class="text-uppercase ms-3 mt-2 fs-5">Irina Rozovsky captures Brooklyn’s Prospect Park in a romantic light</p>
+                </div>
+                <div class="mt-4">
+                    <!-- <h2 class="text-uppercase">Recent Post </h2> -->
+                    <img src="Image (15).png" alt="">
+                    <p  class="text-uppercase ms-3 mt-2 fs-5">Irina Rozovsky captures Brooklyn’s Prospect Park in a romantic light</p>
+                </div>
+                <div class="mt-4">
+                    <!-- <h2 class="text-uppercase">Recent Post </h2> -->
+                    <img src="Image (16).png" alt="">
+                    <p  class="text-uppercase ms-3 mt-2 fs-5">Irina Rozovsky captures Brooklyn’s Prospect Park in a romantic light</p>
+                </div>
+                <div class="mt-4">
+                    <!-- <h2 class="text-uppercase">Recent Post </h2> -->
+                    <img src="Image (17).png" alt="">
+                    <p  class="text-uppercase ms-3 mt-2 fs-5">Irina Rozovsky captures Brooklyn’s Prospect Park in a romantic light</p>
+                </div>
+                <div class="mt-4">
+                    <!-- <h2 class="text-uppercase">Recent Post </h2> -->
+                    <img src="Image (18).png" alt="">
+                    <p  class="text-uppercase ms-3 mt-2 fs-5">Irina Rozovsky captures Brooklyn’s Prospect Park in a romantic light</p>
+                </div>
+                <hr class="mt-4">
+                <div class="mt-3 ms-2 mt-2">
+                    <h3 class="text-uppercase">category</h3>
+                    <div class="row mt-4">
+                        <div class="col-2">
+                             <h3> <i class="fa-solid fa-caret-right"></i> </h3> 
+                        </div>
+                        <div class="col-7 mt-1">
+                            <h5 class="text-uppercase text-muted"> E-commars app</h5>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-2">
+                             <h3> <i class="fa-solid fa-caret-right"></i> </h3> 
+                        </div>
+                        <div class="col-7 mt-1">
+                            <h5 class="text-uppercase text-muted"> banking app</h5>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-2">
+                             <h3> <i class="fa-solid fa-caret-right"></i> </h3> 
+                        </div>
+                        <div class="col-7 mt-1">
+                            <h5 class="text-uppercase text-muted"> bussiness app</h5>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-2">
+                             <h3> <i class="fa-solid fa-caret-right"></i> </h3> 
+                        </div>
+                        <div class="col-7 mt-1">
+                            <h5 class="text-uppercase text-muted"> video app</h5>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-2">
+                             <h3> <i class="fa-solid fa-caret-right"></i> </h3> 
+                        </div>
+                        <div class="col-7 mt-1">
+                            <h5 class="text-uppercase text-muted"> E-commars   app</h5>
+                        </div>
+                    </div>
+                    <hr>
+<div class="mt-2">
+    <h3 class="text-uppercase">tags</h3>
+    <div class="lh-lg">
+        <span class="text-uppercase border-dark border-bottom">E-commars   app </span> <span class="text-uppercase ms-2 border-dark border-bottom">banking   app </span> <br> <span class="text-uppercase   border-dark border-bottom">video   app </span> 
+        <span class="text-uppercase ms-2 border-dark border-bottom">bussiness   app </span>
     </div>
 
-    <div class="slider">
-        <div class="slider__inner">
-          <div class="slider__item">
-           <div class="slider__item-container">
-              <img src="App.png" class="slider__item-img"/>
-              <div class="slider__item-datas">
-                <span>Lorem Ipsum Dolores</span>
+</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="container-fluid footer p-5 pb-2 mt-5  bg-dark">
+        <div class="container pt-5 text-light">
+          <div class="row d-flex justify-content-between align-items-center">
+            <div class="col-md-3">
+              <h4 class="text-uppercase">LOGO</h4>
+              <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est
+                </p>
+              <div class="row text-center">
+                <div class="col border-right border-white align-items-center p-2">
+                  <i class="fa-brands text-primary fa-facebook-f"></i>
+                </div>
+                <div class="col border-right border-white align-items-center p-2">
+                  <img src="insta3.png" class="w-25 pe-0" alt="">
+    
+                </div>
+                <div class="col border-right border-white  align-items-center p-2">
+                  <i class="fa-brands fa-twitter"></i>
+    
+                </div>
+                <div class="col  align-items-center p-2">
+                  <i class="fa-brands fa-youtube"></i>
+    
+                </div>
               </div>
             </div>
-          </div>
-          <div class="slider__item">
-            <div class="slider__item-container">
-              <img src="https://picsum.photos/id/102/300/300" class="slider__item-img"/>
-              <div class="slider__item-datas">
-                <span>Lorem Ipsum Dolores</span>
+            <div class="col-md-3">
+              <!-- <h1>quick link</h1> -->
+              <h4 class="text-uppercase">quick link</h4>
+              <div class="row d-flex flex-column lh-base">
+                <div class="col text-capitalize mt-2">
+                  about
+                </div>
+                <div class="col text-capitalize mt-2">
+                  features
+                </div>
+                <div class="col text-capitalize mt-2 ">
+                  screenshot
+                </div>
+                <div class="col text-capitalize mt-2">
+                  blog
+                </div>
               </div>
+    
+            </div>
+            <div class="col-md-3">
+              <!-- <h1>news letter</h1> -->
+              <h4 class="text-uppercase">news letter</h4>
+              <p>Subscribe our newsletter to get our latest
+                update & news</p>
+              <form action="">
+                <input type="text" class="w-100 p-2" placeholder="your email address">
+              </form>
             </div>
           </div>
-          <div class="slider__item">
-           <div class="slider__item-container">
-              <img src="https://picsum.photos/id/103/300/300" class="slider__item-img"/>
-              <div class="slider__item-datas">
-                <span>Lorem Ipsum Dolores</span>
-              </div>
-            </div>
-          </div>
-          <div class="slider__item">
-            <div class="slider__item-container">
-              <img src="https://picsum.photos/id/104/300/300" class="slider__item-img"/>
-              <div class="slider__item-datas">
-                <span>Lorem Ipsum Dolores</span>
-              </div>
-            </div>
-          </div>
-          <div class="slider__item">
-            <div class="slider__item-container">
-              <img src="https://picsum.photos/id/106/300/300" class="slider__item-img"/>
-              <div class="slider__item-datas">
-                <span>Lorem Ipsum Dolores Lorem Ipsum Dolores</span>
-              </div>
-            </div>
-          </div>
-          <div class="slider__item">
-            <div class="slider__item-container">
-              <img src="https://picsum.photos/id/121/300/300" class="slider__item-img"/>
-              <div class="slider__item-datas">
-                <span>Lorem Ipsum Dolores</span>
-              </div>
-            </div>
-          </div>
-          <div class="slider__item">
-            <div class="slider__item-container">
-              <img src="https://picsum.photos/id/108/300/300" class="slider__item-img"/>
-              <div class="slider__item-datas">
-                <span>Lorem Ipsum Dolores</span>
-              </div>
-            </div>
-          </div>
-          <div class="slider__item">
-            <div class="slider__item-container">
-              <img src="https://picsum.photos/id/109/300/300" class="slider__item-img"/>
-              <div class="slider__item-datas">
-                <span class="slider__item-datas__text">Lorem Ipsum Dolores</span>
-              </div>
-            </div>
-          </div>
-          <div class="slider__controls"></div>
+        </div>
+        <hr class="text-light mt-5 pt-4">
+        <div class="text-center text-light">
+          <p>Copyright 2021 .Ojjomedia. All Right Reserved.</p>
         </div>
       </div>
-
-
-
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-       class Carousel {
-  constructor(params) {
-    this.carouselContainer = params.container;
-    this.controlsContainer = params.controlsContainer;
-    this.controlsClassName = this.controlsContainer.className
-    this.displayControls = params.displayControls;
-    this.carouselControls = ['previous', 'next'];
-    this.carouselArray = [...params.items];
-    this.classNameItem = this.carouselArray[0].className;
-    this.carouselLength = this.carouselArray.length;
-    this.textControls = params.textControls;
-    this.autoplay = params.autoplay;
-    this.autoplayTime = params.autoplayTime;
-    this.setParams()
-  }
-  
-    getCurrentState() {
-    const selectedItem = this.carouselContainer.querySelector(`.${this.classNameItem}-selected`);
-    const previousSelectedItem = this.carouselContainer.querySelector(`.${this.classNameItem}-previous`);
-    const nextSelectedItem = this.carouselContainer.querySelector(`.${this.classNameItem}-next`);
-    const firstCarouselItem = this.carouselContainer.querySelector(`.${this.classNameItem}-first`);
-    const lastCarouselItem = this.carouselContainer.querySelector(`.${this.classNameItem}-last`);
-
-    var indexLastCarouselItem = parseInt(lastCarouselItem.getAttribute('data-index'))
-    var indexFirstCarouselItem = parseInt(firstCarouselItem.getAttribute('data-index'))
-    var indexDownCarouselItem = indexFirstCarouselItem - 1
-    var indexUpCarouselItem = indexLastCarouselItem + 1
-
-    const  downCommingCarouselItem = this.carouselContainer.querySelector(`.${this.classNameItem}[data-index='${indexDownCarouselItem}']`);
-    const  upCommingCarouselItem = this.carouselContainer.querySelector(`.${this.classNameItem}[data-index='${indexUpCarouselItem}']`);
-    
-    return [selectedItem, previousSelectedItem, nextSelectedItem, firstCarouselItem, lastCarouselItem,downCommingCarouselItem, upCommingCarouselItem, indexDownCarouselItem, indexUpCarouselItem]
-  }
-
-//init all params
-  setParams() {
-      
-    this.setInitialState();
-    this.setControls();
-    this.onTouch();
-      
-    if(this.displayControls) {
-      this.useControls();
-    }
-    if(this.autoplay) {
-        setInterval( function(){ this.setCurrentState( this.controlsContainer.childNodes[1], this.getCurrentState())}.bind(this), this.autoplayTime)
-    }
-  }
-  
-// Construct the carousel controls
-  setControls() {
-    this.carouselControls.forEach((control, index) => {
-      this.controlsContainer.appendChild(document.createElement('button')).className = `${this.controlsClassName}-${control}`;
-    });
-    if(this.displayControls) {
-       !!this.controlsContainer.childNodes[0] ? this.controlsContainer.childNodes[0].insertAdjacentHTML('beforeend', this.textControls[0]) : null;
-    !!this.controlsContainer.childNodes[1] ? this.controlsContainer.childNodes[1].insertAdjacentHTML('beforeend', this.textControls[1]) : null;
-    }
-   
-  } 
-  
-// Assign initial css classes and attribute for each items
-  setInitialState() {
-    this.carouselArray.forEach((item,index) => {
-      item.setAttribute('data-index', index)
-    })
-    this.carouselArray[0].classList.add(`${this.classNameItem}-first`);
-    this.carouselArray[1].classList.add(`${this.classNameItem}-previous`);
-    this.carouselArray[2].classList.add(`${this.classNameItem}-selected`);
-    this.carouselArray[3].classList.add(`${this.classNameItem}-next`);
-    this.carouselArray[4].classList.add(`${this.classNameItem}-last`);
-  }
-
- // Update the order state of the carousel with css classes
-  setCurrentState(target, [selected, previous, next, first, last, downComming, upComming, downIndex, upIndex]) {
-
-    selected.classList.remove(`${this.classNameItem}-selected`);
-    previous.classList.remove(`${this.classNameItem}-previous`);
-    next.classList.remove(`${this.classNameItem}-next`);
-    first.classList.remove(`${this.classNameItem}-first`);
-    last.classList.remove(`${this.classNameItem}-last`);
-
-    if (target.className == `${this.controlsClassName}-${this.carouselControls[1]}`) {
-      this.carouselArray.forEach((item) => {
-        item.classList.remove(`${this.classNameItem}-trigger-previous`)
-        item.classList.add(`${this.classNameItem}-trigger-next`)
-      })
-      switch(upIndex) {
-        case this.carouselLength:
-          this.carouselArray[0].classList.add(`${this.classNameItem}-last`);
-          previous.classList.add(`${this.classNameItem}-first`);
-          selected.classList.add(`${this.classNameItem}-previous`);
-          next.classList.add(`${this.classNameItem}-selected`);
-          last.classList.add(`${this.classNameItem}-next`);
-          break
-        case 1:
-          this.carouselArray[0].classList.add(`${this.classNameItem}-next`);
-          this.carouselArray[1].classList.add(`${this.classNameItem}-last`);
-          previous.classList.add(`${this.classNameItem}-first`);
-          selected.classList.add(`${this.classNameItem}-previous`);
-          next.classList.add(`${this.classNameItem}-selected`);
-          break
-        case 2:
-          this.carouselArray[0].classList.add(`${this.classNameItem}-selected`);
-          this.carouselArray[1].classList.add(`${this.classNameItem}-next`);
-          this.carouselArray[2].classList.add(`${this.classNameItem}-last`);
-          previous.classList.add(`${this.classNameItem}-first`);
-          selected.classList.add(`${this.classNameItem}-previous`);
-          break
-        case 3:
-          this.carouselArray[0].classList.add(`${this.classNameItem}-previous`);
-          this.carouselArray[1].classList.add(`${this.classNameItem}-selected`);
-          this.carouselArray[2].classList.add(`${this.classNameItem}-next`);
-          this.carouselArray[3].classList.add(`${this.classNameItem}-last`);
-          previous.classList.add(`${this.classNameItem}-first`);
-          break
-        case 4:
-          this.setInitialState()
-          break
-        default: 
-        previous.classList.add(`${this.classNameItem}-first`);
-        selected.classList.add(`${this.classNameItem}-previous`);
-        next.classList.add(`${this.classNameItem}-selected`);
-        last.classList.add(`${this.classNameItem}-next`);
-        upComming.classList.add(`${this.classNameItem}-last`)
-      }
-    } 
-    
-    else {
-       this.carouselArray.forEach((item) => {
-        item.classList.remove(`${this.classNameItem}-trigger-next`)
-        item.classList.add(`${this.classNameItem}-trigger-previous`)
-      })
-      switch(downIndex) {
-        case -1:
-          this.carouselArray[(this.carouselLength -1)].classList.add(`${this.classNameItem}-first`);
-          first.classList.add(`${this.classNameItem}-previous`);
-          previous.classList.add(`${this.classNameItem}-selected`);
-          selected.classList.add(`${this.classNameItem}-next`);
-          next.classList.add(`${this.classNameItem}-last`);         
-          break
-        case (this.CarouselLength - 2):
-          this.carouselArray[this.carouselLength -1].classList.add(`${this.classNameItem}-previous`);
-          this.carouselArray[this.carouselLength -2].classList.add(`${this.classNameItem}-first`);
-          previous.classList.add(`${this.classNameItem}-selected`);
-          selected.classList.add(`${this.classNameItem}-next`);
-          next.classList.add(`${this.classNameItem}-last`);
-          break
-        case (this.CarouselLength - 3):
-          this.carouselArray[this.carouselLength -1].classList.add(`${this.classNameItem}m-selected`);
-          this.carouselArray[this.carouselLength -2].classList.add(`${this.classNameItem}-previous`);
-          this.carouselArray[this.carouselLength -3].classList.add(`${this.classNameItem}m-first`);
-          selected.classList.add(`${this.classNameItem}-next`);
-          next.classList.add(`${this.classNameItem}-last`);
-          break
-       case (this.CarouselLength - 4):
-          this.carouselArray[this.carouselLength -1].classList.add(`${this.classNameItem}-next`);
-          this.carouselArray[this.carouselLength -2].classList.add(`${this.classNameItem}m-selected`);
-          this.carouselArray[this.carouselLength -3].classList.add(`${this.classNameItem}-previous`);
-          this.carouselArray[this.carouselLength -4].classList.add(`${this.classNameItem}-first`);
-          selected.classList.add(`${this.classNameItem}-next`);
-          next.classList.add(`${this.classNameItem}-last`);
-          break
-        default:
-          downComming.classList.add(`${this.classNameItem}-first`)
-          first.classList.add(`${this.classNameItem}-previous`);
-          previous.classList.add(`${this.classNameItem}-selected`);
-          selected.classList.add(`${this.classNameItem}-next`);
-          next.classList.add(`${this.classNameItem}-last`);
-      }
-    }
-  }
-
-   useControls() {
-    this.controlsContainer.childNodes.forEach(control => {
-      control.addEventListener('click', () => {
-        const target = control;
-        this.setCurrentState(target, this.getCurrentState());
-      });
-    });
-  }
-  
-  // touch action
-  onTouch() {
-    let touchstartX = 0;
-    let touchendX = 0;
-    let clickX = 0;
-    let drag = false;
-    
-    this.carouselContainer.addEventListener('mousedown', function(event) {
-      clickX = event.pageX
-      drag = true
-    }, false)
-    
-    this.carouselContainer.addEventListener('mouseup', function(event) {
-       if(drag) {
-         if(event.pageX < clickX) {
-            this.setCurrentState( this.controlsContainer.childNodes[1], this.getCurrentState())
-          } else if (event.pageX > clickX) {
-            this.setCurrentState( this.controlsContainer.childNodes[0], this.getCurrentState())
-          }
-       }
-    }.bind(this), false)
- this.carouselContainer.addEventListener('touchstart', function(event) {
-        touchstartX = event.changedTouches[0].screenX;
-    }, false);
-    this.carouselContainer.addEventListener('touchend', function(event) {
-        touchendX = event.changedTouches[0].screenX;
-        if (touchendX <= touchstartX) {
-            this.setCurrentState( this.controlsContainer.childNodes[1], this.getCurrentState())
-        }
-        else if (touchendX > touchstartX) {
-            this.setCurrentState( this.controlsContainer.childNodes[0], this.getCurrentState())
-        }
-    }.bind(this), false); 
-  }
-}
-
-const myCarousel = new Carousel({
-  container: document.querySelector('.slider'),
-  items: document.querySelectorAll('.slider__item'),
-  displayControls: true,
-  controlsContainer: document.querySelector('.slider__controls'),
-  textControls: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
-  autoplay: true,
-  autoplayTime: 3500
-}); 
-
-
-
-    </script>
-
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
     
     
--->
-            <script>
-                document.addEventListener('DOMContentLoaded', () => {
-                    const xmarkIcon = document.getElementById('closeIcon');
-                    const content = document.getElementById('navbar'); // Change to the container element that holds the content
-
-                    xmarkIcon.addEventListener('click', () => {
-                        content.classList.add('hidden');
-                    });
-                });
-
-    // });       
-            </script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-                crossorigin="anonymous"></script>
+    
+    
+    
+    
+    
+    
 </body>
 
-</html
-
-
-
-
-            
+</html>
