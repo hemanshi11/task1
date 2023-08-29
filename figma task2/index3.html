@@ -225,11 +225,7 @@
     </div>
 
   </div>
-  </div>
-
-  </div>
-  </div>
-  </div>
+ 
   <!-- about this app -->
   <div class="container mt-5 p-5  pb-5 mb-5">
     <div class="about p-5  d-flex flex-column justify-content-center align-items-center">
@@ -359,9 +355,7 @@
     </div>
   </div>
 
-  </div>
-  </div>
-  </div>
+ 
   <!-- interface look -->
   <div class="container mt-5 pt-5 p-3 text-center">
     <h3 class="text-uppercase p-3">checkout our app interface look</h3>
@@ -459,10 +453,10 @@
    
   </div>
 
-  </div>
-  </div>
-  </div>
-  </div>
+  <!-- </div> -->
+  <!-- </div> -->
+  <!-- </div> -->
+  <!-- </div> -->
   <!-- use of app -->
   <div class="container-fluid pb-5 position-relative">
 
@@ -494,10 +488,7 @@
     </div>
 
   </div>
-    </div>
-
-  </div>
-  </div>  
+   
 
  
   
@@ -893,20 +884,11 @@
       <p>Copyright 2021 .Ojjomedia. All Right Reserved.</p>
     </div>
   </div>
-  <div>
-  </div>
+ 
+
 
   
   <!-- silder end -->
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1017,185 +999,8 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
 
-<script>
-// slider end
 
-    // var Slider = (function () {
-    //   var initSlider = function () {
-    //     var dir = $("html").attr("dir");
-    //     var swipeHandler = new Hammer(document.getElementById("slider"));
-    //     swipeHandler.on('swipeleft', function (e) {
-    //       if (dir == "rtl")
-    //         $(".arrow-left").trigger("click");
-    //       else
-    //         $(".arrow-right").trigger("click");
-    //     });
 
-    //     swipeHandler.on('swiperight', function (e) {
-    //       if (dir == "rtl")
-    //         $(".arrow-right").trigger("click");
-    //       else
-    //         $(".arrow-left").trigger("click");
-    //     });
-
-    //     $(".arrow-right , .arrow-left").click(function (event) {
-    //       var nextActiveSlide = $(".slide.active").next();
-
-    //       if ($(this).hasClass("arrow-left"))
-    //         nextActiveSlide = $(".slide.active").prev();
-
-    //       if (nextActiveSlide.length > 0) {
-    //         var nextActiveIndex = nextActiveSlide.index();
-    //         $(".dots span").removeClass("active");
-    //         $($(".dots").children()[nextActiveIndex]).addClass("active");
-
-    //         updateSlides(nextActiveSlide);
-    //       }
-    //     });
-
-    //     $(".dots span").click(function (event) {
-    //       var slideIndex = $(this).index();
-    //       var nextActiveSlide = $($(".slider").children()[slideIndex]);
-    //       $(".dots span").removeClass("active");
-    //       $(this).addClass("active");
-
-    //       updateSlides(nextActiveSlide);
-    //     });
-
-    //     var updateSlides = function (nextActiveSlide) {
-    //       var nextActiveSlideIndex = $(nextActiveSlide).index();
-
-    //       $(".slide").removeClass("prev-1");
-    //       $(".slide").removeClass("next-1");
-    //       $(".slide").removeClass("active");
-    //       $(".slide").removeClass("prev-2");
-    //       $(".slide").removeClass("next-2");
-
-    //       nextActiveSlide.addClass("active");
-
-    //       nextActiveSlide.prev().addClass("prev-1");
-    //       nextActiveSlide.prev().prev().addClass("prev-2");
-    //       nextActiveSlide.addClass("active");
-    //       nextActiveSlide.next().addClass("next-1");
-    //       nextActiveSlide.next().next().addClass("next-2");
-    //     }
-
-    //     var updateToNextSlide = function (nextActiveSlide) {
-
-    //     }
-    //   }
-    //   return {
-    //     init: function () {
-    //       initSlider();
-    //     }
-    //   }
-    // })();
-
-    // $(function () {
-    //   Slider.init();
-    // });
-
-    // card slider
-    // var carousel = $(".carousel"),
-    //     items = $(".item"),
-    //     currdeg = 0,
-    //     intervalId = null,
-    //     rotationInProgress = false;
-
-    // var mouseDownX = 0;
-    // var mouseUpX = 0;
-
-    // $(".carousel").on("mousedown", function (event) {
-    //   mouseDownX = event.pageX;
-    //   stopRotation();
-    // });
-
-    // $(".carousel").on("mousemove", function (event) {
-    //   if (mouseDownX !== 0) {
-    //     mouseUpX = event.pageX;
-    //   }
-    // });
-
-    // $(".carousel").on("mouseup", function (event) {
-    //   if (mouseDownX !== 0) {
-    //     handleSwipe();
-    //   }
-    //   mouseDownX = 0;
-    //   mouseUpX = 0;
-    //   startRotation();
-    // });
-
-    // function handleSwipe() {
-    //   var swipeThreshold = 50; // Minimum swipe distance required to trigger a rotation
-
-    //   if (mouseUpX - mouseDownX > swipeThreshold) {
-    //     // Swipe right
-    //     rotate({ data: { d: "p" } });
-    //   } else if (mouseDownX - mouseUpX > swipeThreshold) {
-    //     // Swipe left
-    //     rotate({ data: { d: "n" } });
-    //   }
-    // }
-    
-    // function rotate(e) {
-    //   if (rotationInProgress) {
-    //     return; // Ignore rotation request if it's already in progress
-    //   }
-
-    //   rotationInProgress = true;
-
-    //   if (e.data.d == "n") {
-    //     currdeg = currdeg - 60;
-    //   }
-    //   if (e.data.d == "p") {
-    //     currdeg = currdeg + 60;
-    //   }
-    //   carousel.css({
-    //     "-webkit-transform": "rotateY(" + currdeg + "deg)",
-    //     "-moz-transform": "rotateY(" + currdeg + "deg)",
-    //     "-o-transform": "rotateY(" + currdeg + "deg)",
-    //     "transform": "rotateY(" + currdeg + "deg)"
-    //   });
-    //   items.css({
-    //     "-webkit-transform": "rotateY(" + (-currdeg) + "deg)",
-    //     "-moz-transform": "rotateY(" + (-currdeg) + "deg)",
-    //     "-o-transform": "rotateY(" + (-currdeg) + "deg)",
-    //     "transform": "rotateY(" + (-currdeg) + "deg)"
-    //   });
-
-    //   setTimeout(function() {
-    //     rotationInProgress = false;
-    //   }, 1000); // Set rotationInProgress to false after 1 second to allow rotation to complete
-    // }
-    
-    // function startRotation() {
-    //   if (intervalId === null) {
-    //     intervalId = setInterval(function() {
-    //       rotate({ data: { d: "n" } });
-    //     }, 10000);
-    //   }
-    // }
-    
-    // function stopRotation() {
-    //   if (intervalId !== null) {
-    //     clearInterval(intervalId);
-    //     intervalId = null;
-    //   }
-    // }
-
-    // // Start the rotation initially
-    // startRotation();
-
-    // // Detect visibility change and stop/start rotation accordingly
-    // document.addEventListener("visibilitychange", function() {
-    //   if (document.visibilityState === "hidden") {
-    //     stopRotation();
-    //   } else if (document.visibilityState === "visible") {
-    //     startRotation();
-    //   }
-    // });
-
-  </script>
   <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script> -->
