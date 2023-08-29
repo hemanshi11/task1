@@ -13,11 +13,74 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script> -->
+  <link rel="stylesheet" href="style3.css" />
+  <script>
+
+ 
+  $(document).ready(function () {
+    function moveToSelected(element) {
+      if (element == "next") {
+        var selected = $(".selected").next();
+      } else if (element == "prev") {
+        var selected = $(".selected").prev();
+      } else {
+        var selected = element;
+      }
+
+      var next = $(selected).next();
+      var prev = $(selected).prev();
+      var prevSecond = $(prev).prev();
+      var nextSecond = $(next).next();
+
+      $(selected).removeClass().addClass("selected");
+
+      $(prev).removeClass().addClass("prev");
+      $(next).removeClass().addClass("next");
+
+      $(nextSecond).removeClass().addClass("nextRightSecond");
+      $(prevSecond).removeClass().addClass("prevLeftSecond");
+
+      $(nextSecond).nextAll().removeClass().addClass("hideRight");
+      $(prevSecond).prevAll().removeClass().addClass("hideLeft");
+    }
+
+    // Eventos teclado
+    $(document).keydown(function (e) {
+      switch (e.which) {
+        case 37: // left
+          moveToSelected("prev");
+          break;
+
+        case 39: // right
+          moveToSelected("next");
+          break;
+
+        default:
+          return;
+      }
+      e.preventDefault();
+    });
+
+    $("#carousel div").click(function () {
+      moveToSelected($(this));
+    });
+
+    $("#prev").click(function () {
+      moveToSelected("prev");
+    });
+
+    $("#next").click(function () {
+      moveToSelected("next");
+    });
+  });
+</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
   <link rel="stylesheet" href="style3.css" />
 </head>
 
 <body>
+  <!-- header navbar -->
   <div class="header pb-5">
     <div class="container">
       <nav class="navbar d-md-flex d-none navbar-expand-lg navbar-light ">
@@ -115,7 +178,7 @@
         </div>
       </div>
 
-
+<!-- header content -->
 
       <div class="container  mt-5">
         <div class="container  mt-5">
@@ -123,7 +186,7 @@
             <div class="col-md-6 ms-0  col-sm-12">
               <div class="box  ">
                 <div class="card card-content mt-5 ">
-                  <div class="card-body">
+                  <div class="card-body ">
                     <h5 class="card-title fw-bold fw-3 fs-1 text-uppercase text-primary d-flex flex-wrap">
                       a
                       great app makes life better</h5>
@@ -135,7 +198,7 @@
                     <h2 class="text-uppercase mt-5">download app now</h2>
                     <div class="pb-2">
                       <span><img src="toppng 1.png" alt=""></span>
-                      <span class="ms-2"><img src="toppng 1.png" alt=""></span>
+                      <span class="ms-2"><img src="appstore.png" alt=""></span>
 
                     </div>
                   </div>
@@ -167,6 +230,7 @@
   </div>
   </div>
   </div>
+  <!-- about this app -->
   <div class="container mt-5 p-5  pb-5 mb-5">
     <div class="about p-5  d-flex flex-column justify-content-center align-items-center">
       <h1 class="text-uppercase text-center pb-4 fw-bolder">about our app</h1>
@@ -216,6 +280,9 @@
 
     </div>
   </div>
+  <!-- app features -->
+
+
   <div class="header pb-5">
     <div class="container text-light ">
       <div class="feture pt-5 mt-5 d-flex flex-column  text-center">
@@ -291,36 +358,15 @@
       </div>
     </div>
   </div>
-  <!-- <div>
-                <div class="text">
 
-
-                   <img src="surface1.png" class="mb-5 surface " alt=""> 
-                </div>
-                <img src="App.png" class="w-50hmm ">
-            </div> -->
   </div>
   </div>
   </div>
+  <!-- interface look -->
   <div class="container mt-5 pt-5 p-3 text-center">
     <h3 class="text-uppercase p-3">checkout our app interface look</h3>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.<br> Tempora earum eos aperiam voluptates voluptate.
       <br> Saepe minima neque vero odit doloribusnemo facilis blanditiis?
-      <!-- <section id="slider">
-      <br> Saepe minima neque vero odit doloribusnemo facilis blanditiis?
-<section id="slider">
-      <input type="radio" name="slider" id="s1" checked>
-      <input type="radio" name="slider" id="s2">
-      <input type="radio" name="slider" id="s3">
-      <input type="radio" name="slider" id="s4">
-      <input type="radio" name="slider" id="s5">
-
-      <label for="s1" id="slide1"><img src="App.png" class="h-50" alt=""></label>
-      <label for="s2" id="slide2"><img src="Free Ui View Mobile App Mockup 1.png" class="h-50" alt=""></label>
-      <label for="s3" id="slide3"><img src="Free Ui View Mobile App Mockup 1.png" class="h-50" alt=""></label>
-      <label for="s4" id="slide4"><img src="App.png" class="h-50" alt=""></label>
-      <label for="s5" id="slide5"><img src="Free Ui View Mobile App Mockup 1.png" class="h-50" alt=""></label>
-  </section>  -->
 
     </p>
     </p>
@@ -330,86 +376,60 @@
 
   </div>
 
-  <!-- <div class="container mt-5">
+<div class="container curous mt-5" style="height: 40vh; margin-top: 11rem !important;">
+
+  <main>
+    <div id="carousel">
+      <div class="hideLeft">
+        <img
+          src="App.png"
+        />
+      </div>
+
+      <div class="prevLeftSecond">
+        <img
+          src="001.png"
+        />
+      </div>
+
+      <div class="prev">
+        <img
+          src=" 003.png"
+        />
+      </div>
+
+      <div class="selected">
+        <img
+          src="iPhoneX-Mockup 1.png"
+        />
+      </div>
+
+      <div class="next">
+        <img
+          src="001.png"
+        />
+      </div>
+
+      <div class="nextRightSecond">
+        <img
+          src="App.png"
+        />
+      </div>
+
+      <div class="hideRight">
+        <img
+          src="App.png"
+        />
+      </div>
+    </div>
+
+  </main>
+
 </div>
-<div class="container mt-5">
-  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-          <div class="carousel-item active">
-              <img src="Image (10).png" class="d-block w-100" alt="Image 1">
-          </div>
-          <div class="carousel-item">
-              <img src="Image (11).png" class="d-block w-100" alt="Image 2">
-          </div>
-          <div class="carousel-item">
-              <img src="Image (12).png" class="d-block w-100" alt="Image 3">
-          </div>
-          <div class="carousel-item">
-              <img src="Image (16).png" class="d-block w-100" alt="Image 4">
-          </div>
-          <div class="carousel-item">
-              <img src="Image (17).png" class="d-block w-100" alt="Image 5">
-          </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-      </button>
-  </div> 
-      </div>
-  </div>
-</div> -->
 
-  <div class="slider-container mb-5" style="height: 100vh;">
-    <span class="arrow-left">
-      <i class="fa-solid fa-angle-right left           text-light "></i>
 
-    </span>
-    <span class="arrow-right">
-      <i class="fa-solid fa-angle-right  text-light"></i>
-    </span>
-    <div class="slider" id="slider">
-      <div class="slide prev-2">
-        <img src="000.png" alt="">
-      </div>
-      <div class="slide prev-1">
-        <img src="003.png" alt="">
-      </div>
-      <div class="slide active">
-        <img src="iPhoneX-Mockup 1.png" alt="">
-      </div>
-      <div class="slide next-1">
-        <img src="001.png" alt="">
-      </div>
-      <div class="slide next-2">
-        <img src="001.png" alt="">
-      </div>
-      <!-- <div class="slide">
-      6
-    </div>
-    <div class="slide">
-      7
-    </div>
-    <div class="slide">
-      8
-    </div> -->
-    </div>
-    <div class="dots">
-      <span></span>
-      <span></span>
-      <span class="active"></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
-  </div>
+
+  <!-- cutrousal -->
   <div class="container mt-5">
     <div class="row p-2 pt-4">
       <div class="col-md-6 mt-5 pt-5">
@@ -430,50 +450,20 @@
 
         <div class="row mt-5 ms-5 d-flex ">
           <div class="col-sm-3 ">
-            <!-- <div class="card  text-center mt-2 bg-primary text-white text-center"> -->
-            <!-- <h4 class="mt-2"><i class="fa-solid fa-download"></i></h4> -->
-            <!-- <div class="card  text-center bg-primary text-white text-center">
-                          <img src="download-2-fill.png" class="w-25 mt-3 ms-4 mb-2" alt="">
 
-                          <p class="me-2">6543</p>
-                          <p class="me-2">6543</p>
-
-
-
-                      </div> -->
           </div>
-          <!-- <div class="col-sm-3 ">
-                      <div class="card  text-center bg-primary mt-2 text-white text-center">
-                      <div class="card  text-center bg-primary text-white text-center">
-                          <h4 class="mt-2"><i class="fa-solid fa-thumbs-up"></i></h4>
-                          <p class="me-2">6543</p>
-                          <p class="me-2">6543</p>
-
-                      </div>
-                  </div> -->
-          <!-- <div class="col-sm-3 ">
-                      <div class="card  text-center mt-2 bg-primary text-white text-center">
-                      <div class="card  text-center bg-primary text-white text-center">
-                          <h4 class="mt-2"> <i class="fa-solid fa-star"></i></h4>
-
-                          <p class="me-2">6543</p>
-                          <p class="me-2">6543</p>
-
-                      </div>
-                  </div> -->
+         
         </div>
       </div>
     </div>
-    <!-- <div class="col-md-6">
-          <img src="Gravity-Scene-iPhone-12-Mockup 1.png" class="w-75" alt="">
-          <img src="Gravity-Scene-iPhone-12-Mockup 1.png" class="w-100" alt="">
-      </div> -->
+   
   </div>
-  <!-- </div> -->
+
   </div>
   </div>
   </div>
   </div>
+  <!-- use of app -->
   <div class="container-fluid pb-5 position-relative">
 
     <div class="header text-center   text-light w-100">
@@ -504,6 +494,27 @@
     </div>
 
   </div>
+    </div>
+
+  </div>
+  </div>  
+
+ 
+  
+ 
+<!-- 
+  </div>
+  </div>
+  </div>
+  </div>
+  
+        <div>
+        </div>
+      </div>
+
+    </div>
+
+  </div> -->
   <div class="container text-center p-5">
 
     <div class="team mt-5 mb-5  pt-5">
@@ -524,6 +535,7 @@
           <h4 class="mt-5  text-uppercase">carla press</h4>
           <h6 class="text-muted mt-1 text-uppercase">app devlopers</h6>
           <p class="mt-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis illum eos
+         
             <!-- <h6 class="text-muted text-uppercase">app devlopers</h6>
               <p class="mt-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis illum eos
                   nobis!</p> -->
@@ -536,6 +548,7 @@
 
               <h3 class="border-right pe-2"><i class="fa-brands fs-5  fa-square-instagram"></i></h3>
             </div>
+            
             <div class="col p-2">
 
               <h3 class="border-right pe-2"><i class="fa-brands fs-5 fa-twitter"></i></h3>
@@ -551,7 +564,7 @@
           </div>
         </div>
       </div>
-
+      
       <div class="col">
         <div class="bg-light mt-3 ps-4 pe-4 rounded p-4" style="box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.10);">
 
@@ -564,11 +577,8 @@
           <h6 class="text-muted text-uppercase">ui/ux devloper</h6>
 
           <p class="mt-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis illum eos
-            <!-- <h4 class="mt-5  text-uppercase">carla press</h4>
-              <h6 class="text-muted text-uppercase">ui/ux devloper</h6>
-
-              <p class="mt-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis illum eos
-                  nobis!</p> -->
+           
+          
           <div class="row">
             <div class="col p-2">
 
@@ -587,39 +597,26 @@
 
               <h3><i class="fa-brands fs-5 fa-youtube"></i></h3>
             </div>
-            <!-- <div class="col p-2">
-
-                      <h3 class="border-right"><i class="fa-brands fs-5 fa-square-instagram"></i></h3>
-                  </div>
-                  <div class="col p-2">
-
-                      <h3 class="border-right"><i class="fa-brands fs-5 fa-twitter"></i></h3>
-                    </div>
-                    <div class="col p-2">
-  
-                        <h3><i class="fa-brands fs-5 fa-youtube"></i></h3>
-                    </div> -->
-
+            
+          
 
           </div>
-        </div>
       </div>
+    </div>
       <div class="col">
         <div class="bg-light mt-3 ps-4 pe-4 rounded p-4" style="box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.10);">
 
           <div class="img-section" style="position: relative; display: inline-block;">
             <img src="Group 1513.png" class="w-75" alt="">
-            <img src="Profile Image (1).png"
-              class=" profile-img1 profile-img position-absolute top-50 start-50 translate-middle" alt=""
+            <img src="Profile Image.png" class=" profile-img position-absolute top-50 start-50 translate-middle" alt=""
               style="width: 9rem; left: 50%; top: 50%; transform: translate(-50%, -50%);">
           </div>
-          <h4 class="mt-5  text-uppercase">Jocelyn Septimus</h4>
-          <h6 class="text-muted mt-1 text-uppercase">website devloper</h6>
+          <h4 class="mt-5  text-uppercase">Craig Gouse</h4>
+          <h6 class="text-muted text-uppercase">ui/ux devloper</h6>
+
           <p class="mt-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis illum eos
-            <!-- <h4 class="mt-5  text-uppercase">carla press</h4>
-              <h6 class="text-muted text-uppercase">website devloper</h6>
-              <p class="mt-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis illum eos
-                  nobis!</p> -->
+           
+          
           <div class="row">
             <div class="col p-2">
 
@@ -638,215 +635,126 @@
 
               <h3><i class="fa-brands fs-5 fa-youtube"></i></h3>
             </div>
-            <!-- 
-                      <h3 class="border-right"><i class="fa-brands fs-5 fa-square-instagram"></i></h3>
-                  </div>
-                  <div class="col p-2">
-
-                      <h3 class="border-right"><i class="fa-brands fs-5 fa-twitter"></i></h3>
-                  </div>
-                  <div class="col p-2">
-
-                      <h3><i class="fa-brands fs-5 fa-youtube"></i></h3>
-                  </div> -->
-
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-
-  <div class="container-fluid mt-5 text-light pb-5 text-center">
-    <div class="header w-100 p-5">
-      <div class="container">
-
-
-        <h1 class="text-uppercase mt-5 pt-5">our happy customer</h1>
-        <p class="ps-4  pb-5 ms-5 mt-1 pe-5 me-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur assumenda
-          delectus ut, commodi sequi magnam enim temporibus, molestiae repellendus officiis modi saepe illo ea
-          accusamus labore ipsum sit debitis consectetur dolor adipisci consequatur fugit!</p>
-        <div>
-          <div class="slider-container mb-5 pb-5" >
-            <span class="arrow-left">
-              <i class="fa-solid fa-angle-right left  text-light "></i>
-
-            </span>
-            <span class="arrow-right">
-              <i class="fa-solid fa-angle-right  text-light"></i>
-            </span>
-            <div class="slider" id="slider">
-              <div class="slide prev-2">
-
-                <div class="card text-center d-flex justify-content-center align-items-center" style="width: 48.125rem;
-                height: 22.3125rem;">
-
-
-                  <img src="Profile Image (2).png" alt="" class="profile-img ">
-                  <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit fugiat consectetur eos! -->
-
-                </div>
-              </div>
-              <div class="slide prev-1">
-                <!-- <img src="001.png" alt=""> -->
-                <div class="card text-center d-flex justify-content-center align-items-center" style="width: 32.125rem;
-                height: 22.3125rem;">
-                  <div>
-                    <img src="Profile Image (2).png" alt="">
-
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum hic facilis quaerat.
-                  </div>
-
-                </div>
-              </div>
-              <div class="slide active mb-5">
-                <!-- <img src="001.png" alt="" > -->
-                <div class="card text-center d-flex justify-content-center align-items-center" style="width: 32.125rem;
-                height: 22.3125rem;">
-                  <div>
-                    <img src="Profile Image (2).png" alt="">
-
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum hic facilis quaerat.
-                  </div>
-
-                </div>
-              </div>
-              <div class="slide next-1 pb-5">
-                <div class="card text-center d-flex justify-content-center align-items-center" style="width: 32.125rem;
-                height: 22.3125rem;">
-                  <div>
-                    <img src="Profile Image (2).png" alt="">
-
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum hic facilis quaerat.
-                  </div>
-
-                </div>
-                <!-- <img src="001.png" alt=""> -->
-              </div>
-              <div class="slide next-2 mb-5">
-                <!-- <img src="001.png" alt=""> -->
-                <div class="card text-center d-flex justify-content-center align-items-center" style="width: 32.125rem;
-                height: 22.3125rem;">
-                  <div>
-                    <img src="Profile Image (2).png" alt="">
-
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum hic facilis quaerat.
-                  </div>
-
-                </div>
-              </div>
-              <div class="slide next-2 mb-5">
-                <!-- <img src="001.png" alt=""> -->
-                <div class="card text-center d-flex justify-content-center align-items-center" style="width: 32.125rem;
-                height: 22.3125rem;">
-                  <div>
-                    <img src="Profile Image (2).png" alt="">
-
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum hic facilis quaerat.
-                  </div>
-
-                </div>
-              </div>
-
-            </div>
-            <div class="dots">
-              <span></span>
-              <span></span>
-              <span class="active"></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div>
-        </div>
-        <!-- <section id="slider"> -->
-          <!-- <h1 class="text-uppercase mt-5 pt-5">our happy customer</h1>
-      <p class="ps-4 ms-5 pe-5 me-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur assumenda
-          delectus ut, commodi sequi magnam enim temporibus, molestiae repellendus officiis modi saepe illo ea
-          accusamus labore ipsum sit debitis consectetur dolor adipisci consequatur fugit!</p> -->
-          <!-- <div> -->
-            <!-- <section id="slider">
-              <input type="radio" name="slider" id="s1" checked>
-              <input type="radio" name="slider" id="s2">
-              <input type="radio" name="slider" id="s3">
-              <input type="radio" name="slider" id="s4">
-              <input type="radio" name="slider" id="s5"> 
-
-
-       <label for="s1" id="slide1">
-              <label for="s1" id="slide1">
-                  <div class="card" style="width: 18rem;">
-                      <img src="..." class="card-img-top" alt="...">
-                      <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the
-                              bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
-                      </div>
-                  </div>
-              </label> 
-       <label for="s2" id="slide2">
-               <label for="s2" id="slide2">
-                  <div class="card" style="width: 18rem;">
-                      <img src="..." class="card-img-top" alt="...">
-                      <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the
-                              bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
-                      </div>
-                  </div>
-              </label> 
-       <label for="s3" id="slide3">
-               <label for="s3" id="slide3">
-                  <div class="card" style="width: 18rem;">
-                      <img src="..." class="card-img-top" alt="...">
-                      <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the
-                              bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
-                      </div>
-                  </div>
-              </label> 
-      <label for="s4" id="slide4">
-
-              </label>
-      <label for="s5" id="slide5">
-              <label for="s4" id="slide4">
-
-              </label> 
-             <label for="s5" id="slide5">
-                  <div class="card" style="width: 18rem;">
-                      <img src="..." class="card-img-top" alt="...">
-                      <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the
-                              bulk of the card's content.</p>
-                          <a href="#" class="btn btn-primary">Go somewhere</a>
-                      </div>
-                  </div>>
-              </label> 
-
-      </section> -->
+            
+          
 
           </div>
       </div>
     </div>
 
-    <!-- </section> -->
 
   </div>
   </div>
+<!-- happy customers -->
+
+  <div class="header p-5 text-light">
+    <div class="d-flex flex-column justify-content-center align-items-center">
+      <h3 class="text-uppercase">Our Happy Customers</h3>
+      <p class="p-5  ps-5 text-center flex-wrap">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam tincidunt rhoncus, ullamcorper velit. Ullamcorper risus tempor, ac nunc libero urna, feugiat.</p>
+    </div>
+    <div class="container" style=" margin: 0 auto;
+    width: 450px;
+    height: 200px;
+    position: relative;
+    perspective: 1000px;">
+      <div class="carousel" style=" height: 100%;
+      width: 100%;
+      position: absolute;
+      transform-style: preserve-3d;
+      transition: transform 1s;
+      user-select: none; /* Disable text selection */">
+        <div class="slide1">
+          <div class="item">
+            <div class="card text-center d-flex p-3 justify-content-center align-items-center" >
+              <img src="Profile Image (2).png" class="card-img-top w-25" alt="...">
+              <h5 class="card-title">Ann Lubin</h5>
+              <h6 class="text-muted"> Co-Founder</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <div class="card-body">
+                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide2">
+          <div class="item">
+            <div class="card text-center d-flex p-3 justify-content-center align-items-center" >
+              <img src="Profile Image (2).png" class="card-img-top w-25" alt="...">
+              <h5 class="card-title">Ann Lubin</h5>
+              <h6 class="text-muted"> Co-Founder</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <div class="card-body">
+                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide3">
+          <div class="item"> 
+            <div class="card text-center d-flex p-3 justify-content-center align-items-center" >
+              <img src="Profile Image (2).png" class="card-img-top w-25" alt="...">
+              <h5 class="card-title">Ann Lubin</h5>
+              <h6 class="text-muted"> Co-Founder</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <div class="card-body">
+                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide4">
+          <div class="item"> 
+            <div class="card text-center d-flex p-3 justify-content-center align-items-center" >
+              <img src="Profile Image (2).png" class="card-img-top w-25" alt="...">
+              <h5 class="card-title">Ann Lubin</h5>
+              <h6 class="text-muted"> Co-Founder</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <div class="card-body">
+                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide5">
+          <div class="item"> 
+            <div class="card text-center d-flex p-3 justify-content-center align-items-center" >
+              <img src="Profile Image (2).png" class="card-img-top w-25" alt="...">
+              <h5 class="card-title">Ann Lubin</h5>
+              <h6 class="text-muted"> Co-Founder</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <div class="card-body">
+                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slide6">
+          <div class="item">
+            <div class="card text-center d-flex p-3 justify-content-center align-items-center" >
+              <img src="Profile Image (2).png" class="card-img-top w-25" alt="...">
+              <h5 class="card-title">Ann Lubin</h5>
+              <h6 class="text-muted"> Co-Founder</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <div class="card-body">
+                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- blogs -->
+
   <div class="container text-center mt-5 p-3">
     <div class="blog">
       <h3 class="text-uppercase p-3">our resent blog</h3>
       <p class="ps-5 pe-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe quidem culpa, amet
         cupiditate, aperiam perspiciatis ullam sapiente, assumenda asperiores tempore temporibus quibusdam ad.
       </p>
+
+
+
     </div>
     <div class="row d-flex mt-5">
       <div class="col-md-4">
@@ -857,7 +765,7 @@
               <h5 class="card-title  mt-2 p-3 ">The Snap Pixel: How It Works and How to Install</h5>
               <p class="card-text ps-3 pe-3">Some quick example text to build on the card title and make up
                 the bulk of the card's content.</p>
-              <a href="index2.html" class=" btn  text-primary fs-5  ms-3 mt-5">Read more</a>
+              <a href="blog.html" class=" btn  text-primary fs-5  ms-3 mt-5">Read more</a>
 
             </div>
           </div>
@@ -873,12 +781,12 @@
               <h5 class="card-title  mt-2 p-3 ">Global Partner Solutions: A Partnership of Innovation</h5>
               <p class="card-text ps-3 pe-3">Some quick example text to build on the card title and make up
                 the bulk of the card's content.</p>
-              <a href="index2.html" class="btn text-primary fs-5 mt-5 ms-3">Read more</a>
+              <a href="blog.html" class="btn text-primary fs-5 mt-5 ms-3">Read more</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4" style="margin-bottom: 5rem;">
 
         <div class="col">
           <div class="bg-light blogs">
@@ -887,7 +795,7 @@
               <h5 class="card-title mt-2 p-3">2021: An opportunity for Snapchatters to start fresh</h5>
               <p class="card-text ps-3 pe-3">Some quick example text to build on the card title and make up
                 the bulk of the card's content.</p>
-              <a href="index2.html" class="btn mt-5  text-primary fs-5   ms-3">Read more</a>
+              <a href="blog.html" class="btn mt-5  text-primary fs-5   ms-3">Read more</a>
             </div>
 
           </div>
@@ -896,8 +804,10 @@
 
     </div>
   </div>
-  <div class="container position-relative">
-    <div class="bg-light mail-contact rounded p-5">
+
+
+  <div class="container mt-5" >
+    <div class="bg-light mail-contact  position-absolute z-1 rounded p-5 "  style="">
       <div class="row d-flex justify-content-between">
         <div class="col border-right border-dark h-50 d-flex align-items-center">
           <div class="bg-primary p-3 rounded-circle text-light">
@@ -921,6 +831,8 @@
       </div>
     </div>
   </div>
+
+  <!-- footer -->
   <div class="container-fluid footer p-5 pb-2 mt-5  bg-dark">
     <div class="container pt-5 text-light">
       <div class="row d-flex justify-content-between align-items-center">
@@ -981,6 +893,11 @@
       <p>Copyright 2021 .Ojjomedia. All Right Reserved.</p>
     </div>
   </div>
+  <div>
+  </div>
+
+  
+  <!-- silder end -->
 
 
 
@@ -993,86 +910,295 @@
 
 
 
-  <script>
-    var Slider = (function () {
-      var initSlider = function () {
-        var dir = $("html").attr("dir");
-        var swipeHandler = new Hammer(document.getElementById("slider"));
-        swipeHandler.on('swipeleft', function (e) {
-          if (dir == "rtl")
-            $(".arrow-left").trigger("click");
-          else
-            $(".arrow-right").trigger("click");
-        });
+  <!-- <script> -->
 
-        swipeHandler.on('swiperight', function (e) {
-          if (dir == "rtl")
-            $(".arrow-right").trigger("click");
-          else
-            $(".arrow-left").trigger("click");
-        });
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+    // slider start
+    var carousel = $(".carousel"),
+        items = $(".item"),
+        currdeg = 0,
+        intervalId = null,
+        rotationInProgress = false;
 
-        $(".arrow-right , .arrow-left").click(function (event) {
-          var nextActiveSlide = $(".slide.active").next();
+    var mouseDownX = 0;
+    var mouseUpX = 0;
 
-          if ($(this).hasClass("arrow-left"))
-            nextActiveSlide = $(".slide.active").prev();
-
-          if (nextActiveSlide.length > 0) {
-            var nextActiveIndex = nextActiveSlide.index();
-            $(".dots span").removeClass("active");
-            $($(".dots").children()[nextActiveIndex]).addClass("active");
-
-            updateSlides(nextActiveSlide);
-          }
-        });
-
-        $(".dots span").click(function (event) {
-          var slideIndex = $(this).index();
-          var nextActiveSlide = $($(".slider").children()[slideIndex]);
-          $(".dots span").removeClass("active");
-          $(this).addClass("active");
-
-          updateSlides(nextActiveSlide);
-        });
-
-        var updateSlides = function (nextActiveSlide) {
-          var nextActiveSlideIndex = $(nextActiveSlide).index();
-
-          $(".slide").removeClass("prev-1");
-          $(".slide").removeClass("next-1");
-          $(".slide").removeClass("active");
-          $(".slide").removeClass("prev-2");
-          $(".slide").removeClass("next-2");
-
-          nextActiveSlide.addClass("active");
-
-          nextActiveSlide.prev().addClass("prev-1");
-          nextActiveSlide.prev().prev().addClass("prev-2");
-          nextActiveSlide.addClass("active");
-          nextActiveSlide.next().addClass("next-1");
-          nextActiveSlide.next().next().addClass("next-2");
-        }
-
-        var updateToNextSlide = function (nextActiveSlide) {
-
-        }
-      }
-      return {
-        init: function () {
-          initSlider();
-        }
-      }
-    })();
-
-    $(function () {
-      Slider.init();
+    $(".carousel").on("mousedown", function (event) {
+      mouseDownX = event.pageX;
+      stopRotation();
     });
 
+    $(".carousel").on("mousemove", function (event) {
+      if (mouseDownX !== 0) {
+        mouseUpX = event.pageX;
+      }
+    });
+
+    $(".carousel").on("mouseup", function (event) {
+      if (mouseDownX !== 0) {
+        handleSwipe();
+      }
+      mouseDownX = 0;
+      mouseUpX = 0;
+      startRotation();
+    });
+
+    function handleSwipe() {
+      var swipeThreshold = 50; // Minimum swipe distance required to trigger a rotation
+
+      if (mouseUpX - mouseDownX > swipeThreshold) {
+        // Swipe right
+        rotate({ data: { d: "p" } });
+      } else if (mouseDownX - mouseUpX > swipeThreshold) {
+        // Swipe left
+        rotate({ data: { d: "n" } });
+      }
+    }
+    
+    function rotate(e) {
+      if (rotationInProgress) {
+        return; // Ignore rotation request if it's already in progress
+      }
+
+      rotationInProgress = true;
+
+      if (e.data.d == "n") {
+        currdeg = currdeg - 60;
+      }
+      if (e.data.d == "p") {
+        currdeg = currdeg + 60;
+      }
+      carousel.css({
+        "-webkit-transform": "rotateY(" + currdeg + "deg)",
+        "-moz-transform": "rotateY(" + currdeg + "deg)",
+        "-o-transform": "rotateY(" + currdeg + "deg)",
+        "transform": "rotateY(" + currdeg + "deg)"
+      });
+      items.css({
+        "-webkit-transform": "rotateY(" + (-currdeg) + "deg)",
+        "-moz-transform": "rotateY(" + (-currdeg) + "deg)",
+        "-o-transform": "rotateY(" + (-currdeg) + "deg)",
+        "transform": "rotateY(" + (-currdeg) + "deg)"
+      });
+
+      setTimeout(function() {
+        rotationInProgress = false;
+      }, 1000); // Set rotationInProgress to false after 1 second to allow rotation to complete
+    }
+    
+    function startRotation() {
+      if (intervalId === null) {
+        intervalId = setInterval(function() {
+          rotate({ data: { d: "n" } });
+        }, 10000);
+      }
+    }
+    
+    function stopRotation() {
+      if (intervalId !== null) {
+        clearInterval(intervalId);
+        intervalId = null;
+      }
+    }
+
+    // Start the rotation initially
+    startRotation();
+
+    // Detect visibility change and stop/start rotation accordingly
+    document.addEventListener("visibilitychange", function() {
+      if (document.visibilityState === "hidden") {
+        stopRotation();
+      } else if (document.visibilityState === "visible") {
+        startRotation();
+      }
+    });
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+
+<script>
+// slider end
+
+    // var Slider = (function () {
+    //   var initSlider = function () {
+    //     var dir = $("html").attr("dir");
+    //     var swipeHandler = new Hammer(document.getElementById("slider"));
+    //     swipeHandler.on('swipeleft', function (e) {
+    //       if (dir == "rtl")
+    //         $(".arrow-left").trigger("click");
+    //       else
+    //         $(".arrow-right").trigger("click");
+    //     });
+
+    //     swipeHandler.on('swiperight', function (e) {
+    //       if (dir == "rtl")
+    //         $(".arrow-right").trigger("click");
+    //       else
+    //         $(".arrow-left").trigger("click");
+    //     });
+
+    //     $(".arrow-right , .arrow-left").click(function (event) {
+    //       var nextActiveSlide = $(".slide.active").next();
+
+    //       if ($(this).hasClass("arrow-left"))
+    //         nextActiveSlide = $(".slide.active").prev();
+
+    //       if (nextActiveSlide.length > 0) {
+    //         var nextActiveIndex = nextActiveSlide.index();
+    //         $(".dots span").removeClass("active");
+    //         $($(".dots").children()[nextActiveIndex]).addClass("active");
+
+    //         updateSlides(nextActiveSlide);
+    //       }
+    //     });
+
+    //     $(".dots span").click(function (event) {
+    //       var slideIndex = $(this).index();
+    //       var nextActiveSlide = $($(".slider").children()[slideIndex]);
+    //       $(".dots span").removeClass("active");
+    //       $(this).addClass("active");
+
+    //       updateSlides(nextActiveSlide);
+    //     });
+
+    //     var updateSlides = function (nextActiveSlide) {
+    //       var nextActiveSlideIndex = $(nextActiveSlide).index();
+
+    //       $(".slide").removeClass("prev-1");
+    //       $(".slide").removeClass("next-1");
+    //       $(".slide").removeClass("active");
+    //       $(".slide").removeClass("prev-2");
+    //       $(".slide").removeClass("next-2");
+
+    //       nextActiveSlide.addClass("active");
+
+    //       nextActiveSlide.prev().addClass("prev-1");
+    //       nextActiveSlide.prev().prev().addClass("prev-2");
+    //       nextActiveSlide.addClass("active");
+    //       nextActiveSlide.next().addClass("next-1");
+    //       nextActiveSlide.next().next().addClass("next-2");
+    //     }
+
+    //     var updateToNextSlide = function (nextActiveSlide) {
+
+    //     }
+    //   }
+    //   return {
+    //     init: function () {
+    //       initSlider();
+    //     }
+    //   }
+    // })();
+
+    // $(function () {
+    //   Slider.init();
+    // });
+
+    // card slider
+    // var carousel = $(".carousel"),
+    //     items = $(".item"),
+    //     currdeg = 0,
+    //     intervalId = null,
+    //     rotationInProgress = false;
+
+    // var mouseDownX = 0;
+    // var mouseUpX = 0;
+
+    // $(".carousel").on("mousedown", function (event) {
+    //   mouseDownX = event.pageX;
+    //   stopRotation();
+    // });
+
+    // $(".carousel").on("mousemove", function (event) {
+    //   if (mouseDownX !== 0) {
+    //     mouseUpX = event.pageX;
+    //   }
+    // });
+
+    // $(".carousel").on("mouseup", function (event) {
+    //   if (mouseDownX !== 0) {
+    //     handleSwipe();
+    //   }
+    //   mouseDownX = 0;
+    //   mouseUpX = 0;
+    //   startRotation();
+    // });
+
+    // function handleSwipe() {
+    //   var swipeThreshold = 50; // Minimum swipe distance required to trigger a rotation
+
+    //   if (mouseUpX - mouseDownX > swipeThreshold) {
+    //     // Swipe right
+    //     rotate({ data: { d: "p" } });
+    //   } else if (mouseDownX - mouseUpX > swipeThreshold) {
+    //     // Swipe left
+    //     rotate({ data: { d: "n" } });
+    //   }
+    // }
+    
+    // function rotate(e) {
+    //   if (rotationInProgress) {
+    //     return; // Ignore rotation request if it's already in progress
+    //   }
+
+    //   rotationInProgress = true;
+
+    //   if (e.data.d == "n") {
+    //     currdeg = currdeg - 60;
+    //   }
+    //   if (e.data.d == "p") {
+    //     currdeg = currdeg + 60;
+    //   }
+    //   carousel.css({
+    //     "-webkit-transform": "rotateY(" + currdeg + "deg)",
+    //     "-moz-transform": "rotateY(" + currdeg + "deg)",
+    //     "-o-transform": "rotateY(" + currdeg + "deg)",
+    //     "transform": "rotateY(" + currdeg + "deg)"
+    //   });
+    //   items.css({
+    //     "-webkit-transform": "rotateY(" + (-currdeg) + "deg)",
+    //     "-moz-transform": "rotateY(" + (-currdeg) + "deg)",
+    //     "-o-transform": "rotateY(" + (-currdeg) + "deg)",
+    //     "transform": "rotateY(" + (-currdeg) + "deg)"
+    //   });
+
+    //   setTimeout(function() {
+    //     rotationInProgress = false;
+    //   }, 1000); // Set rotationInProgress to false after 1 second to allow rotation to complete
+    // }
+    
+    // function startRotation() {
+    //   if (intervalId === null) {
+    //     intervalId = setInterval(function() {
+    //       rotate({ data: { d: "n" } });
+    //     }, 10000);
+    //   }
+    // }
+    
+    // function stopRotation() {
+    //   if (intervalId !== null) {
+    //     clearInterval(intervalId);
+    //     intervalId = null;
+    //   }
+    // }
+
+    // // Start the rotation initially
+    // startRotation();
+
+    // // Detect visibility change and stop/start rotation accordingly
+    // document.addEventListener("visibilitychange", function() {
+    //   if (document.visibilityState === "hidden") {
+    //     stopRotation();
+    //   } else if (document.visibilityState === "visible") {
+    //     startRotation();
+    //   }
+    // });
+
+  </script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script> -->
 </body>
 
 </html>
