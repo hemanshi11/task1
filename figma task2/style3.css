@@ -458,6 +458,21 @@ line-height: 130%; /* 1.625rem */
 .blogs {
     box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.10);
 }
+.item {
+    display: block;
+    position: absolute;
+    background: linear-gradient(to bottom, #f9f9f9, #e0e0e0);
+    width: 450px;
+    height: 200px;
+    /* line-height: 200px; */
+    /* font-size: 2em; */
+    text-align: center;
+    color: #333;
+    /* opacity: 0.8; */
+    border-radius: 10px;
+    transition: transform 1s, opacity 0.5s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
 
 /* Custom CSS to style the input group with button inside */
 .input-group {
@@ -499,9 +514,7 @@ line-height: 130%; /* 1.625rem */
 
 }
 
-.carousel {
-    display: flex;
-}
+
 .footer{
     position: relative;
 }
