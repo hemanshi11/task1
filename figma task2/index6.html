@@ -1,462 +1,284 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Test</title>
-    <style>
-      html, body, main {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-#carousel {
-  position: relative;
-  height: 400px;
-  top: 50%;
-  transform: translateY(-50%);
-  overflow: hidden;
-}
-
-#carousel div {
-  position: absolute;
-  transition: transform 1s, left 1s, opacity 1s, z-index 0s;
-  opacity: 1;
-}
-
-#carousel div img {
-  width: 300px;
-  transition: width 1s;
-}
-
-#carousel div.hideLeft {
-  left: 0%;
-  opacity: 0;
-  transform: translateY(50%) translateX(-50%);
-}
-
-#carousel div.hideLeft img {
-  width: 150px;
-}
-
-#carousel div.hideRight {
-  left: 100%;
-  opacity: 0;
-  transform: translateY(50%) translateX(-50%);
-}
-
-#carousel div.hideRight img {
-  width: 150px;
-}
-
-#carousel div.prev {
-  z-index: 5;
-  left: 34%;
-  transform: translateY(50px) translateX(-50%);
-}
-
-#carousel div.prev img {
-  width:225px;
-}
-
-#carousel div.prevLeftSecond {
-  z-index: 4;
-  left: 28%;
-  transform: translateY(18%) translateX(-82%);
-  opacity: 0.7;
-}
-
-#carousel div.prevLeftSecond img {
-  width: 150px;
-  height: 300px;
-}
-
-#carousel div.selected {
-  z-index: 10;
-  left: 50%;
-  transform: translateY(0px) translateX(-50%);
-}
-
-#carousel div.next {
-  z-index: 5;
-  left: 65%;
-  transform: translateY(50px) translateX(-50%);
-}
-
-#carousel div.next img {
-  width: 225px;
-  
-}
-
-#carousel div.nextRightSecond {
-  z-index: 4;
-  left: 76%;
-  transform: translateY(18%) translateX(-82%);
-  opacity: 0.7;
-}
-
-#carousel div.nextRightSecond img {
-  width: 150px;
-  height: 300px;
-}
-
-.buttons {
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 10px;
-}
-
-
-    </style>
-    <script>
-      $(document).ready(function () {
-        function moveToSelected(element) {
-          if (element == "next") {
-            var selected = $(".selected").next();
-          } else if (element == "prev") {
-            var selected = $(".selected").prev();
-          } else {
-            var selected = element;
-          }
-
-          var next = $(selected).next();
-          var prev = $(selected).prev();
-          var prevSecond = $(prev).prev();
-          var nextSecond = $(next).next();
-
-          $(selected).removeClass().addClass("selected");
-
-          $(prev).removeClass().addClass("prev");
-          $(next).removeClass().addClass("next");
-
-          $(nextSecond).removeClass().addClass("nextRightSecond");
-          $(prevSecond).removeClass().addClass("prevLeftSecond");
-
-          $(nextSecond).nextAll().removeClass().addClass("hideRight");
-          $(prevSecond).prevAll().removeClass().addClass("hideLeft");
-        }
-
-        $(document).keydown(function (e) {
-          switch (e.which) {
-            case 37: // left
-              moveToSelected("prev");
-              break;
-
-            case 39: // right
-              moveToSelected("next");
-              break;
-
-            default:
-              return;
-          }
-          e.preventDefault();
-        });
-
-        $("#carousel div").click(function () {
-          moveToSelected($(this));
-        });
-
-        $("#prev").click(function () {
-          moveToSelected("prev");
-        });
-
-        $("#next").click(function () {
-          moveToSelected("next");
-        });
-      });
-    </script>
-  </head>
-  <body>
-    <main>
-      <div id="carousel">
-        <div class="hideLeft">
-          <img
-            src="App.png"
-          />
-
-     
-        </div>
-
-        <div class="prevLeftSecond">
-          <img
-            src="001.png" 
-          />
-         
-        </div>
-
-        <div class="prev">
-          <img
-            src="003.png"
-          />
-        
-        </div>
-
-        <div class="selected">
-          <img
-            src="iPhoneX-Mockup 1.png"
-          />
-         
-        </div>
-
-        <div class="next">
-          <img
-            src="001.png" 
-          />
-        </div>
-
-        <div class="nextRightSecond">
-          <img
-            src="App.png"
-          />
-        </div>
-
-        <div class="hideRight">
-          <img
-            src="App.png"
-          />
-        </div>
-      </div>
-
-      <div class="buttons">
-        <button id="prev">Prev</button>
-        <button id="next">Next</button>
-      </div>
-      
-    </main>
-  </body>
-</html> -->
-
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="styel.css" /> -->
-    <!-- <script src="carasoule.js"></script> -->
-<style>
-        .container .curous {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-#carousel {
-  position: relative;
-  height: 700px;
-  top: 50%;
-  transform: translateY(-50%);
-  overflow: hidden;
-}
-
-#carousel div {
-  position: absolute;
-  transition: transform 1s, left 1s, opacity 1s, z-index 0s;
-  opacity: 1;
-}
-
-#carousel div img {
-  width: 300px;
-  transition: width 1s;
-}
-
-#carousel div.hideLeft {
-  left: 0%;
-  opacity: 0;
-  transform: translateY(50%) translateX(-50%);
-}
-
-#carousel div.hideLeft img {
-  width: 150px;
-}
-
-#carousel div.hideRight {
-  left: 100%;
-  opacity: 0;
-  transform: translateY(50%) translateX(-50%);
-}
-
-#carousel div.hideRight img {
-  width: 150px;
-}
-
-#carousel div.prev {
-  z-index: 5;
-  left: 28%;
-  transform: translateY(50px) translateX(-50%);
-}
-
-#carousel div.prev img {
-  width:225px;
-}
-
-#carousel div.prevLeftSecond {
-  z-index: 4;
-  left: 26%;
-  transform: translateY(18%) translateX(-82%);
-  opacity: 0.7;
-}
-
-#carousel div.prevLeftSecond img {
-  width: 209px;
-  /* height: 300px; */
-}
-
-#carousel div.selected {
-  z-index: 10;
-  left: 50%;
-  transform: translateY(0px) translateX(-50%);
-}
-
-#carousel div.next {
-  z-index: 5;
-  left: 70%;
-  transform: translateY(50px) translateX(-50%);
-}
-
-#carousel div.next img {
-  width: 225px;
+<html>
+<head>
+  <title>Interactive 3D Carousel Slider with Swipe and Auto-Rotation.</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <style>
+    body {
+      background: #f5f5f5;
+      padding: 70px 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .container {
+      margin: 0 auto;
+      width: 450px;
+      height: 200px;
+      position: relative;
+      perspective: 1000px;
+    }
+    
+    .carousel {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      transform-style: preserve-3d;
+      transition: transform 1s;
+      user-select: none; /* Disable text selection */
+    }
+    .carousel div {
+      transform-style: preserve-3d;
+    }
+    
+    .item {
+      display: block;
+      position: absolute;
+      background: linear-gradient(to bottom, #f9f9f9, #e0e0e0);
+      width: 450px;
+      height: 200px;
+      /* line-height: 200px; */
+      /* font-size: 2em; */
+      text-align: center;
+      color: #333;
+      /* opacity: 0.8; */
+      border-radius: 10px;
+      transition: transform 1s, opacity 0.5s;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .slide1 {
+      transform: rotateY(0deg) translateZ(250px);
+    }
+    .slide1 .item {
+      /* background: linear-gradient(to bottom, #e84c3d, #f66d49); */
+      /* color: #fff; opacity:.93; */
+    }
+    .slide2 {
+      transform: rotateY(60deg) translateZ(250px) rotateY(-60deg);
+    }
+    .slide2 .item {
+      /* background: linear-gradient(to bottom, #417ebf, #0072bc); */
+      /* color: #fff; opacity:.93; */
+    }
+    .slide3 {
+      transform: rotateY(120deg) translateZ(250px) rotateY(-120deg);
+    }
+    .slide3 .item {
+      /* background: linear-gradient(to bottom, #38c172, #36a165); */
+      /* color: #fff; opacity:.93; */
+    }
+    .slide4 {
+      transform: rotateY(180deg) translateZ(250px) rotateY(-180deg);
+    }
+    .slide4 .item {
+      /* background: linear-gradient(to bottom, #f0932b, #ed7600); */
+      /* color: #fff; opacity:.93; */
+    }
+    .slide5 {
+      transform: rotateY(240deg) translateZ(250px) rotateY(-240deg);
+    } 
+    .slide5 .item {
+      /* background: linear-gradient(to bottom, #9b59b6, #610093); */
+      /* color: #fff; opacity:.93; */
+    }
+    .slide6 {
+      transform: rotateY(300deg) translateZ(250px) rotateY(-300deg);
+    }
+    .slide6 .item {
+      /* background: linear-gradient(to bottom, #bf935a, #8c6239); */
+      /* color: #fff; opacity:.93; */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="carousel">
+      <div class="slide1">
+        <div class="item">
+          <div class="card text-center d-flex p-3 justify-content-center align-items-center" >
+            <img src="Profile Image (2).png" class="card-img-top w-25" alt="...">
+            <h5 class="card-title">Ann Lubin</h5>
+            <h6 class="text-muted"> Co-Founder</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="card-body">
+              <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide2">
+        <div class="item">
+          <div class="card text-center d-flex p-3 justify-content-center align-items-center" >
+            <img src="Profile Image (2).png" class="card-img-top w-25" alt="...">
+            <h5 class="card-title">Ann Lubin</h5>
+            <h6 class="text-muted"> Co-Founder</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="card-body">
+              <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide3">
+        <div class="item"> 
+          <div class="card text-center d-flex p-3 justify-content-center align-items-center" >
+            <img src="Profile Image (2).png" class="card-img-top w-25" alt="...">
+            <h5 class="card-title">Ann Lubin</h5>
+            <h6 class="text-muted"> Co-Founder</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="card-body">
+              <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide4">
+        <div class="item"> 
+          <div class="card text-center d-flex p-3 justify-content-center align-items-center" >
+            <img src="Profile Image (2).png" class="card-img-top w-25" alt="...">
+            <h5 class="card-title">Ann Lubin</h5>
+            <h6 class="text-muted"> Co-Founder</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="card-body">
+              <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide5">
+        <div class="item"> 
+          <div class="card text-center d-flex p-3 justify-content-center align-items-center" >
+            <img src="Profile Image (2).png" class="card-img-top w-25" alt="...">
+            <h5 class="card-title">Ann Lubin</h5>
+            <h6 class="text-muted"> Co-Founder</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="card-body">
+              <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide6">
+        <div class="item">
+          <div class="card text-center d-flex p-3 justify-content-center align-items-center" >
+            <img src="Profile Image (2).png" class="card-img-top w-25" alt="...">
+            <h5 class="card-title">Ann Lubin</h5>
+            <h6 class="text-muted"> Co-Founder</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div class="card-body">
+              <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   
-}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script>
+    var carousel = $(".carousel"),
+        items = $(".item"),
+        currdeg = 0,
+        intervalId = null,
+        rotationInProgress = false;
 
-#carousel div.nextRightSecond {
-  z-index: 4;
-  left:89%;
-  transform: translateY(18%) translateX(-82%);
-  opacity: 0.7;
-}
+    var mouseDownX = 0;
+    var mouseUpX = 0;
 
-#carousel div.nextRightSecond img {
-  width: 255px;
-  /* height: 300px; */
-}
+    $(".carousel").on("mousedown", function (event) {
+      mouseDownX = event.pageX;
+      stopRotation();
+    });
 
-.buttons {
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 10px;
-}
+    $(".carousel").on("mousemove", function (event) {
+      if (mouseDownX !== 0) {
+        mouseUpX = event.pageX;
+      }
+    });
 
+    $(".carousel").on("mouseup", function (event) {
+      if (mouseDownX !== 0) {
+        handleSwipe();
+      }
+      mouseDownX = 0;
+      mouseUpX = 0;
+      startRotation();
+    });
 
-</style>
-    <title>Test</title>
-    <script>
-      $(document).ready(function () {
-        function moveToSelected(element) {
-          if (element == "next") {
-            var selected = $(".selected").next();
-          } else if (element == "prev") {
-            var selected = $(".selected").prev();
-          } else {
-            var selected = element;
-          }
+    function handleSwipe() {
+      var swipeThreshold = 50; // Minimum swipe distance required to trigger a rotation
 
-          var next = $(selected).next();
-          var prev = $(selected).prev();
-          var prevSecond = $(prev).prev();
-          var nextSecond = $(next).next();
+      if (mouseUpX - mouseDownX > swipeThreshold) {
+        // Swipe right
+        rotate({ data: { d: "p" } });
+      } else if (mouseDownX - mouseUpX > swipeThreshold) {
+        // Swipe left
+        rotate({ data: { d: "n" } });
+      }
+    }
+    
+    function rotate(e) {
+      if (rotationInProgress) {
+        return; // Ignore rotation request if it's already in progress
+      }
 
-          $(selected).removeClass().addClass("selected");
+      rotationInProgress = true;
 
-          $(prev).removeClass().addClass("prev");
-          $(next).removeClass().addClass("next");
-
-          $(nextSecond).removeClass().addClass("nextRightSecond");
-          $(prevSecond).removeClass().addClass("prevLeftSecond");
-
-          $(nextSecond).nextAll().removeClass().addClass("hideRight");
-          $(prevSecond).prevAll().removeClass().addClass("hideLeft");
-        }
-
-        // Eventos teclado
-        $(document).keydown(function (e) {
-          switch (e.which) {
-            case 37: // left
-              moveToSelected("prev");
-              break;
-
-            case 39: // right
-              moveToSelected("next");
-              break;
-
-            default:
-              return;
-          }
-          e.preventDefault();
-        });
-
-        $("#carousel div").click(function () {
-          moveToSelected($(this));
-        });
-
-        $("#prev").click(function () {
-          moveToSelected("prev");
-        });
-
-        $("#next").click(function () {
-          moveToSelected("next");
-        });
+      if (e.data.d == "n") {
+        currdeg = currdeg - 60;
+      }
+      if (e.data.d == "p") {
+        currdeg = currdeg + 60;
+      }
+      carousel.css({
+        "-webkit-transform": "rotateY(" + currdeg + "deg)",
+        "-moz-transform": "rotateY(" + currdeg + "deg)",
+        "-o-transform": "rotateY(" + currdeg + "deg)",
+        "transform": "rotateY(" + currdeg + "deg)"
       });
-    </script>
-  </head>
-  <body>
-    <main>
-      <div id="carousel">
-        <div class="hideLeft">
-          <img
-            src="App.png"
-          />
-        </div>
+      items.css({
+        "-webkit-transform": "rotateY(" + (-currdeg) + "deg)",
+        "-moz-transform": "rotateY(" + (-currdeg) + "deg)",
+        "-o-transform": "rotateY(" + (-currdeg) + "deg)",
+        "transform": "rotateY(" + (-currdeg) + "deg)"
+      });
 
-        <div class="prevLeftSecond">
-          <img
-            src="001.png"
-          />
-        </div>
+      setTimeout(function() {
+        rotationInProgress = false;
+      }, 1000); // Set rotationInProgress to false after 1 second to allow rotation to complete
+    }
+    
+    function startRotation() {
+      if (intervalId === null) {
+        intervalId = setInterval(function() {
+          rotate({ data: { d: "n" } });
+        }, 10000);
+      }
+    }
+    
+    function stopRotation() {
+      if (intervalId !== null) {
+        clearInterval(intervalId);
+        intervalId = null;
+      }
+    }
 
-        <div class="prev">
-          <img
-            src=" 003.png"
-          />
-        </div>
+    // Start the rotation initially
+    startRotation();
 
-        <div class="selected">
-          <img
-            src="iPhoneX-Mockup 1.png"
-          />
-        </div>
+    // Detect visibility change and stop/start rotation accordingly
+    document.addEventListener("visibilitychange", function() {
+      if (document.visibilityState === "hidden") {
+        stopRotation();
+      } else if (document.visibilityState === "visible") {
+        startRotation();
+      }
+    });
+  </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
-        <div class="next">
-          <img
-            src="001.png"
-          />
-        </div>
-
-        <div class="nextRightSecond">
-          <img
-            src="App.png"
-          />
-        </div>
-
-        <div class="hideRight">
-          <img
-            src="App.png"
-          />
-        </div>
-      </div>
-
-      <div class="buttons">
-        <button id="prev">Prev</button>
-        <button id="next">Next</button>
-      </div>
-    </main>
-  </body>
+</body>
 </html>
+
+
 
